@@ -1,0 +1,33 @@
+/* styles/pages/home.module.scss */
+@use "../abstracts/variables" as *;
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  min-height: 100vh;
+}
+
+.centerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center; /* Center the grid horizontally */
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+  }
+}
+
+/* Add any other styling you need for the Services component */

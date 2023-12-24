@@ -1,0 +1,30 @@
+/* styles/Card.module.scss */
+.card {
+  /* Your card styling */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 15px;
+  max-width: 50rem;
+}
+/* styles/Home.module.scss */
+
+.cardContent {
+  /* Styling for the content area */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  /* Styling for the icon */
+  margin-bottom: 10px;
+}
+
+.cardFooter {
+  /* Styling for the footer */
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
