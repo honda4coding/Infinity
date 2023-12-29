@@ -7,10 +7,17 @@
   align-items: center;
   // justify-content: center;
   min-height: 100vh;
+
+  span {
+    display: block;
+    text-align: center;
+  }
 }
 
 .centerContainer {
-  display: flex;
+  padding-top: 10rem;
+  display: grid;
+  text-align: center;
   align-items: center;
   justify-content: center;
 }

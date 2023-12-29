@@ -10,7 +10,9 @@
   max-width: 1424px; /* Set a maximum width for the container */
   margin: 0 auto; /* Center the container horizontally */
   // height: 100vh;
-  padding-top: 15rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
   box-sizing: border-box;
 
   @media (max-width: 768px) {

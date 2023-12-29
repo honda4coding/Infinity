@@ -4,20 +4,24 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
 import styles from "./services.module.scss";
+import Button from "../common/readmore"; // Import your custom Button component
 
 interface CardProps {
   number: number;
-  clickableText: string;
+  buttonText: string; // Renamed clickableText to buttonText
   icon: ReactNode;
-  description: string;
+  description: ReactNode;
+  // linkTo: string;
 }
 
 const Services: React.FC<CardProps> = ({
   number,
-  clickableText,
+  buttonText, // Renamed clickableText to buttonText
   icon,
   description,
 }) => {
+  function handleButtonClick(): void {}
+
   return (
     <div className={styles.card}>
       <div className={styles.cardContent}>
@@ -26,7 +30,14 @@ const Services: React.FC<CardProps> = ({
       </div>
       <div className={styles.cardFooter}>
         <span>{number}</span>
-        <a href="#">{clickableText}</a>
+        {/* Using your custom Button component */}
+        {/* <Button
+          link="/services"
+          text={buttonText}
+          size="0.8em"
+          onClick={handleButtonClick}
+          cursorPointer={true}
+        /> */}
       </div>
     </div>
   );
