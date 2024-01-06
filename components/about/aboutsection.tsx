@@ -1,6 +1,8 @@
 // components/AboutSection.js
 import React from "react";
 import styles from "./aboutsection.module.scss";
+import Image from "next/image";
+
 interface AboutSectionProps {
   title: string;
   imageSrc: string;
@@ -18,7 +20,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
         <h2>{title}</h2>
         <p> {description}</p>
       </div>
-      <img src={imageSrc} alt={`${title} Image`} />
+      <Image src={imageSrc} alt={`${title} Image`} />
     </div>
   );
 };

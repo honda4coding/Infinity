@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./home1.module.scss";
 import Button from "../common/readmore";
+import Image from "next/image";
 
 const Home1 = () => {
   function handleButtonClick(): void {}
@@ -23,7 +24,7 @@ const Home1 = () => {
         />
       </div>
       <div className={styles.imageContainer}>
-        <img src="./logo_sign.png" alt="Sample Image" />
+        <Image src="./logo_sign.png" alt="Sample Image" />
       </div>
     </div>
   );

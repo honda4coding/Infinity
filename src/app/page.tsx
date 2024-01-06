@@ -8,6 +8,7 @@ import styles from "../styles/pages/home.module.scss";
 import Info from "../../components/home/info";
 import Button from "../../components/common/readmore";
 import Hero from "../../components/home/hero";
+import Image from "next/image";
 
 const HomePage = () => {
   function handleButtonClick(): void {}
@@ -28,11 +29,7 @@ const HomePage = () => {
             <Services
               // number={1}
               icon={
-                <img
-                  src="/sailboat.svg"
-                  alt="Icon"
-                  style={{ width: "50px", height: "50px" }}
-                />
+                <Image src="/sailboat.svg" alt="Icon" width={50} height={50} />
               }
               description={
                 <>

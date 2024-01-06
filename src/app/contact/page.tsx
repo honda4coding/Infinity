@@ -4,18 +4,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesomimport Image from 'next/image';
+import Image from 'next/image';
 
 const Contact: React.FC = () => {
   return (
     <div>
       <div className={styles.container}>
         <div></div>
-        <img
-          className={styles.img}
-          src="https://i.ibb.co/dDr1D8t/resize-170386058519758890772.jpg"
-          alt="hero"
-        />
+        <Image
+  className={styles.img}
+  src="https://i.ibb.co/dDr1D8t/resize-170386058519758890772.jpg"
+  alt="hero"
+  
+/>
+
 
         <div className={styles.conect}>
           <h2> {`conect us`} </h2>

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import styles from "../../src/styles/pages/nav.module.scss";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
   // State to control visibility of the opening times
@@ -64,11 +65,7 @@ const Navbar: React.FC = () => {
 
       {/* Button to Toggle Opening Hours */}
       <div className={styles.openingTimesButton} onClick={toggleOpeningTimes}>
-        <img
-          src={"/clock.svg"}
-          alt="Clock Icon"
-          style={{ width: "50px", height: "50px" }}
-        />
+        <Image src={"/clock.svg"} alt="Clock Icon" width={50} height={50} />
       </div>
 
       {/* Display opening times if showOpeningTimes is true and menu is not open */}
