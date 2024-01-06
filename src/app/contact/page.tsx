@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "../../styles/pages/contact.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import { faLocationDot } from "@fortawesomimport Image from 'next/image';
-import Image from 'next/image';
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Contact: React.FC = () => {
   return (
@@ -13,12 +13,10 @@ const Contact: React.FC = () => {
       <div className={styles.container}>
         <div></div>
         <Image
-  className={styles.img}
-  src="https://i.ibb.co/dDr1D8t/resize-170386058519758890772.jpg"
-  alt="hero"
-  
-/>
-
+          className={styles.img}
+          src="https://i.ibb.co/dDr1D8t/resize-170386058519758890772.jpg"
+          alt="hero"
+        />
 
         <div className={styles.conect}>
           <h2> {`conect us`} </h2>
