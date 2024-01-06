@@ -8,7 +8,7 @@ const Home1 = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h2>Infinity Marine Consultants (IMC)</h2>
+        <h2>{`Infinity Marine Consultants (IMC)`}</h2>
         <p>
           {` We are a leading maritime company in EGYPT, with international network
           of marine companies, Classification Societies, Flag administrations.
@@ -24,7 +24,7 @@ const Home1 = () => {
         />
       </div>
       <div className={styles.imageContainer}>
-        <Image src="./logo_sign.png" alt="Sample Image" />
+        <Image src="/logo_sign.png" alt="Icon" width={500} height={500} />
       </div>
     </div>
   );

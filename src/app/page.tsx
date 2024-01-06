@@ -41,6 +41,7 @@ const HomePage = () => {
               }
               // number={}
               title={"Ship registration services"}
+              buttonText={""}
             />
             <Services
               // number={2}
@@ -60,7 +61,7 @@ const HomePage = () => {
                 </>
               }
               title={"Annual Safety Inspections"}
-              // linkTo="/services"
+              buttonText={""} // linkTo="/services"
             />
             <Services
               // number={3}
@@ -80,6 +81,7 @@ const HomePage = () => {
                 </>
               }
               title={"Corporations"}
+              buttonText={""}
             />
             <Services
               // number={4}
@@ -99,6 +101,7 @@ const HomePage = () => {
                 </>
               }
               title={"Seafarers endorsements & certification"}
+              buttonText={""}
             />
             <Services
               // number={5}
@@ -118,6 +121,7 @@ const HomePage = () => {
                 </>
               }
               title={"Class & statutory certification"}
+              buttonText={""}
             />
             <Services
               // number={6}
@@ -130,6 +134,7 @@ const HomePage = () => {
               }
               description={<></>}
               title={"ISM & ISPS training and consultancy"}
+              buttonText={""}
             />
             {/* Repeat other Services components similarly */}
           </div>

@@ -7,7 +7,7 @@ import styles from "./services.module.scss";
 import Button from "../common/readmore"; // Import your custom Button component
 
 interface CardProps {
-  number: number;
+  // number: number;
   buttonText: string; // Renamed clickableText to buttonText
   icon: ReactNode;
   title: string;
@@ -16,7 +16,7 @@ interface CardProps {
 }
 
 const Services: React.FC<CardProps> = ({
-  number,
+  // number,
   buttonText,
   title, // Include the title property
   icon,
@@ -32,7 +32,7 @@ const Services: React.FC<CardProps> = ({
         <h4>{description}</h4>
       </div>
       <div className={styles.cardFooter}>
-        <span>{number}</span>
+        {/* <span>{number}</span> */}
         {/* Using your custom Button component */}
         {/* <Button
           link="/services"
