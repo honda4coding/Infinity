@@ -38,7 +38,7 @@ const MainComponent: React.FC<MainProps> = ({
         >
           <div className={styles.logoDiv}>
             <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
-              <title>Maintenance Icon</title>
+              <title>{`Maintenance Icon`}</title>
               <image href={dataObj.logo} width="50" height="50" />
             </svg>
           </div>
@@ -57,7 +57,7 @@ const MainComponent: React.FC<MainProps> = ({
                 )}
                 {dataObj.contentListOne && (
                   <>
-                    <h4>Drawings</h4>
+                    <h4>{`Drawings`}</h4>
                     <ul>
                       {dataObj.contentListOne.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -67,7 +67,7 @@ const MainComponent: React.FC<MainProps> = ({
                 )}
                 {dataObj.contentListTwo && (
                   <>
-                    <h4>Calculations</h4>
+                    <h4>{`Calculations`}</h4>
                     <ul>
                       {dataObj.contentListTwo.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -77,7 +77,7 @@ const MainComponent: React.FC<MainProps> = ({
                 )}
                 {dataObj.contentListThree && (
                   <>
-                    <h4>Manuals</h4>
+                    <h4>{`Manuals`}</h4>
                     <ul>
                       {dataObj.contentListThree.map((item, index) => (
                         <li key={index}>{item}</li>
@@ -87,7 +87,7 @@ const MainComponent: React.FC<MainProps> = ({
                 )}
               </div>
               <svg xmlns="http://www.w3.org/2000/svg">
-                <title>Maintenance Icon</title>
+                <title>{`Maintenance Icon`}</title>
                 <image href={dataObj.img} width="300" height="150" />
               </svg>
             </div>

@@ -16,18 +16,18 @@ const Footer: React.FC = () => {
         <div className={styles.footer__columns}>
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <span>Contact us</span>
+              <span>{`Contact us`}</span>
             </h3>
             <nav className={styles.footer__nav}>
               <div className={styles.footer__navList}>
                 <div className={styles.contactInfo}>
                   {/* Contact information */}
-                  <p className={styles.contactInfo}>Tel: +20643135910</p>
+                  <p className={styles.contactInfo}>{`Tel: +20643135910`}</p>
                   <p className={styles.contactInfo}>
-                    E-mail: tech@infinity-marine.org
+                    {`E-mail: tech@infinity-marine.org`}
                   </p>
                   <p className={styles.contactInfo}>
-                    Reg.: reg@infinity-marine.org
+                    {` Reg.: reg@infinity-marine.org`}
                   </p>
                 </div>
 
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Facebook
+                    {`Facebook`}
                   </a>
 
                   <a
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Twitter
+                    {`Twitter`}
                   </a>
 
                   <a
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Instagram
+                    {`Instagram`}
                   </a>
                 </div>
               </div>
@@ -62,22 +62,22 @@ const Footer: React.FC = () => {
           </div>
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <span>Location</span>
+              <span>{`Location`}</span>
             </h3>
             <h5>
-              <p>25 Reda Street,</p>
-              <p>ADAM Bldg. 4th Floor,</p>
-              <p>Ismailia-Egypt</p>
+              <p>{`25 Reda Street,`}</p>
+              <p>{`ADAM Bldg. 4th Floor,`}</p>
+              <p>{`Ismailia-Egypt`}</p>
             </h5>
           </div>
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <span>Hotline</span>
+              <span>{`Hotline`}</span>
             </h3>
             <nav className={styles.footer__nav}>
               <div className={styles.footer__navList}>
                 {/* Hotline information */}
-                <h1>+201033050011</h1>
+                <h1>{`+201033050011`}</h1>
               </div>
             </nav>
           </div>

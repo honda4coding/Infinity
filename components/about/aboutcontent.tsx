@@ -91,7 +91,7 @@ const AboutContent = () => {
   return (
     <>
       <div className={styles["about-page"]}>
-        <h1>About Us</h1>
+        <h1>{`About Us`}</h1>
         <div className={styles["button-container"]}>
           {topics.map((topic, index) => (
             <button
