@@ -9,10 +9,10 @@ const Home1 = () => {
       <div className={styles.textContainer}>
         <h2>Infinity Marine Consultants (IMC)</h2>
         <p>
-          We are a leading maritime company in EGYPT, with international network
+          {` We are a leading maritime company in EGYPT, with international network
           of marine companies, Classification Societies, Flag administrations.
           With a highly specialized teamwork of Naval Architects, Masters and
-          Chief Engineers.
+          Chief Engineers.`}
         </p>
         <Button
           link="/services"

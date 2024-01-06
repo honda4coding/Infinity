@@ -20,8 +20,8 @@ const HomePage = () => {
         <div className={styles.centerContainer}>
           <h1>Services</h1>
           <h2>
-            We strive to provide an expert solution everyday in maritime
-            consultancies services.
+            {` We strive to provide an expert solution everyday in maritime
+            consultancies services.`}
           </h2>
           <div className={styles.gridContainer}>
             {/* Repeat this block to create multiple cards */}
@@ -37,8 +37,8 @@ const HomePage = () => {
               description={
                 <>
                   <p>
-                    Flag registration including processing of Navigation
-                    license, Ship station license.
+                    {`  Flag registration including processing of Navigation
+                    license, Ship station license.`}
                   </p>
                 </>
               }
@@ -57,8 +57,8 @@ const HomePage = () => {
               description={
                 <>
                   <p>
-                    Our surveyors are duly authorized form Panama, Belize, Togo,
-                    Malta, Dominica Maritime.
+                    {`Our surveyors are duly authorized form Panama, Belize, Togo,
+                    Malta, Dominica Maritime.`}
                   </p>
                 </>
               }
@@ -77,8 +77,8 @@ const HomePage = () => {
               description={
                 <>
                   <p>
-                    Registration of incorporations /off-shore companies under
-                    Panama, Belize, Marshal.
+                    {`Registration of incorporations /off-shore companies under
+                    Panama, Belize, Marshal.`}
                   </p>
                 </>
               }
@@ -96,8 +96,8 @@ const HomePage = () => {
               description={
                 <>
                   <p>
-                    Issuance of Certificates of Endorsement (COE), Certificate
-                    of competencies (COC) Continuous.
+                    {` Issuance of Certificates of Endorsement (COE), Certificate
+                    of competencies (COC) Continuous.`}
                   </p>
                 </>
               }
@@ -115,8 +115,8 @@ const HomePage = () => {
               description={
                 <>
                   <p>
-                    We are approved for the following class and statutory
-                    certification under flags of Panama.
+                    {`We are approved for the following class and statutory
+                    certification under flags of Panama.`}
                   </p>
                 </>
               }
