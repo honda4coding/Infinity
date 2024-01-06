@@ -11,11 +11,13 @@ const Contact: React.FC = () => {
   return (
     <div>
       <div className={styles.container}>
-        <div></div>
         <Image
           className={styles.img}
-          src="https://i.ibb.co/dDr1D8t/resize-170386058519758890772.jpg"
-          alt="hero"
+          src="/resize-170386058519758890772.jpg" // Replace with your image URL
+          alt="Description"
+          // width={100}
+          // height={100}
+          // objectFit="cover"
         />
 
         <div className={styles.conect}>
