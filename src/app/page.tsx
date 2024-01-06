@@ -26,8 +26,7 @@ const HomePage = () => {
           <div className={styles.gridContainer}>
             {/* Repeat this block to create multiple cards */}
             <Services
-              number={1}
-              // clickableText="Click Me"
+              // number={1}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -37,18 +36,17 @@ const HomePage = () => {
               }
               description={
                 <>
-                  <span>Ship registration services</span>
-                  <span>
+                  <p>
                     Flag registration including processing of Navigation
                     license, Ship station license.
-                  </span>
+                  </p>
                 </>
               }
-              buttonText={"hi"}
+              // number={}
+              title={"Ship registration services"}
             />
             <Services
-              number={2}
-              // clickableText="Click Me"
+              // number={2}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -58,20 +56,17 @@ const HomePage = () => {
               }
               description={
                 <>
-                  <span>Annual Safety Inspections</span>
-                  <span>
+                  <p>
                     Our surveyors are duly authorized form Panama, Belize, Togo,
                     Malta, Dominica Maritime.
-                  </span>
+                  </p>
                 </>
               }
-              buttonText={"hi"}
-
+              title={"Annual Safety Inspections"}
               // linkTo="/services"
             />
             <Services
-              number={3}
-              // clickableText="Click Me"
+              // number={3}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -81,18 +76,16 @@ const HomePage = () => {
               }
               description={
                 <>
-                  <span>Corporations</span>
-                  <span>
+                  <p>
                     Registration of incorporations /off-shore companies under
                     Panama, Belize, Marshal.
-                  </span>
+                  </p>
                 </>
               }
-              buttonText={"hi"}
+              title={"Corporations"}
             />
             <Services
-              number={4}
-              // clickableText="Click Me"
+              // number={4}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -102,18 +95,16 @@ const HomePage = () => {
               }
               description={
                 <>
-                  <span>Seafarers endorsements & certification</span>
-                  <span>
+                  <p>
                     Issuance of Certificates of Endorsement (COE), Certificate
                     of competencies (COC) Continuous.
-                  </span>
+                  </p>
                 </>
               }
-              buttonText={"hi"}
+              title={"Seafarers endorsements & certification"}
             />
             <Services
-              number={5}
-              // clickableText="Click Me"
+              // number={5}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -123,18 +114,16 @@ const HomePage = () => {
               }
               description={
                 <>
-                  <span>Class & statutory certification</span>
-                  <span>
+                  <p>
                     We are approved for the following class and statutory
                     certification under flags of Panama.
-                  </span>
+                  </p>
                 </>
               }
-              buttonText={"hi"}
+              title={"Class & statutory certification"}
             />
             <Services
-              number={6}
-              // clickableText="Click Me"
+              // number={6}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -142,24 +131,19 @@ const HomePage = () => {
                   style={{ width: "50px", height: "50px" }}
                 />
               }
-              description={
-                <>
-                  <span>ISM & ISPS training and consultancy</span>
-                  <span></span>
-                </>
-              }
-              buttonText={"hi"}
+              description={<></>}
+              title={"ISM & ISPS training and consultancy"}
             />
             {/* Repeat other Services components similarly */}
           </div>
+          <Button
+            link="/services"
+            text="Dive more"
+            size="1em"
+            onClick={handleButtonClick}
+            cursorPointer={true}
+          />
         </div>
-        <Button
-          link="/services"
-          text="Dive more"
-          size="1em"
-          onClick={handleButtonClick}
-          cursorPointer={true}
-        />
 
         <Info></Info>
       </div>

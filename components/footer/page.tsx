@@ -1,8 +1,8 @@
-// components/Footer.js
+// components/Footer.tsx
 import React from "react";
 import styles from "../../src/styles/pages/footer.module.scss";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__parralax}>
@@ -12,63 +12,73 @@ const Footer = () => {
         <div className={styles["footer__parralax-premierplan"]}></div>
         <div className={styles["footer__parralax-voiture"]}></div>
       </div>
-      <div className="container">
+      <div className={styles.container}>
         <div className={styles.footer__columns}>
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <i data-feather="shopping-bag"></i> <span>La boutique</span>
+              <span>Contact us</span>
             </h3>
             <nav className={styles.footer__nav}>
-              <ul className={styles.footer__navList}>
-                {/* Add your three links for La boutique here */}
-                <li>
-                  <a href="#">Link 1</a>
-                </li>
-                <li>
-                  <a href="#">Link 2</a>
-                </li>
-                <li>
-                  <a href="#">Link 3</a>
-                </li>
-              </ul>
+              <div className={styles.footer__navList}>
+                <div className={styles.contactInfo}>
+                  {/* Contact information */}
+                  <p className={styles.contactInfo}>Tel: +20643135910</p>
+                  <p className={styles.contactInfo}>
+                    E-mail: tech@infinity-marine.org
+                  </p>
+                  <p className={styles.contactInfo}>
+                    Reg.: reg@infinity-marine.org
+                  </p>
+                </div>
+
+                <div className={styles.socialMediaLinks}>
+                  {/* Social media links */}
+                  <a
+                    href="https://facebook.com/infinitymarine"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Facebook
+                  </a>
+
+                  <a
+                    href="https://twitter.com/infinitymarine"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Twitter
+                  </a>
+
+                  <a
+                    href="https://instagram.com/infinitymarine"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Instagram
+                  </a>
+                </div>
+              </div>
             </nav>
           </div>
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <i data-feather="share-2"></i> <span>Nos réseaux</span>
+              <span>Location</span>
             </h3>
-            <nav className={styles.footer__nav}>
-              <ul className={styles.footer__navList}>
-                {/* Add your three links for Nos réseaux here */}
-                <li>
-                  <a href="#">Link 1</a>
-                </li>
-                <li>
-                  <a href="#">Link 2</a>
-                </li>
-                <li>
-                  <a href="#">Link 3</a>
-                </li>
-              </ul>
-            </nav>
+            <h5>
+              <p>25 Reda Street,</p>
+              <p>ADAM Bldg. 4th Floor,</p>
+              <p>Ismailia-Egypt</p>
+            </h5>
           </div>
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <i data-feather="send"></i> <span>Contact</span>
+              <span>Hotline</span>
             </h3>
             <nav className={styles.footer__nav}>
-              <ul className={styles.footer__navList}>
-                {/* Add your three links for Contact here */}
-                <li>
-                  <a href="#">Link 1</a>
-                </li>
-                <li>
-                  <a href="#">Link 2</a>
-                </li>
-                <li>
-                  <a href="#">Link 3</a>
-                </li>
-              </ul>
+              <div className={styles.footer__navList}>
+                {/* Hotline information */}
+                <h1>+201033050011</h1>
+              </div>
             </nav>
           </div>
         </div>

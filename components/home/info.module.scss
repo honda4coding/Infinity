@@ -3,33 +3,38 @@
 
 /* components/Features.module.scss */
 /* components/Features.module.scss */
-/* components/Features.module.scss */
+
 .info {
   display: grid;
   justify-content: center;
   align-items: center;
 }
 .features {
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
-  background-color: aqua;
+  // background-color: aqua;
   padding-top: 3rem;
   padding-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .text {
   padding: 10px;
   max-width: 50rem;
+  text-align: center;
   h2 {
-    color: aquamarine;
+    color: rgb(0, 0, 0);
   }
   p {
-    color: bisque;
+    color: rgb(0, 0, 0);
   }
 }
 .featureCard {
+  display: flex;
   position: relative;
-  background-color: lighten(blue, 5%);
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #003366, #006699);
   padding: 1.5em; /* Increased padding for larger size */
   z-index: 5;
   border-radius: 2px;
@@ -37,7 +42,8 @@
   transition: 200ms ease-in-out;
   margin-top: -2em;
   max-width: 510px; /* Adjusted width for the cards */
-  max-height: 250px; /* Adjusted margin for overlapping */
+  max-height: 250px;
+  text-align: center; /* Adjusted margin for overlapping */
 
   p {
     color: antiquewhite;

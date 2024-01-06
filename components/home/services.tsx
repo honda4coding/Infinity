@@ -10,13 +10,15 @@ interface CardProps {
   number: number;
   buttonText: string; // Renamed clickableText to buttonText
   icon: ReactNode;
+  title: string;
   description: ReactNode;
   // linkTo: string;
 }
 
 const Services: React.FC<CardProps> = ({
   number,
-  buttonText, // Renamed clickableText to buttonText
+  buttonText,
+  title, // Include the title property
   icon,
   description,
 }) => {
@@ -26,7 +28,8 @@ const Services: React.FC<CardProps> = ({
     <div className={styles.card}>
       <div className={styles.cardContent}>
         <div className={styles.icon}>{icon}</div>
-        <p>{description}</p>
+        <h2>{title}</h2> {/* Display the title text */}
+        <h4>{description}</h4>
       </div>
       <div className={styles.cardFooter}>
         <span>{number}</span>

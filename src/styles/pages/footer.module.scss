@@ -11,7 +11,7 @@
   margin-top: 300px;
   padding: 3rem 0;
   color: white;
-  background: rgb(0, 0, 0);
+  background: #006699;
   &__columns {
     display: flex;
     justify-content: space-around;
@@ -157,7 +157,7 @@
     //   animation-duration: 1000s;
     // }
     &-premierplan {
-      background-image: url("../../../public/premierplanv3.png");
+      background-image: url("../../../public/output-onlinepngtools.png");
       animation-duration: 2000s;
       //background-position-y: 27px !important;
     }
@@ -165,5 +165,29 @@
     //   background-image: url("../../../public/second-plan.png");
     //   animation-duration: 600s;
     // }
+  }
+}
+.socialMediaLinks {
+  display: flex;
+  gap: 10px;
+}
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+
+  .footer__parralax-voiture {
+    left: 0%;
+    /* Adjust animation for smaller screens */
+  }
+
+  .footer__parralax {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    // top: -150px; /* Adjust the top position for better visibility on smaller screens */
+  }
+
+  .footer__columns {
+    flex-wrap: wrap; /* Adjust column layout for smaller screens */
+    align-items: center;
   }
 }

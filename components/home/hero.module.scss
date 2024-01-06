@@ -1,15 +1,16 @@
 .ag-maecenas_title {
+  position: relative;
   padding: 100px 0;
-  //   background-color: #00a2ff;
-  background: url("/test2.jpeg") no-repeat;
-  background-size: cover;
+  height: 255px;
 
+  // background-color: #00a2ff;
+  background: url("/test.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center center;
   text-align: center;
   font-weight: bold;
   font-size: 120px;
   color: #0099ff;
-
-  position: relative;
 
   &:before {
     content: "";
@@ -30,7 +31,11 @@
     }
   }
 }
-
+@media screen and (max-width: 768px) {
+  .ag-maecenas_title:before {
+    display: none; /* Hide the wave SVG on smaller screens */
+  }
+}
 .ag-maecenas_item {
   display: flex;
   align-items: center;

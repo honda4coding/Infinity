@@ -1,0 +1,96 @@
+// styles/about.module.scss
+.about-page {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  padding-top: 90px;
+  max-height: 100%;
+
+  h1 {
+    color: #333;
+  }
+  h2 {
+    color: red;
+  }
+  p {
+    color: green;
+  }
+
+  .button-container {
+    margin-bottom: 20px;
+
+    button {
+      margin-right: 10px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #2980b9;
+      }
+
+      &.active {
+        background-color: #2980b9;
+      }
+    }
+  }
+
+  //   .about-section {
+  //     // display: flex;
+  //     // align-items: center;
+  //     // justify-content: center;
+  //     // margin-bottom: 40px;
+
+  //     img {
+  //       max-width: 100%;
+  //       border-radius: 8px;
+  //       margin-left: 20px;
+  //     }
+  //   }
+}
+
+.about-page {
+  text-align: center;
+
+  // ... (same as before)
+
+  .additional-info {
+    margin-top: 40px;
+    width: 100vw;
+    height: 100%; /* Set the desired height for the background effect */
+    background-image: url("https://priteshgupta.com/demos/fill/waves.png");
+    background-repeat: repeat-x; /* Repeat the image horizontally */
+    background-position: 0% -110%; /* Start the image at the bottom */
+
+    animation: riseBackground 5s linear forwards; /* Adjust the duration as needed */
+  }
+
+  @keyframes riseBackground {
+    from {
+      background-position: 0% -110%; /* Start position at the bottom */
+    }
+    to {
+      background-position: 0% 100%; /* End position at the top */
+    }
+  }
+
+  .additional-info p {
+    /* Your existing styling for paragraphs */
+    color: #000000;
+    margin-bottom: 10px;
+    font-size: 40px;
+
+    @media (max-width: 768px) {
+      padding-top: 10px;
+      font-size: 20px;
+    }
+  }
+}
+
+.aboutSectionStyle {
+  width: 80%;
+}
