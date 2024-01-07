@@ -16,7 +16,7 @@ const AsideComponent: React.FC<AsideProps> = ({
   openService,
 }) => {
   const [collapsed, setCollapsed] = useState(
-    window.innerWidth <= 768 ? true : false
+    window.innerWidth <= 1059 ? true : false
   );
 
   const toggleCollapse = () => {
@@ -30,7 +30,7 @@ const AsideComponent: React.FC<AsideProps> = ({
     openService(e, title);
 
     // Set collapsed to true after a service is selected in mobile view
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 1059) {
       setCollapsed(true);
     }
   };

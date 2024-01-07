@@ -164,12 +164,12 @@ const Services: React.FC = () => {
   ) {
     setActiveTab(Service);
 
-    if (typeof window !== "undefined") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+    // if (typeof window !== "undefined") {
+    //   window.scrollTo({
+    //     top: 0,
+    //     behavior: "smooth",
+    //   });
+    // }
   }
 
   return (
