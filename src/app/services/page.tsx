@@ -163,18 +163,16 @@ const Services: React.FC = () => {
     Service: string
   ) {
     setActiveTab(Service);
-    if (typeof window !== "undefined") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
   return (
     <>
       <div className={styles.page}>
-        <div className={`${styles.tab} ${styles.sidebar}`}>
+        <div className={styles.tab}>
           {/* side bar */}
           <AsideComponent
             mainData={mainData}
@@ -182,7 +180,7 @@ const Services: React.FC = () => {
             openService={openService}
           />
         </div>
-        <div className={`${styles.container} ${styles.content}`}>
+        <div className={styles.container}>
           {/* content of tabs: */}
           <MainComponent
             mainData={mainData}
