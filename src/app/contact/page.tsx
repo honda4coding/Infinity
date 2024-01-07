@@ -15,9 +15,9 @@ const Contact: React.FC = () => {
           className={styles.img}
           src="/resize-170386058519758890772.jpg" // Replace with your image URL
           alt="Description"
-          // width={100}
-          // height={100}
-          // objectFit="cover"
+          width={300}
+          height={300}
+          objectFit="cover"
         />
 
         <div className={styles.conect}>

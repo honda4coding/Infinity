@@ -8,31 +8,31 @@ import MainComponent from "../../../components/services/main";
 const mainData = [
   {
     logo: "https://img.icons8.com/ios/50/000000/maintenance--v1.png",
-    title: "Annual Safety Inspections",
-    contentPara:
+    titile: "Annual Safety Inspections",
+    contantPara:
       "Our surveyors are duly authorized form Panama, Belize, Togo, Malta, Dominica Maritime Authority to carry out Annual Safety Inspection for aforementioned administrations.",
     img: "https://i.ibb.co/F0C4drm/istockphoto-1658925458-612x612.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/commercial-development-management.png",
-    title: "Ballast Water Management Solutions",
-    contentPara:
+    titile: "Ballast Water Management Solutions",
+    contantPara:
       "Ballast water management system (BWMS) means any system which processes ballast water to kill, render harmless, or remove organisms. The BWMS includesall ballast water treatment equipment and all associated control and monitoringequipment,We present a cost-effective solution for complying with Ballast Water Management Convention and Non-Applicability of the convention Exemptions ",
     img: "https://i.ibb.co/LDy0zcq/maxresdefault.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/case-study.png",
-    title: "CFD Finite Element Analysis",
-    contentPara:
+    titile: "CFD Finite Element Analysis",
+    contantPara:
       "A dedicated team of highly qualified and experienced engineers and analysts ensure that all our CFD work is performed to the very highest standards. CFD results are presented in professional engineering reports that are accepted by Classification Societies",
     img: "https://i.ibb.co/yy1RyY8/Marine-ship-CFD-Msc-Cradle-Ansys-Fluent-Siemens-Star-ccm.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/certificate--v1.png",
-    title: "Class and statutory certification",
-    contentPara:
+    titile: "Class and statutory certification",
+    contantPara:
       "We are approved for the following class and statutory certification under flags of Panama, Panama, Belize, Serra Leone, Bolivia, Georgia, Moldova, Togo, Saint Kitts and Nevis:",
-    contentList: [
+    contantList: [
       "Class Hull and Machinery certification",
       "International Tonnage certificate",
       "International load line certificate",
@@ -56,41 +56,41 @@ const mainData = [
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/related-companies.png",
-    title: "Corporations",
-    contentPara:
+    titile: "Corporations",
+    contantPara:
       "Registration of incorporations /off-shore companies under Panama, Belize, Marshal Island, St.Kitts &Nevies.",
     img: "https://i.ibb.co/k2WgwT5/desktop-wallpaper-business-corporate.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/manhole-cover.png",
-    title: "Insurance Cover, conditions surveys",
-    content: "",
+    titile: "Insurance Cover, conditions surveys",
+    contant: "",
     img: "",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/training.png",
-    title: "ISM and ISPS training and consultancy",
-    content: "",
+    titile: "ISM and ISPS training and consultancy",
+    contant: "",
     img: "",
   },
 
   {
     logo: "https://img.icons8.com/ios/50/000000/cargo-ship.png",
-    title: "New ships designs",
-    contentPara:
+    titile: "New ships designs",
+    contantPara:
       "We offer a complete set of design with building supervision at owner request.",
     img: "https://i.ibb.co/JB6gxNz/photo-1585713181935-d5f622cc2415.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/advanced-search.png",
-    title: "Non-destructive tests",
-    contentList: ["UT Thickness Measurements"],
+    titile: "Non-destructive tests",
+    contantList: ["UT Thickness Measurements"],
     img: "https://i.ibb.co/TbdMSH2/non-destructive.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/strike.png",
-    title: "On demand surveys",
-    contentList: [
+    titile: "On demand surveys",
+    contantList: [
       "Pre-purchase inspection",
       "On hire/ Off hire inspection",
       "Bunker Survey",
@@ -105,9 +105,9 @@ const mainData = [
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/drafting-compass.png",
-    title:
+    titile:
       "Recreation of existing ships drawings, calculations, manuals & plans",
-    contentListOne: [
+    contantListOne: [
       "Lines Plans",
       "Construction Drawings",
       "Machinery, Shafting Layouts",
@@ -116,10 +116,10 @@ const mainData = [
       "Capacity Plan",
       "Fire Control and Safety Plan",
     ],
-    contentListTwo: [
+    contantListTwo: [
       "Hydrostatics, Stability, freeboard calculations, tonnage measurements, Dwt Increment, Torsional Vibrations, etc.",
     ],
-    contentListThree: [
+    contantListThree: [
       "Intact, Damage Stability booklets",
       "Trim Sounding Tables",
       "Tonnage, Freeboard measurements",
@@ -136,15 +136,15 @@ const mainData = [
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/contract.png",
-    title: "Seafarers endorsements and certification",
-    contentPara:
+    titile: "Seafarers endorsements and certification",
+    contantPara:
       "Issuance of Certificates of Endorsement (COE), Certificate of competencies (COC) Continuous Discharge Certificate (CDC).",
     img: "https://i.ibb.co/WHhT6sk/wood-table-business-wooden.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/signing-a-document.png",
-    title: "Ship registration services",
-    contentList: [
+    titile: "Ship registration services",
+    contantList: [
       "Flag registration including processing of Navigation license, Ship station license, Minimum safe manning and Continuous synopsis record under Panama, Serra Leone, Bolivia, Georgia, Moldova and St. Vincent, Togo, Belize, Dominica, Malta, and Saint Kitts and Nevis",
       "Registration of mortgages",
       "Registration of title",
@@ -158,12 +158,8 @@ const mainData = [
 
 const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
-  function openService(
-    evt: React.MouseEvent<HTMLButtonElement>,
-    Service: string
-  ) {
-    setActiveTab(Service);
-
+  function openServ(evt: React.MouseEvent<HTMLButtonElement>, Serv: string) {
+    setActiveTab(Serv);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -172,23 +168,20 @@ const Services: React.FC = () => {
 
   return (
     <>
-      <div className={styles.page}>
-        <div className={styles.tab}>
-          {/* side bar */}
-          <AsideComponent
-            mainData={mainData}
-            activeTab={activeTab}
-            openService={openService}
-          />
-        </div>
-        <div className={styles.container}>
-          {/* content of tabs: */}
-          <MainComponent
-            mainData={mainData}
-            activeTab={activeTab}
-            openService={openService}
-          />
-        </div>
+      <div className={styles.tab}>
+        {/* side bar */}
+        <AsideComponent
+          mainData={mainData}
+          activeTab={activeTab}
+          openServ={openServ}
+        />
+
+        {/* Contant of tabs: */}
+        <MainComponent
+          mainData={mainData}
+          activeTab={activeTab}
+          openServ={openServ}
+        />
       </div>
     </>
   );

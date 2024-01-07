@@ -19,12 +19,12 @@ const Info: React.FC = () => {
     <>
       <div className={styles.text}>
         <h1>{`About us`}</h1>
-        <h4>
+        <h3>
           {`Embark on a journey with Infinity Marine as we navigate beyond the
           ordinary, driven by our maritime aspirations. Our commitment goes
           beyond the waves, shaping a future where excellence, innovation, and
           sustainability converge on the vast canvas of the sea.`}
-        </h4>
+        </h3>
       </div>
       <div className={styles.features}>
         <div className={styles.cardsContainer}>

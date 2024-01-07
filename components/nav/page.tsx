@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
       <div className={styles.logo}>
         <Link href="/">
           <div>
-            <Image src="/logo.jpg" alt="Clock Icon" width={50} height={50} />
+            <Image src="/logo.png" alt="Clock Icon" width={110} height={80} />
           </div>
         </Link>
 

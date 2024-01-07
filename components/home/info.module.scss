@@ -9,6 +9,9 @@
   justify-content: center;
   align-items: center;
 }
+.text h1 {
+  font-size: 3.5rem;
+}
 .features {
   display: grid;
   justify-content: center;
@@ -44,6 +47,7 @@
   max-width: 250px; /* Adjusted width for the cards */
   max-height: 250px;
   text-align: center; /* Adjusted margin for overlapping */
+  border-radius: 20px;
 
   p {
     color: antiquewhite;

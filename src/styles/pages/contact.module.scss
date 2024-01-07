@@ -34,7 +34,7 @@
 }
 
 .conect h2:nth-child(2) {
-  color: rgb(0, 186, 243);
+  color: rgb(255, 255, 255);
   animation: animate 3s ease-in-out infinite;
 
   // position: absolute;
@@ -82,7 +82,7 @@
   gap: 40px;
   margin-top: 1vw;
   align-content: space-around;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .info_one,

@@ -1,6 +1,11 @@
 // components/Footer.tsx
 import React from "react";
 import styles from "../../src/styles/pages/footer.module.scss";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer: React.FC = () => {
   return (
@@ -16,7 +21,7 @@ const Footer: React.FC = () => {
         <div className={styles.footer__columns}>
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <span>{`Contact us`}</span>
+              <span><FontAwesomeIcon icon={faEnvelope} /> {`Contact us`}</span>
             </h3>
             <nav className={styles.footer__nav}>
               <div className={styles.footer__navList}>
@@ -62,7 +67,7 @@ const Footer: React.FC = () => {
           </div>
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <span>{`Location`}</span>
+              <span> <FontAwesomeIcon icon={faLocationDot} /> {`Location`}</span>
             </h3>
             <h5>
               <p>{`25 Reda Street,`}</p>
@@ -72,7 +77,7 @@ const Footer: React.FC = () => {
           </div>
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <span>{`Hotline`}</span>
+              <span><FontAwesomeIcon icon={faPhone} /> {`Hotline`}</span>
             </h3>
             <nav className={styles.footer__nav}>
               <div className={styles.footer__navList}>
