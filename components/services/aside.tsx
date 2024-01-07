@@ -4,7 +4,10 @@ import styles from "./aside.module.scss";
 interface AsideProps {
   mainData: { title: string }[];
   activeTab: string;
-  openService: (evt: React.MouseEvent<HTMLButtonElement>, Serv: string) => void;
+  openService: (
+    evt: React.MouseEvent<HTMLButtonElement>,
+    Service: string
+  ) => void;
 }
 
 const AsideComponent: React.FC<AsideProps> = ({
