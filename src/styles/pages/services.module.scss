@@ -1,7 +1,7 @@
 .tab {
   background-color: FCF8EC;
   width: auto;
-  height: 100vh;
+  height: 60vh;
   padding: 50px;
   display: flex;
   flex-direction: row;
@@ -33,7 +33,7 @@
       background-color: whitesmoke;
       color: black;
       padding: 15px 10px 15px 8px;
-      width: 90%;
+      width: 80%;
       height: 60px;
       outline: none;
       margin: 5px;
@@ -44,6 +44,9 @@
       transition: 0.3s;
       border: 0.01px solid white;
       border-radius: 5%;
+      font-size: 15px;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
 
       &:hover {
         background-color: #00303f;
@@ -75,11 +78,22 @@
 
       .textDivChild {
         display: flex;
+        flex-direction: column;
         .textDivChildContant {
           width: 60%;
+          
           font-family: "Open Sans, sans-serif";
-          font-size: small;
-          color: rgba(0, 0, 0, 0.54);
+          font-size: 19px;
+          color: rgba(0, 0, 0, 0.64);
+        }
+        svg {
+          overflow: visible !important;
+
+        }
+        image {
+          width: 500px;
+          height: 250px;
+          border-radius: 60px;
         }
       }
 
@@ -93,9 +107,8 @@
 @media screen and (min-width: 1400px) {
   /* Apply styles for screens larger than 1200px */
   .tab {
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 50px;
+ 
+    padding-top: 100px;
     padding-bottom: 50px;
   }
 }
@@ -103,7 +116,7 @@
 @media (max-width: 991px) {
   .tab {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 25px;
     justify-content: center;
     align-items: center;
@@ -120,6 +133,10 @@
       .textDiv {
         .textDivChild {
           display: flex;
+        }
+        image {
+          width: 100% !important;
+          height: 100% !important;
         }
       }
     }
@@ -262,9 +279,13 @@
     width: 300px;
     right: -150px;
   }
-
+.tab {
+  height: 100vh;
+}
   .toggleButton {
     width: 300px;
     right: -150px;
+    margin-top: 180px;
+    margin-bottom: 40px;
   }
 }

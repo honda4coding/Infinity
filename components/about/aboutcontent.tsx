@@ -14,6 +14,7 @@ const topics = [
     imageSrc: "/test.jpeg",
     description:
       "Infinity marine COnsultants (IMC) is in the heart position of the maritime industry in EGYPT, with a highly specialized teamwork, including Naval Architects, Masters and Chief Engineers.",
+      
   },
   {
     title: "Our Vision",

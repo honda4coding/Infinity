@@ -11,7 +11,7 @@
   text-align: center;
   font-weight: bold;
   font-size: 160px;
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   letter-spacing: 60px; /* Adjust the value according to your preference */
 
   &:before {
@@ -38,8 +38,6 @@
   .ag-maecenas_title:before {
     display: none; /* Hide the wave SVG on smaller screens */
   }
-
-  
 }
 .ag-maecenas_item {
   display: flex;
@@ -66,8 +64,8 @@
 
 @media screen and (max-width: 979px) {
   .ag-maecenas_title {
-    font-size: 90px;
-
+    font-size: 85px;
+    letter-spacing: 24px;
     &:before {
       height: 90px;
     }
@@ -79,8 +77,8 @@
 
 @media only screen and (max-width: 639px) {
   .ag-maecenas_title {
-    font-size: 60px;
-
+    font-size: 55px;
+    letter-spacing: 14px;
     &:before {
       height: 60px;
     }
@@ -90,8 +88,7 @@
 @media only screen and (max-width: 479px) {
   .ag-maecenas_title {
     font-size: 55px;
-    letter-spacing: 24px;
-
+    letter-spacing: 14px;
 
     &:before {
       height: 40px;

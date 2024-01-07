@@ -69,12 +69,14 @@ const Navbar: React.FC = () => {
         <div className={styles.line}></div>
         <div className={styles.line}></div>
       </label>
-
       {/* Button to Toggle Opening Hours */}
       <div className={styles.openingTimesButton} onClick={toggleOpeningTimes}>
-        <Image src={"/clock.svg"} alt="Clock Icon" width={50} height={50} />
-      </div>
+        <div className={styles.openTimeLogoText}>
+          <h4>Opening times</h4>
+        </div>
 
+        <Image src={"/clock.svg"} alt="Clock Icon" width={35} height={35} />
+      </div>
       {/* Display opening times if showOpeningTimes is true and menu is not open */}
       {showOpeningTimes && !isMenuOpen && (
         <div
