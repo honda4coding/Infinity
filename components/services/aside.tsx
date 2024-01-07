@@ -27,7 +27,7 @@ const AsideComponent: React.FC<AsideProps> = ({
   ) => {
     openServ(e, titile);
     // Set collapsed to true after a service is selected in mobile view
-    if (window.innerWidth <= 990) {
+    if (typeof window !== "undefined" && window.innerWidth <= 990) {
       setCollapsed(true);
     }
   };
