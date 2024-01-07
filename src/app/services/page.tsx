@@ -160,11 +160,13 @@ const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
   function openServ(evt: React.MouseEvent<HTMLButtonElement>, Serv: string) {
     setActiveTab(Serv);
-    if (typeof window !== 'undefined') {
+
+    if (typeof window !== "undefined") {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
+    }
   }
 
   return (
