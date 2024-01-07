@@ -162,11 +162,15 @@ const Services: React.FC = () => {
     evt: React.MouseEvent<HTMLButtonElement>,
     Service: string
   ) {
-    setActiveTab(Service);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    React.useEffect(() => {
+      // window is accessible here.
+      setActiveTab(Service);
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      // console.log("window.innerHeight", window.innerHeight);
+    }, []);
   }
 
   return (
