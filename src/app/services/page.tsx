@@ -172,7 +172,7 @@ const Services: React.FC = () => {
   return (
     <>
       <div className={styles.page}>
-        <div className={styles.tab}>
+        <div className={`${styles.tab} ${styles.sidebar}`}>
           {/* side bar */}
           <AsideComponent
             mainData={mainData}
@@ -180,7 +180,7 @@ const Services: React.FC = () => {
             openService={openService}
           />
         </div>
-        <div className={styles.container}>
+        <div className={`${styles.container} ${styles.content}`}>
           {/* content of tabs: */}
           <MainComponent
             mainData={mainData}

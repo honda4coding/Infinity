@@ -1,4 +1,4 @@
-// MainComponent.tsx
+// // MainComponent.tsx
 import React from "react";
 import styles from "./main.module.scss";
 

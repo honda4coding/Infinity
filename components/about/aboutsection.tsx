@@ -15,13 +15,15 @@ const AboutSection: React.FC<AboutSectionProps> = ({
   description,
 }) => {
   return (
-    <div className={styles["about-section"]}>
-      <div>
-        <h2>{title}</h2>
-        <p> {description}</p>
+    <>
+      <div className={styles["about-section"]}>
+        <div>
+          <h2>{title}</h2>
+          <p> {description}</p>
+        </div>
+        <Image src={imageSrc} alt={`${title} Image`} width={100} height={100} />
       </div>
-      <Image src={imageSrc} alt={`${title} Image`} />
-    </div>
+    </>
   );
 };
 

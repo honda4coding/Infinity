@@ -93,7 +93,11 @@
     }
   }
 }
-
+@media (max-width: 1059px) {
+  .content {
+    margin-top: -1px;
+  }
+}
 // @media (max-width: 991px) {
 // .tab {
 //   display: flex;

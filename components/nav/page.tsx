@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "../../src/styles/pages/nav.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Navbar: React.FC = () => {
   // State to control visibility of the opening times
@@ -33,7 +34,13 @@ const Navbar: React.FC = () => {
     <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}>
       {/* Navbar Logo */}
       <div className={styles.logo}>
-        <strong>NAVBAR</strong>
+        <Link href="/">
+          <div>
+            <Image src="/logo.jpg" alt="Clock Icon" width={50} height={50} />
+          </div>
+        </Link>
+
+        {/* <strong>Infinity</strong> */}
       </div>
 
       {/* Navbar Links */}
