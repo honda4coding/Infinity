@@ -63,7 +63,7 @@ const AsideComponent: React.FC<AsideProps> = ({
   openService,
 }) => {
   const [collapsed, setCollapsed] = useState(
-    window.innerWidth <= 1059 ? true : false
+    typeof window !== "undefined" && window.innerWidth <= 1059 ? true : false
   );
 
   const toggleCollapse = () => {
@@ -83,6 +83,8 @@ const AsideComponent: React.FC<AsideProps> = ({
   };
 
   useEffect(() => {
+    if (typeof window === "undefined") return; // Check if 'window' is defined
+
     const handleOutsideClick = (e: MouseEvent) => {
       // Check if the click occurred outside the services container
       const container = document.querySelector(`.${styles.container}`);
