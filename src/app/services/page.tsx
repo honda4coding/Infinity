@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "../../styles/pages/services.module.scss";
 import Image from "next/image";
 import AsideComponent from "../../../components/services/aside";
@@ -155,24 +155,20 @@ const mainData = [
     img: "https://i.ibb.co/D4ksJGw/ship-registration-e1623403355938.jpg",
   },
 ];
+
 const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
-
   function openService(
-    _evt: React.MouseEvent<HTMLButtonElement>,
+    evt: React.MouseEvent<HTMLButtonElement>,
     Service: string
   ) {
     setActiveTab(Service);
-  }
 
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  }, [activeTab]); // Run when activeTab changes
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
 
   return (
     <>
