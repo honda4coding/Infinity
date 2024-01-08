@@ -36,11 +36,18 @@ const Navbar: React.FC = () => {
       <div className={styles.logo}>
         <Link href="/">
           <div>
-            <Image src="/logo.png" alt="Clock Icon" width={110} height={80} />
+            <Image src="/logo.png" alt="Clock Icon" width={110} height={110} />
           </div>
         </Link>
 
         {/* <strong>Infinity</strong> */}
+      </div>
+      <div className={styles.openingTimesButton} onClick={toggleOpeningTimes}>
+        <div className={styles.openTimeLogoText}>
+          <h6>OPENING HOURS</h6>
+        </div>
+
+        <Image src={"/clock.svg"} alt="Clock Icon" width={20} height={20} />
       </div>
 
       {/* Navbar Links */}
@@ -49,11 +56,10 @@ const Navbar: React.FC = () => {
           <a href="/">{`Home`}</a>
         </li>
         <li>
-          <a href="/services">{`Services`}</a>
-        </li>
-        <li>
           <a href="/about">{`About`}</a>
         </li>
+        <a href="/services">{`Services`}</a>
+        <li></li>
 
         <li>
           <a href="/contact">{`Contact`}</a>
@@ -70,13 +76,6 @@ const Navbar: React.FC = () => {
         <div className={styles.line}></div>
       </label>
       {/* Button to Toggle Opening Hours */}
-      <div className={styles.openingTimesButton} onClick={toggleOpeningTimes}>
-        <div className={styles.openTimeLogoText}>
-          <h6>OPENING HOURS</h6>
-        </div>
-
-        <Image src={"/clock.svg"} alt="Clock Icon" width={20} height={20} />
-      </div>
       {/* Display opening times if showOpeningTimes is true and menu is not open */}
       {showOpeningTimes && !isMenuOpen && (
         <div

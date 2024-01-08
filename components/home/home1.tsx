@@ -24,7 +24,8 @@ const Home1 = () => {
         />
       </div>
       <div className={styles.imageContainer}>
-        <Image src="/logo_sign.png" alt="Icon" width={500} height={500} />
+        {/* <Image src="/logo_sign.png" alt="Icon" width={500} height={500} /> */}
+        <Image src="/INFINITY2.jpg" alt="Icon" width={500} height={500} />
       </div>
     </div>
   );

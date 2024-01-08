@@ -1,13 +1,15 @@
 /* styles/Navbar.module.scss */
 .nav {
+  display: flex;
   position: fixed;
   z-index: 10;
   left: 0;
   right: 0;
   top: 0;
   font-family: sans-serif;
+  justify-content: space-between;
   // padding: 1px;
-  height: 80px;
+  height: 110px;
   // border-radius: 10px;
   // border: 4px solid #ccc;
   background-color: rgb(255, 255, 255, 0.85);
@@ -15,8 +17,8 @@
 
 .logo {
   float: left;
-  width: 40%;
-  height: 100%;
+  // width: 40%;
+  // height: 100%;
   display: flex;
   align-items: center;
   font-size: 24px;
@@ -24,13 +26,13 @@
 }
 
 .links {
-  float: right;
+  // float: right;
   padding: 0;
   margin: 0;
-  width: 10%;
+  // width: 10%;
   height: 100%;
   display: flex;
-  justify-content: flex-end;
+  // justify-content: flex-start;
 
   align-items: center;
   transition: all 0.5s ease-in-out;
@@ -83,6 +85,7 @@
 
   .links {
     float: none;
+    display: grid;
     position: fixed;
     z-index: 9;
     left: 0;
@@ -91,8 +94,9 @@
     bottom: 100%;
     width: auto;
     height: auto;
-    flex-direction: column;
-    justify-content: space-evenly;
+    // flex-direction: column;
+    justify-content: center;
+    justify-items: center;
     background: linear-gradient(45deg, #003366, #006699);
     overflow: hidden;
     box-sizing: border-box;
@@ -132,19 +136,19 @@
   cursor: pointer;
   color: #000000;
   font-weight: bold;
-  width: 150px;
-  height: 50px;
-  margin-top: 10px;
+  width: auto;
+  // height: 50px;
+  // margin-top: 10px;
   align-items: center;
-  transform: translateX(200%);
-
+  // transform: translateX(200%);
+  white-space: nowrap;
   /* Other styles */
 }
 
 .openingTimes {
   display: none;
   position: absolute;
-  top: 100px; /* Adjust positioning as needed */
+  top: 120px; /* Adjust positioning as needed */
   // left: 2%; /* Adjust positioning as needed */
   background-color: #fff;
   color: #000;
@@ -174,36 +178,19 @@
 .openingTimes.active {
   display: block;
 }
-@media screen and (max-width: 2000px) {
-  .openingTimesButton {
-    transform: translateX(85%);
-  }
-}
-@media screen and (max-width: 1500px) {
-  .openingTimesButton {
-    transform: translateX(30%);
-  }
-}
-@media screen and (max-width: 949px) {
-  .openingTimesButton {
-    transform: translateX(-40%);
-  }
-}
 @media screen and (max-width: 768px) {
-  .openingTimesButton {
-    position: fixed;
-    margin-top: -60px;
-    margin-left: 64px;
+  .nav {
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
-  .openingTimes {
-    top: 150px;
+  .logo {
+    margin: 0 40% 0 0;
+  }
+  .openingTimesButton {
+    padding-left: 5px;
   }
 }
-//   .openingTimes {
-//     top: 150px; /* Adjust positioning as needed */
-//   }
-// }
-// /* styles/Navbar.module.scss */
+/* styles/Navbar.module.scss */
 // .nav {
 //   position: fixed;
 //   z-index: 10;
@@ -212,7 +199,7 @@
 //   top: 0;
 //   font-family: sans-serif;
 //   // padding: 1px;
-//   height: 80px;
+//   height: 110px;
 //   // border-radius: 10px;
 //   // border: 4px solid #ccc;
 //   background-color: rgb(255, 255, 255, 0.85);
@@ -232,7 +219,7 @@
 //   float: right;
 //   padding: 0;
 //   margin: 0;
-//   width: 60%;
+//   width: 10%;
 //   height: 100%;
 //   display: flex;
 //   justify-content: flex-end;
@@ -335,19 +322,21 @@
 // .openingTimesButton {
 //   display: flex;
 //   cursor: pointer;
-//   color: #fff;
+//   color: #000000;
 //   font-weight: bold;
-//   width: 50px;
+//   width: 150px;
 //   height: 50px;
-//   // padding-top: 10px;
+//   margin-top: 10px;
+//   align-items: center;
+//   transform: translateX(200%);
+
 //   /* Other styles */
-//   margin-left: 10px;
 // }
 
 // .openingTimes {
 //   display: none;
 //   position: absolute;
-//   // top: 150px; /* Adjust positioning as needed */
+//   top: 100px; /* Adjust positioning as needed */
 //   // left: 2%; /* Adjust positioning as needed */
 //   background-color: #fff;
 //   color: #000;
@@ -376,4 +365,29 @@
 // /* Apply 'active' class to display the opening times */
 // .openingTimes.active {
 //   display: block;
+// }
+// @media screen and (max-width: 2000px) {
+//   .openingTimesButton {
+//     transform: translateX(85%);
+//   }
+// }
+// @media screen and (max-width: 1500px) {
+//   .openingTimesButton {
+//     transform: translateX(30%);
+//   }
+// }
+// @media screen and (max-width: 949px) {
+//   .openingTimesButton {
+//     transform: translateX(-40%);
+//   }
+// }
+// @media screen and (max-width: 768px) {
+//   .openingTimesButton {
+//     position: fixed;
+//     margin-top: -60px;
+//     margin-left: 64px;
+//   }
+//   .openingTimes {
+//     top: 150px;
+//   }
 // }
