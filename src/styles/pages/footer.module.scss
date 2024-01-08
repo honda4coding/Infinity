@@ -2,7 +2,7 @@
 
 .container {
   width: 100%;
-  max-width: 1600px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -14,8 +14,8 @@
   background: #006699;
   &__columns {
     display: flex;
-    justify-content: space-around;
-    gap: 2rem; // Adjust the gap as needed
+    justify-content: center;
+    gap: 10rem; // Adjust the gap as needed
   }
   &__col {
     &-title {
@@ -143,9 +143,9 @@
       bottom: 10px;
       left: 50%;
       margin-left: 250px;
-      height: 100px;
-      width: 206px;
-      background: url("../../../public/ship-boat-svgrepo-com.svg");
+      height: 70px;
+      width: 100px;
+      background: url("../../../public/cargo-ship-svgrepo-com\ \(1\).svg");
       background-repeat: no-repeat;
       animation: voiture 1s linear infinite;
     }
@@ -185,9 +185,27 @@
     justify-content: center;
     // top: -150px; /* Adjust the top position for better visibility on smaller screens */
   }
-
+}
+@media only screen and (max-width: 599px) {
   .footer__columns {
-    flex-wrap: wrap; /* Adjust column layout for smaller screens */
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
   }
+  .container {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1099px) {
+  .footer__columns {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(357px, 1fr)
+    ); /* Two equal-width columns */
+    justify-items: center;
+    gap: 15px;
+  }
+}
+.socialText {
+  text-align: center;
 }

@@ -10,6 +10,12 @@ import Button from "../../components/common/readmore";
 import Hero from "../../components/home/hero";
 import Image from "next/image";
 
+const mainData = [
+  {
+    logo: "https://img.icons8.com/ios/50/000000/maintenance--v1.png", // Local path
+  },
+];
+
 const HomePage = () => {
   function handleButtonClick(): void {}
 

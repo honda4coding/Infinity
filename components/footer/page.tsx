@@ -1,4 +1,3 @@
-// components/Footer.tsx
 import React from "react";
 import styles from "../../src/styles/pages/footer.module.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -6,68 +5,46 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SocialMedia from "../common/social";
 
 const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__parralax}>
-        <div className={styles["footer__parralax-trees"]}></div>
-        <div className={styles["footer__parralax-moto"]}></div>
-        <div className={styles["footer__parralax-secondplan"]}></div>
         <div className={styles["footer__parralax-premierplan"]}></div>
         <div className={styles["footer__parralax-voiture"]}></div>
       </div>
       <div className={styles.container}>
         <div className={styles.footer__columns}>
+          {/* Contact us column */}
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <span><FontAwesomeIcon icon={faEnvelope} /> {`Contact us`}</span>
+              <span>
+                <FontAwesomeIcon icon={faEnvelope} /> {`Contact us`}
+              </span>
             </h3>
             <nav className={styles.footer__nav}>
+              {/* Contact information */}
               <div className={styles.footer__navList}>
-                <div className={styles.contactInfo}>
-                  {/* Contact information */}
-                  <p className={styles.contactInfo}>{`Tel: +20643135910`}</p>
-                  <p className={styles.contactInfo}>
-                    {`E-mail: tech@infinity-marine.org`}
-                  </p>
-                  <p className={styles.contactInfo}>
-                    {` Reg.: reg@infinity-marine.org`}
-                  </p>
-                </div>
-
-                <div className={styles.socialMediaLinks}>
-                  {/* Social media links */}
-                  <a
-                    href="https://facebook.com/infinitymarine"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {`Facebook`}
-                  </a>
-
-                  <a
-                    href="https://twitter.com/infinitymarine"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {`Twitter`}
-                  </a>
-
-                  <a
-                    href="https://instagram.com/infinitymarine"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {`Instagram`}
-                  </a>
-                </div>
+                {/* Contact information */}
+                <p className={styles.contactInfo}>{`Tel: +20643135910`}</p>
+                <p className={styles.contactInfo}>
+                  {`E-mail: tech@infinity-marine.org`}
+                </p>
+                <p className={styles.contactInfo}>
+                  {` Reg.: reg@infinity-marine.org`}
+                </p>
               </div>
+              {/* Social media links */}
             </nav>
           </div>
+
+          {/* Location column */}
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <span> <FontAwesomeIcon icon={faLocationDot} /> {`Location`}</span>
+              <span>
+                <FontAwesomeIcon icon={faLocationDot} /> {`Location`}
+              </span>
             </h3>
             <h5>
               <p>{`25 Reda Street,`}</p>
@@ -75,16 +52,54 @@ const Footer: React.FC = () => {
               <p>{`Ismailia-Egypt`}</p>
             </h5>
           </div>
+
+          {/* Hotline column */}
           <div className={styles.footer__col}>
             <h3 className={styles.footer__colTitle}>
-              <span><FontAwesomeIcon icon={faPhone} /> {`Hotline`}</span>
+              <span>
+                <FontAwesomeIcon icon={faPhone} /> {`Hotline`}
+              </span>
             </h3>
             <nav className={styles.footer__nav}>
               <div className={styles.footer__navList}>
-                {/* Hotline information */}
                 <h1>{`+201033050011`}</h1>
               </div>
             </nav>
+          </div>
+
+          {/* Separate column for social media links */}
+          <div className={styles.socialText}>
+            <div className={styles.footer__col}>
+              <h3 className={styles.footer__colTitle}>
+                <span>Social</span>
+              </h3>
+              <div className={styles.footer__nav}>
+                <div className={styles.socialMediaLinks}>
+                  {/* <a
+                  href="https://facebook.com/infinitymarine"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  {`Facebook`}
+                  </a>
+                  <a
+                  href="https://www.linkedin.com/infinitymarine"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  {`LinkedIn`}
+                  </a>
+                  <a
+                  href="https://twitter.com/infinitymarine"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                  {`Twitter`}
+                </a> */}
+                  <SocialMedia></SocialMedia>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         {/* <div className={styles.footer__copyrights}>

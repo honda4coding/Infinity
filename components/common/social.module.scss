@@ -1,0 +1,160 @@
+.social {
+  margin: 0;
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 25px;
+
+  &-item {
+    margin: 0 30px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .social-link {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      text-align: center;
+      transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+      transition: all 0.4s ease;
+
+      &::before {
+        top: 5px;
+        left: -10px;
+        height: 100%;
+        width: 10px;
+        background: #b1b1b1;
+        transform: rotate(0deg) skewY(-45deg);
+      }
+
+      &::after {
+        top: 40px;
+        left: -5px;
+        height: 10px;
+        width: 100%;
+        background: #b1b1b1;
+        transform: rotate(0deg) skewX(-45deg);
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        transition: all 0.4s ease;
+      }
+
+      &:hover {
+        background-color: #3b5998;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        background: #ffffff;
+      }
+    }
+
+    // Additional styles for different social media icons
+    &:nth-child(1) .social-link {
+      background-color: #ffffff;
+
+      &:hover {
+        background-color: #3b5998;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        background: #3b5998;
+      }
+    }
+
+    &:nth-child(2) .social-link {
+      background-color: #ffffff;
+
+      &:hover {
+        background-color: #1da1f2;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        background: #1da1f3;
+      }
+    }
+
+    &:nth-child(3) .social-link {
+      background-color: #ffffff;
+
+      &:hover {
+        background-color: #0e76a8;
+      }
+
+      &:hover::before,
+      &:hover::after {
+        background: #0e76a9;
+      }
+    }
+  }
+}
+
+// SocialMedia.module.scss
+.social {
+  /* ... your other styles */
+
+  &-link {
+    /* Base styles for the social link */
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Other base styles you might have */
+
+    // Facebook styles
+    &.facebook {
+      color: #3b5998;
+    }
+
+    // Twitter styles
+    &.twitter {
+      color: #1da1f3;
+    }
+
+    // LinkedIn styles
+    &.linkedin {
+      color: #0e76a9;
+    }
+
+    // Hover styles for each social media icon
+    &:hover {
+      // Facebook hover
+      &.facebook {
+        // Define the hover styles for Facebook
+        // For example, change the background color on hover
+        color: white;
+      }
+
+      // Twitter hover
+      &.twitter {
+        // Define the hover styles for Twitter
+        // For example, change the background color on hover
+        color: white;
+      }
+
+      // LinkedIn hover
+      &.linkedin {
+        // Define the hover styles for LinkedIn
+        // For example, change the background color on hover
+        color: white;
+      }
+    }
+  }
+}

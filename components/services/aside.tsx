@@ -1,3 +1,102 @@
+// import React, { useEffect, useState } from "react";
+// import styles from "./aside.module.scss";
+
+// interface AsideProps {
+//   mainData: { title: string }[];
+//   activeTab: string;
+//   openService: (
+//     evt: React.MouseEvent<HTMLButtonElement>,
+//     Service: string
+//   ) => void;
+// }
+
+// const AsideComponent: React.FC<AsideProps> = ({
+//   mainData,
+//   activeTab,
+//   openService,
+// }) => {
+//   const [collapsed, setCollapsed] = useState(window.innerWidth <= 1059);
+
+//   const toggleCollapse = () => {
+//     setCollapsed(!collapsed);
+//   };
+
+//   const handleServiceClick = (
+//     e: React.MouseEvent<HTMLButtonElement>,
+//     title: string
+//   ) => {
+//     openService(e, title);
+
+//     if (window.innerWidth <= 1059) {
+//       setCollapsed(true);
+//     }
+//   };
+//   useEffect(() => {
+//     const handleOutsideClick = (e: MouseEvent) => {
+//       if (window.innerWidth <= 1059 && !collapsed) {
+//         const container = document.querySelector(`.${styles.container}`);
+//         if (container && !container.contains(e.target as Node)) {
+//           setCollapsed(true);
+//         }
+//       }
+//     };
+
+//     // Add event listener for clicks on the entire document
+//     document.addEventListener("click", handleOutsideClick);
+
+//     return () => {
+//       // Remove event listener when the component unmounts
+//       document.removeEventListener("click", handleOutsideClick);
+//     };
+//   }, [collapsed]); // Dependency on 'collapsed' to update the listener
+
+//   // ... rest of the component remains the same
+
+//   useEffect(() => {
+//     const handleResize = () => {
+//       setCollapsed(window.innerWidth <= 1059);
+//     };
+
+//     window.addEventListener("resize", handleResize);
+
+//     return () => {
+//       window.removeEventListener("resize", handleResize);
+//     };
+//   }, []);
+
+//   return (
+//     <div className={styles.container}>
+//       {/* Show Services button always visible on smaller screens */}
+//       <button
+//         onClick={toggleCollapse}
+//         className={`${styles.toggleButton} ${
+//           window.innerWidth <= 1059 ? "" : styles.hidden
+//         }`}
+//       >
+//         {collapsed ? "Show Services" : "Hide Services"}
+//       </button>
+//       {/* Services list always visible on larger screens */}
+//       <aside className={`${styles.btn} ${collapsed ? styles.collapsed : ""}`}>
+//         {mainData.map((dataObj) => (
+//           <button
+//             className={
+//               activeTab === dataObj.title
+//                 ? `${styles.tabLinks} ${styles.active}`
+//                 : styles.tabLinks
+//             }
+//             onClick={(e) => handleServiceClick(e, dataObj.title)}
+//             key={dataObj.title}
+//           >
+//             {dataObj.title}
+//           </button>
+//         ))}
+//       </aside>
+//     </div>
+//   );
+// };
+
+// export default AsideComponent;
+
 // AsideComponent.tsx
 import React, { useState, useEffect } from "react";
 import styles from "../../src/styles/pages/services.module.scss";

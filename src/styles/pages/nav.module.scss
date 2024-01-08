@@ -176,7 +176,7 @@
 }
 @media screen and (max-width: 2000px) {
   .openingTimesButton {
-    transform: translateX(120%);
+    transform: translateX(85%);
   }
 }
 @media screen and (max-width: 1500px) {
@@ -191,7 +191,9 @@
 }
 @media screen and (max-width: 768px) {
   .openingTimesButton {
-    margin-left: 80px;
+    position: fixed;
+    margin-top: -60px;
+    margin-left: 64px;
   }
   .openingTimes {
     top: 150px;

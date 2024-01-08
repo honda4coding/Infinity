@@ -6,15 +6,20 @@
   width: 100%;
   padding-top: 90px;
   max-height: 100%;
-
+  margin-bottom: 200px;
   h1 {
     color: #000000;
+    margin-top: 80px;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 80px;
   }
   h2 {
     color: rgb(0, 0, 0);
   }
   p {
     color: rgb(0, 0, 0);
+    font-size: large;
   }
 
   .button-container {
@@ -22,20 +27,17 @@
 
     button {
       margin: 10px;
-      padding: 8px 16px;
+      padding: 19px;
       border: none;
-      background: linear-gradient(45deg, #003366, #006699);
+      border-radius: 10px;
+      width: 200px;
+      background: linear-gradient(45deg, #8db2d7, #006699);
       color: #fff;
+      font-size: 18px;
       cursor: pointer;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: #2980b9;
-      }
-
-      &.active {
-        background-color: #0096fa;
-      }
+    }
+    button:hover {
+      background: linear-gradient(45deg, #020d13, #5f7891);
     }
   }
 
@@ -52,6 +54,36 @@
   //     }
   //   }
 }
+.focus-in-expand {
+  animation: focus-in-expand 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    both;
+}
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
 
 .about-page {
   text-align: center;
@@ -59,14 +91,16 @@
   // ... (same as before)
 
   .additional-info {
-    margin-top: 40px;
+    margin-top: 120px;
     width: 100vw;
-    height: 100%; /* Set the desired height for the background effect */
-    background-image: url("https://priteshgupta.com/demos/fill/waves.png");
+    height: 80%; /* Set the desired height for the background effect */
+    background-image: url("../../public/output-onlinepngtool.png");
+    // background-image: url("https://priteshgupta.com/demos/fill/waves.png");
+
     background-repeat: repeat-x; /* Repeat the image horizontally */
     background-position: 0% -110%; /* Start the image at the bottom */
 
-    animation: riseBackground 5s linear forwards; /* Adjust the duration as needed */
+    animation: riseBackground 7s infinite both; /* Adjust the duration as needed */
   }
 
   @keyframes riseBackground {
@@ -94,3 +128,101 @@
 .aboutSectionStyle {
   width: 80%;
 }
+// // styles/about.module.scss
+// .about-page {
+//   display: grid;
+//   justify-content: center;
+//   justify-items: center;
+//   width: 100%;
+//   padding-top: 90px;
+//   max-height: 100%;
+
+//   h1 {
+//     color: #000000;
+//   }
+//   h2 {
+//     color: rgb(0, 0, 0);
+//   }
+//   p {
+//     color: rgb(0, 0, 0);
+//   }
+
+//   .button-container {
+//     margin-bottom: 20px;
+
+//     button {
+//       margin: 10px;
+//       padding: 8px 16px;
+//       border: none;
+//       background: linear-gradient(45deg, #003366, #006699);
+//       color: #fff;
+//       cursor: pointer;
+//       transition: background-color 0.3s;
+
+//       &:hover {
+//         background-color: #2980b9;
+//       }
+
+//       &.active {
+//         background-color: #0096fa;
+//       }
+//     }
+//   }
+
+//   //   .about-section {
+//   //     // display: flex;
+//   //     // align-items: center;
+//   //     // justify-content: center;
+//   //     // margin-bottom: 40px;
+
+//   //     img {
+//   //       max-width: 100%;
+//   //       border-radius: 8px;
+//   //       margin-left: 20px;
+//   //     }
+//   //   }
+// }
+
+// .about-page {
+//   text-align: center;
+
+//   // ... (same as before)
+
+//   .additional-info {
+//     margin-top: 40px;
+//     width: 100vw;
+//     height: 100%; /* Set the desired height for the background effect */
+//     // background-image: url("https://priteshgupta.com/demos/fill/waves.png");
+//     background-image: url("../../public/output-onlinepngtool.png");
+
+//     background-repeat: repeat-x; /* Repeat the image horizontally */
+//     background-position: 0% -110%; /* Start the image at the bottom */
+
+//     animation: riseBackground 5s linear forwards; /* Adjust the duration as needed */
+//   }
+
+//   @keyframes riseBackground {
+//     from {
+//       background-position: 0% -110%; /* Start position at the bottom */
+//     }
+//     to {
+//       background-position: 0% 100%; /* End position at the top */
+//     }
+//   }
+
+//   .additional-info p {
+//     /* Your existing styling for paragraphs */
+//     color: #000000;
+//     margin-bottom: 10px;
+//     font-size: 40px;
+
+//     @media (max-width: 768px) {
+//       padding-top: 10px;
+//       font-size: 20px;
+//     }
+//   }
+// }
+
+// .aboutSectionStyle {
+//   width: 80%;
+// }
