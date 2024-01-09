@@ -1,7 +1,4 @@
 //  Info.scss
-//TODO finish this component
-
-/* components/Features.module.scss */
 /* components/Features.module.scss */
 
 .info {
@@ -71,8 +68,6 @@
 
     @media (max-width: 550px) {
       margin: 0;
-      // width: 200px; /* Adjusted width for the cards */
-      // height: 120px;
     }
   }
 
@@ -88,14 +83,11 @@
 
     @media (max-width: 550px) {
       margin: 1em 0 0;
-      // width: 200px; /* Adjusted width for the cards */
-      // height: 120px;
     }
   }
 
   &:nth-of-type(3) {
     margin-left: -5em; /* Adjusted margin for the third card */
-    // margin-right: 1em; /* Adjusted margin for the third card */
 
     @media (max-width: 705px) {
       margin-left: -1em;
@@ -114,56 +106,6 @@
 
     @media (max-width: 550px) {
       margin: 1em 0 0;
-      // width: 200px; /* Adjusted width for the cards */
-      // height: 120px;
     }
   }
 }
-
-// $primary-color: #3498db;
-// $background-color: #ecf0f1;
-
-// .info-container {
-//   display: flex;
-//   grid-template-areas:
-//     "intro intro"
-//     "card1 card2"
-//     "card3 card3"
-//     "button button"; // Span the button over two columns
-//   gap: 20px;
-//   justify-content: center;
-//   align-items: center;
-//   padding: 20px;
-//   //   background-color: $background-color;
-// }
-
-// .info-intro {
-//   grid-area: intro;
-//   max-width: 600px; // Adjust the max-width as needed
-//   text-align: center;
-// }
-
-// .info-card {
-//   max-width: 300px; // Adjust the max-width as needed
-//   padding: 20px;
-//   border-radius: 10px;
-//   background-color: #fff;
-//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-//   h3 {
-//     margin-top: 10px;
-//     color: #555;
-//   }
-// }
-
-// .info-card:nth-child(1) {
-//   grid-area: card1;
-// }
-
-// .info-card:nth-child(2) {
-//   grid-area: card2;
-// }
-
-// .info-card:nth-child(3) {
-//   grid-area: card3;
-// }

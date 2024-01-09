@@ -78,27 +78,6 @@ const Footer: React.FC = () => {
               </h3>
               <div className={styles.footer__nav}>
                 <div className={styles.socialMediaLinks}>
-                  {/* <a
-                  href="https://facebook.com/infinitymarine"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  {`Facebook`}
-                  </a>
-                  <a
-                  href="https://www.linkedin.com/infinitymarine"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  {`LinkedIn`}
-                  </a>
-                  <a
-                  href="https://twitter.com/infinitymarine"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >
-                  {`Twitter`}
-                </a> */}
                   <SocialMedia></SocialMedia>
                 </div>
               </div>

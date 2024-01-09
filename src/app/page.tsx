@@ -36,26 +36,7 @@ const HomePage = () => {
               href="/services"
               onClick={handleServiceClick}
             />
-            {/* <Services
-              // number={2}
-              icon={
-                <img
-                  src="/sailboat.svg"
-                  alt="Icon"
-                  style={{ width: "50px", height: "50px" }}
-                />
-              }
-              description={
-                <>
-                  <p>
-                    {`Our surveyors are duly authorized form Panama, Belize, Togo,
-                    Malta, Dominica Maritime.`}
-                  </p>
-                </>
-              }
-              title={"Annual Safety Inspections"}
-              buttonText={""} // linkTo="/services"
-            /> */}
+
             <Services
               title={`Annual Safety Inspections`}
               icon={

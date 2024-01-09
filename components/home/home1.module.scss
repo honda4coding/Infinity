@@ -5,11 +5,9 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  // gap: 20px;
   padding: 20px;
   max-width: 1424px; /* Set a maximum width for the container */
   margin: 0 auto; /* Center the container horizontally */
-  // height: 100vh;
   padding-top: 5rem;
   padding-bottom: 5rem;
 
@@ -50,6 +48,5 @@
   img {
     max-width: 100%;
     height: auto;
-    // max-height: 400px; /* Set a maximum height for the image */
   }
 }

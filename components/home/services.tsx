@@ -2,9 +2,7 @@
 "use client";
 
 import React, { ReactNode } from "react";
-import Link from "next/link";
 import styles from "./services.module.scss";
-import Button from "../common/readmore"; // Import your custom Button component
 
 interface CardProps {
   icon: ReactNode;

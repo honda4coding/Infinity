@@ -141,6 +141,11 @@
   .form_plus {
     width: 90%;
   }
+  .img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+  }
 }
 .info_address {
   text-align: center;
