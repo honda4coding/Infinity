@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+4;
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/pages/services.module.scss";
-import Image from "next/image";
 import AsideComponent from "../../../components/services/aside";
 import MainComponent from "../../../components/services/main";
 
@@ -172,29 +172,57 @@ const mainData = [
 
 const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
-  function openServ(evt: React.MouseEvent<HTMLButtonElement>, Serv: string) {
+
+  // Function to extract the service name from the URL hash
+  const getServiceFromHash = () => {
+    const hash = window.location.hash.substring(1);
+    return decodeURIComponent(hash);
+  };
+
+  // Effect to handle initial load and hash changes
+  useEffect(() => {
+    // Check if there's a hash on initial load
+    const initialService = getServiceFromHash();
+    if (
+      initialService &&
+      mainData.some((data) => data.titile === initialService)
+    ) {
+      setActiveTab(initialService);
+    }
+
+    // Add event listener for hash changes
+    const handleHashChange = () => {
+      const newService = getServiceFromHash();
+      if (newService && mainData.some((data) => data.titile === newService)) {
+        setActiveTab(newService);
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []); // Empty dependency array to run the effect only once on mount
+
+  // Function to handle service selection
+  const openServ = (evt: React.MouseEvent<HTMLButtonElement>, Serv: string) => {
     setActiveTab(Serv);
 
-    if (typeof window !== "undefined") {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  }
+    // Update the hash dynamically based on the selected service
+    window.location.hash = encodeURIComponent(Serv);
+  };
 
   return (
     <>
       <div className={styles.page}>
         <div className={styles.tab}>
-          {/* side bar */}
           <AsideComponent
             mainData={mainData}
             activeTab={activeTab}
             openServ={openServ}
           />
-
-          {/* Contant of tabs: */}
           <MainComponent
             mainData={mainData}
             activeTab={activeTab}

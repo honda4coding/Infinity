@@ -18,6 +18,14 @@
   max-width: 30rem;
   min-height: 250px;
   margin: 10px;
+  // font-size: 15px;
+  h2 {
+    font-size: 23px;
+    font-weight: 800;
+  }
+  h4 {
+    font-size: 17px;
+  }
   cursor: pointer;
   &:hover {
     transform: scale(1.05); /* Scale up on hover */

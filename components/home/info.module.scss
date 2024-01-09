@@ -8,6 +8,7 @@
 }
 .text h1 {
   font-size: 3.5rem;
+  margin-bottom: 10px;
 }
 .features {
   display: grid;
@@ -17,11 +18,15 @@
   padding-top: 3rem;
   padding-bottom: 1rem;
   margin-bottom: 0.5rem;
+  padding: 10px;
 }
 .text {
   padding: 10px;
+  padding-bottom: 50px;
+
   max-width: 50rem;
   text-align: center;
+  font-size: 60px;
   h2 {
     color: rgb(0, 0, 0);
   }
@@ -30,6 +35,7 @@
   }
 }
 .featureCard {
+  text-decoration: none;
   display: flex;
   position: relative;
   justify-content: center;
@@ -41,14 +47,15 @@
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
   transition: 200ms ease-in-out;
   margin-top: -2em;
-  max-width: 250px; /* Adjusted width for the cards */
+  max-width: 450px; /* Adjusted width for the cards */
   max-height: 250px;
   text-align: center; /* Adjusted margin for overlapping */
   border-radius: 20px;
-
+  padding: 10px;
   p {
     color: antiquewhite;
-    width: 300px;
+    // width: 300px;
+    font-size: 30px;
   }
 
   &:hover {

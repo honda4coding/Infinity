@@ -124,14 +124,14 @@
       margin-left: 250px;
       height: 75px;
       width: 100px;
-      background: url("../../../public/cargo-ship-svgrepo-com\ \(1\).svg");
+      // background: url("../../../public/cargo-ship-svgrepo-com\ \(1\).svg");
       background-repeat: no-repeat;
       animation: voiture 1s linear infinite;
       z-index: -99;
     }
 
     &-premierplan {
-      background-image: url("../../../public/output-onlinepngtools.png");
+      // background-image: url("../../../public/output-onlinepngtools.png");
       animation-duration: 2000s;
     }
   }

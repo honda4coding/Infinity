@@ -16,13 +16,13 @@ const topics = [
   },
   {
     title: "Our Vision",
-    imageSrc: "/test.jpeg",
+    imageSrc: "/Our-vision-1.jpg",
     description:
       "At Infinity Marine Consultants (IMC), we envision a future where we stand proudly at the forefront of the maritime industry in Egypt, serving as the heartbeat of innovation, excellence, and reliability. Our commitment to excellence is embodied in our highly specialized and dynamic team, comprised of expert Naval Architects, seasoned Masters, and accomplished Chief Engineers. In this vision, IMC is synonymous with unparalleled quality, cutting-edge solutions, and unwavering dedication to the maritime sector. We strive to be the go-to destination for clients seeking top-tier consulting services, where our team's expertise seamlessly merges with a deep understanding of the intricacies of the maritime domain.",
   },
   {
     title: "Our Mission",
-    imageSrc: "/test.jpeg",
+    imageSrc: "/Our-Mission-1.jpg",
     description:
       "At Infinity Marine Consultants (IMC), our mission is to be the driving force behind the evolution and advancement of the maritime industry in Egypt. We are dedicated to providing unparalleled consulting services that combine technical expertise, innovation, and a profound understanding of maritime intricacies. To achieve complete customer satisfaction by providing on-time reliable, professional services. IMC consists of a group of highly specialized teamwork of Naval Architects, Masters, and Chief Engineers. IMC team provides technical expertise and engineering solutions locally and globally through our representatives in different countries.",
   },
@@ -92,6 +92,14 @@ const AboutContent = () => {
       <div className={styles["about-page"]}>
         <h1 className={styles["focus-in-expand"]}>{`About Us`}</h1>
         <div className={styles["button-container"]}>
+          <div className={styles["additional-info"]}>
+            <h3>
+              <FontAwesomeIcon icon={faCalendarDays} /> {yearsText}
+            </h3>
+            <h3>
+              <FontAwesomeIcon icon={faBellConcierge} /> {servicesText}
+            </h3>
+          </div>
           {topics.map((topic, index) => (
             <button
               key={index}
@@ -112,8 +120,8 @@ const AboutContent = () => {
         <div>
           <Button
             link="/services"
-            text="Dive more"
-            size="1em"
+            text="Contact us"
+            size="1.2rem"
             onClick={handleButton}
             cursorPointer={true}
           />
@@ -128,15 +136,6 @@ const AboutContent = () => {
           >
             here
           </a>
-        </div>
-
-        <div className={styles["additional-info"]}>
-          <p>
-            <FontAwesomeIcon icon={faCalendarDays} /> {yearsText}
-          </p>
-          <p>
-            <FontAwesomeIcon icon={faBellConcierge} /> {servicesText}
-          </p>
         </div>
       </div>
     </>

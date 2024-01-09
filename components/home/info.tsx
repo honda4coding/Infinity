@@ -7,7 +7,7 @@ const Info: React.FC = () => {
 
   return (
     <>
-      <div className={styles.text}>{/* ... */}</div>
+      <div className={styles.text}>About us</div>
       <div className={styles.features}>
         <div className={styles.cardsContainer}>
           <a href="/about" className={`${styles.featureCard} ${styles.card1}`}>
@@ -35,7 +35,7 @@ const Info: React.FC = () => {
       <Button
         link="/about"
         text="Dive more"
-        size="1em"
+        size="1.5rem"
         onClick={handleButtonClick}
         cursorPointer={true}
       />
