@@ -6,6 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SocialMedia from "../common/social";
+import { faShareAlt } from "@fortawesome/free-solid-svg-icons";
 
 const Footer: React.FC = () => {
   return (
@@ -71,7 +72,9 @@ const Footer: React.FC = () => {
           <div className={styles.socialText}>
             <div className={styles.footer__col}>
               <h3 className={styles.footer__colTitle}>
-                <span>Social</span>
+                <span>
+                  <FontAwesomeIcon icon={faShareAlt} /> Social
+                </span>
               </h3>
               <div className={styles.footer__nav}>
                 <div className={styles.socialMediaLinks}>

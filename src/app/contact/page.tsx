@@ -16,13 +16,13 @@ const Contact: React.FC = () => {
           src="/resize-170386058519758890772.jpg" // Replace with your image URL
           alt="Description"
           objectFit="cover"
-          // width={100}
-          // height={100}
+          width={100}
+          height={100}
         />
 
         <div className={styles.conect}>
-          <h2> {`conect us`} </h2>
-          <h2> {`conect us`} </h2>
+          <h2> {`contact us`} </h2>
+          <h2> {`contact us`} </h2>
         </div>
       </div>
 
@@ -56,10 +56,10 @@ const Contact: React.FC = () => {
             <div className={styles.info_email}>
               <FontAwesomeIcon icon={faEnvelope} />
               <p>{`Registration , Seafarer Dept.`}</p>
-              <p>{` E-mail: reg@ infinity-marine.org`}</p>
+              <p>{` E-mail: reg@infinity-marine.org`}</p>
 
               <p>{`Ship's Managements, Operation`}</p>
-              <p> {`E-mail: info@ infinity-marine.org`}</p>
+              <p> {`E-mail: info@infinity-marine.org`}</p>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
             <input required type="text" placeholder="Email" />
             <input required type="text" placeholder="Subject" />
             <textarea required placeholder="Message" />
-            <button> {`SEND `}</button>
+            <button type="submit">{`SEND`}</button>
           </form>
         </div>
       </div>

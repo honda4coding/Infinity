@@ -96,7 +96,7 @@
 // };
 
 // export default AsideComponent;
-
+"use client";
 // AsideComponent.tsx
 import React, { useState, useEffect } from "react";
 import styles from "../../src/styles/pages/services.module.scss";
@@ -175,6 +175,7 @@ const AsideComponent: React.FC<AsideProps> = ({
         <aside className={styles.btncnttt}>
           {mainData.map((dataObj) => (
             <button
+              type="button"
               className={
                 activeTab === dataObj.titile
                   ? `${styles.tablinks} ${styles.active}`
@@ -189,8 +190,12 @@ const AsideComponent: React.FC<AsideProps> = ({
         </aside>
       ) : (
         <div className={styles.container}>
-          <button onClick={toggleCollapse} className={styles.toggleButton}>
-            {collapsed ? "Show Services" : "Hide Services"}
+          <button
+            type="button"
+            onClick={toggleCollapse}
+            className={styles.toggleButton}
+          >
+            {collapsed ? "Hide Services" : "Show Services"}
           </button>
 
           <aside
@@ -198,6 +203,7 @@ const AsideComponent: React.FC<AsideProps> = ({
           >
             {mainData.map((dataObj) => (
               <button
+                type="button"
                 className={
                   activeTab === dataObj.titile
                     ? `${styles.tablinks} ${styles.active}`

@@ -35,8 +35,14 @@ const Navbar: React.FC = () => {
       {/* Navbar Logo */}
       <div className={styles.logo}>
         <Link href="/">
-          <div>
-            <Image src="/logo.png" alt="Clock Icon" width={110} height={110} />
+          <div style={{ width: "100%", maxWidth: "110px", height: "auto" }}>
+            <Image
+              src="/logo.png"
+              alt="Clock Icon"
+              width={110}
+              height={110}
+              layout="responsive"
+            />
           </div>
         </Link>
 
@@ -53,19 +59,20 @@ const Navbar: React.FC = () => {
       {/* Navbar Links */}
       <ul className={`${styles.links} ${isMenuOpen ? styles.open : ""}`}>
         <li>
-          <a href="/">{`Home`}</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="/about">{`About`}</a>
+          <a href="/about">About</a>
         </li>
-        <a href="/services">{`Services`}</a>
-        <li></li>
-
         <li>
-          <a href="/contact">{`Contact`}</a>
+          <a href="/services">Services</a>
+        </li>
+        <li>
+          <a href="/contact">Contact</a>
         </li>
         {/* Add other menu items here */}
       </ul>
+
       <label
         htmlFor="nav-toggle"
         className={styles.iconBurger}

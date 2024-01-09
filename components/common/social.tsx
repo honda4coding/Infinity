@@ -13,7 +13,7 @@ const SocialMedia: React.FC = () => {
       <li className={styles["social-item"]}>
         <a
           className={`${styles["social-link"]} ${styles["facebook"]}`}
-          href="/"
+          href="https://www.facebook.com/profile.php?id=100078132671829&mibextid=vk8aRt"
           title="Visit our Facebook page"
         >
           <FontAwesomeIcon
@@ -22,7 +22,7 @@ const SocialMedia: React.FC = () => {
           />
         </a>
       </li>
-      <li className={styles["social-item"]}>
+      {/* <li className={styles["social-item"]}>
         <a
           className={`${styles["social-link"]} ${styles["twitter"]}`}
           href="/"
@@ -33,11 +33,11 @@ const SocialMedia: React.FC = () => {
             style={{ width: "30px", height: "30px" }}
           />
         </a>
-      </li>
+      </li> */}
       <li className={styles["social-item"]}>
         <a
           className={`${styles["social-link"]} ${styles["linkedin"]}`}
-          href="/"
+          href="https://www.linkedin.com/company/infinity-marine-consultants/"
           title="Connect with us on LinkedIn"
         >
           <FontAwesomeIcon

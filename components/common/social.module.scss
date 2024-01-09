@@ -2,11 +2,11 @@
   margin: 0;
   list-style: none;
   padding-left: 0;
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  gap: 25px;
+  // gap: 25px;
 
   &-item {
     margin: 0 30px;

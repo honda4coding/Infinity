@@ -45,17 +45,7 @@
       gap: 1.5rem;
     }
   }
-  //   &__copyrights {
-  //     padding-top: 3rem;
-  //     margin-top: 3rem;
-  //     border-top: 1px solid rgba(white, 0.2);
-  //     p {
-  //       display: flex;
-  //       a {
-  //         margin-left: 0.5rem;
-  //       }
-  //     }
-  //   }
+
   @keyframes parralax {
     0% {
       background-position: 260px;
@@ -126,45 +116,24 @@
       background-position-y: 100% !important;
       animation: parralax 600s linear infinite;
     }
-    // &-moto {
-    //   position: absolute;
-    //   bottom: 80px;
-    //   left: 50%;
-    //   margin-left: -250px;
-    //   height: 200px;
-    //   width: 150px;
-    //   background: url(https://i.ibb.co/JCGfFJd/moto-net.gif);
-    //   background-repeat: no-repeat;
-    //   transform-origin: 50% 80%;
-    //   animation: moto 5s linear infinite;
-    // }
+
     &-voiture {
       position: absolute;
-      bottom: 10px;
+      bottom: 5px;
       left: 50%;
       margin-left: 250px;
-      height: 70px;
+      height: 75px;
       width: 100px;
       background: url("../../../public/cargo-ship-svgrepo-com\ \(1\).svg");
       background-repeat: no-repeat;
       animation: voiture 1s linear infinite;
+      z-index: -99;
     }
-    // &-trees {
-    //   background-image: url("../../../public/lighthouse-4-com.svg");
-    //   bottom: -60px;
-    //   background-repeat: no-repeat;
 
-    //   animation-duration: 1000s;
-    // }
     &-premierplan {
       background-image: url("../../../public/output-onlinepngtools.png");
       animation-duration: 2000s;
-      //background-position-y: 27px !important;
     }
-    // &-secondplan {
-    //   background-image: url("../../../public/second-plan.png");
-    //   animation-duration: 600s;
-    // }
   }
 }
 .socialMediaLinks {
@@ -176,14 +145,12 @@
 
   .footer__parralax-voiture {
     left: 0%;
-    /* Adjust animation for smaller screens */
   }
 
   .footer__parralax {
     text-align: center;
     display: flex;
     justify-content: center;
-    // top: -150px; /* Adjust the top position for better visibility on smaller screens */
   }
 }
 @media only screen and (max-width: 599px) {
@@ -198,10 +165,7 @@
 @media only screen and (max-width: 1099px) {
   .footer__columns {
     display: grid;
-    grid-template-columns: repeat(
-      auto-fill,
-      minmax(357px, 1fr)
-    ); /* Two equal-width columns */
+    grid-template-columns: repeat(auto-fill, minmax(357px, 1fr));
     justify-items: center;
     gap: 15px;
   }

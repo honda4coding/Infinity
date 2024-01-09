@@ -10,15 +10,9 @@ import Button from "../../components/common/readmore";
 import Hero from "../../components/home/hero";
 import Image from "next/image";
 
-const mainData = [
-  {
-    logo: "https://img.icons8.com/ios/50/000000/maintenance--v1.png", // Local path
-  },
-];
-
 const HomePage = () => {
   function handleButtonClick(): void {}
-
+  const handleServiceClick = () => {};
   return (
     <>
       <Hero></Hero>
@@ -32,24 +26,17 @@ const HomePage = () => {
           </h2>
           <div className={styles.gridContainer}>
             {/* Repeat this block to create multiple cards */}
+
             <Services
-              // number={1}
+              title={`Ship registration services`}
               icon={
                 <Image src="/sailboat.svg" alt="Icon" width={50} height={50} />
-              }
-              description={
-                <>
-                  <p>
-                    {`  Flag registration including processing of Navigation
-                    license, Ship station license.`}
-                  </p>
-                </>
-              }
-              // number={}
-              title={"Ship registration services"}
-              buttonText={""}
+              } // Replace with your icon component
+              description={`  Flag registration including processing of Navigation license, Ship station license.`}
+              href="/services"
+              onClick={handleServiceClick}
             />
-            <Services
+            {/* <Services
               // number={2}
               icon={
                 <img
@@ -68,9 +55,19 @@ const HomePage = () => {
               }
               title={"Annual Safety Inspections"}
               buttonText={""} // linkTo="/services"
+            /> */}
+            <Services
+              title={`Annual Safety Inspections`}
+              icon={
+                <Image src="/sailboat.svg" alt="Icon" width={50} height={50} />
+              } // Replace with your icon component
+              description={`Our surveyors are duly authorized form Panama, Belize, Togo,Malta, Dominica Maritime.`}
+              href="/services"
+              onClick={handleServiceClick}
             />
             <Services
               // number={3}
+              title={`Corporations`}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -78,19 +75,12 @@ const HomePage = () => {
                   style={{ width: "50px", height: "50px" }}
                 />
               }
-              description={
-                <>
-                  <p>
-                    {`Registration of incorporations /off-shore companies under
-                    Panama, Belize, Marshal.`}
-                  </p>
-                </>
-              }
-              title={"Corporations"}
-              buttonText={""}
+              description={`Registration of incorporations /off-shore companies under Panama, Belize, Marshal.`}
+              href="/services"
+              onClick={handleServiceClick}
             />
             <Services
-              // number={4}
+              title={`Seafarers endorsements & certification`}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -98,19 +88,12 @@ const HomePage = () => {
                   style={{ width: "50px", height: "50px" }}
                 />
               }
-              description={
-                <>
-                  <p>
-                    {` Issuance of Certificates of Endorsement (COE), Certificate
-                    of competencies (COC) Continuous.`}
-                  </p>
-                </>
-              }
-              title={"Seafarers endorsements & certification"}
-              buttonText={""}
+              description={` Issuance of Certificates of Endorsement (COE), Certificate of competencies (COC) Continuous.`}
+              href="/services"
+              onClick={handleServiceClick}
             />
             <Services
-              // number={5}
+              title={`Class & statutory certification`}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -118,19 +101,12 @@ const HomePage = () => {
                   style={{ width: "50px", height: "50px" }}
                 />
               }
-              description={
-                <>
-                  <p>
-                    {`We are approved for the following class and statutory
-                    certification under flags of Panama.`}
-                  </p>
-                </>
-              }
-              title={"Class & statutory certification"}
-              buttonText={""}
+              description={`We are approved for the following class and statutory certification under flags of Panama.`}
+              href="/services"
+              onClick={handleServiceClick}
             />
             <Services
-              // number={6}
+              title={`New ships designs`}
               icon={
                 <img
                   src="/sailboat.svg"
@@ -138,9 +114,9 @@ const HomePage = () => {
                   style={{ width: "50px", height: "50px" }}
                 />
               }
-              description={<></>}
-              title={"ISM & ISPS training and consultancy"}
-              buttonText={""}
+              description={`We offer a complete set of design with building supervision at owner request.`}
+              href="/services"
+              onClick={handleServiceClick}
             />
             {/* Repeat other Services components similarly */}
           </div>

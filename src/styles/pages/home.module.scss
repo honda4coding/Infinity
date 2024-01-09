@@ -22,7 +22,6 @@
   justify-items: center;
   padding-bottom: 80px;
   gap: 30px;
-  text-decoration: none !important;
 }
 .centerContainer h1 {
   font-size: 3.5rem;
@@ -36,7 +35,6 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
   justify-content: center; /* Center the grid horizontally */
-
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, minmax(300px, 1fr));
   }
