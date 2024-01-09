@@ -18,6 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={metadata.description} />
+        <title>{metadata.title}</title>
+        {/* Add the link to your favicon.ico or favicon.png */}
+        <link rel="icon" href="/logo.jpg" />
+      </head>
       <body style={{ margin: 0 }}>
         <header>
           <Navbar />

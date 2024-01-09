@@ -120,21 +120,18 @@ const AboutContent = () => {
         </div>
 
         <div className={styles["more-info"]}>
-          if you want to know more about us, please download our company profile
-          from
+          Our company profile
           <a
             href="https://drive.google.com/file/d/1tX6xTpx7n93WE2tffv6_qT2yZ40vDctt/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
           >
             here
-          </a>{" "}
-          😊
+          </a>
         </div>
 
         <div className={styles["additional-info"]}>
           <p>
-            {" "}
             <FontAwesomeIcon icon={faCalendarDays} /> {yearsText}
           </p>
           <p>
