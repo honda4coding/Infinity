@@ -24,6 +24,10 @@
   // margin-top: -10px;
   object-position: center top; /* Adjust object-position as needed */
 }
+.enhanced-video {
+  filter: brightness(50%) contrast(90%) saturate(120%);
+  /* Add more filter properties as desired */
+}
 .ag-maecenas_item {
   display: flex;
   align-items: center;

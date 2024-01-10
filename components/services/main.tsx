@@ -61,6 +61,7 @@ const MainComponent: React.FC<MainProps> = ({
             <div className={styles.textDivChild}>
               <div className={styles.textDivChildContant}>
                 <p key={dataOpj.titile}>{dataOpj.contantPara}</p>
+                {/* ... Other text content rendering */}
                 {dataOpj.contantList &&
                 Array.isArray(dataOpj.contantList) &&
                 dataOpj.contantList.length > 0 ? (
@@ -115,10 +116,13 @@ const MainComponent: React.FC<MainProps> = ({
                   ""
                 )}
               </div>
-              <svg xmlns="http://www.w3.org/2000/svg">
-                <title>Maintenance Icon</title>
-                <image href={dataOpj.img} width="500" height="250" />
-              </svg>
+              <img
+                src={dataOpj.img}
+                alt="Service Image"
+                className={styles.serviceImage}
+                width={500}
+                height={250}
+              />
             </div>
           </div>
         </>
