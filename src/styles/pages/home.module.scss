@@ -1,18 +1,17 @@
 /* styles/pages/home.module.scss */
 @use "../abstracts/variables" as *;
-
 .pageContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  font-family: "Red Hat Display", sans-serif !important;
 
   span {
     display: block;
     text-align: center;
   }
 }
-
 .centerContainer {
   display: grid;
   padding-top: 20px;

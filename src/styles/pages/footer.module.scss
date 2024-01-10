@@ -4,6 +4,7 @@
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+  font-family: "Red Hat Display", sans-serif !important;
 }
 
 .footer {
@@ -12,6 +13,8 @@
   padding: 3rem 0;
   color: white;
   background: #006699;
+  font-family: "Red Hat Display", sans-serif !important;
+
   &__columns {
     display: flex;
     justify-content: center;
@@ -34,6 +37,8 @@
     align-items: center;
     color: white;
     text-decoration: none;
+    font-family: "Red Hat Display", sans-serif !important;
+
     * ~ span {
       margin-left: 1rem;
     }

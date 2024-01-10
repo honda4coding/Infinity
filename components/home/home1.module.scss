@@ -10,6 +10,7 @@
   padding-top: 20rem;
   padding-bottom: 5rem;
   box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif !important;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr; /* Change to a single column layout on small screens */

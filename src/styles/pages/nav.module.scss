@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   top: 0;
-  font-family: sans-serif;
+  font-family: "Red Hat Display", sans-serif !important;
   justify-content: space-between;
   align-items: center;
   height: 110px;
@@ -30,7 +30,7 @@
   // width: 10%;
   height: 100%;
   display: flex;
-  // justify-content: flex-start;
+  font-family: "Red Hat Display", sans-serif !important;
 
   align-items: center;
   transition: all 0.5s ease-in-out;
@@ -92,7 +92,6 @@
     bottom: 100%;
     width: auto;
     height: auto;
-    // flex-direction: column;
     justify-content: center;
     justify-items: center;
     background: linear-gradient(45deg, #003366, #006699);
