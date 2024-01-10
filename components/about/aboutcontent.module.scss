@@ -21,7 +21,7 @@
 
   h2 {
     color: rgb(0, 0, 0);
-    font-size: 2rem;
+    font-size: 3rem;
     margin: 0;
   }
   h3 {
@@ -30,7 +30,7 @@
   }
   p {
     color: rgb(0, 0, 0);
-    font-size: 14px;
+    font-size: 20px;
     max-width: 1620px;
     min-height: 115px;
 
@@ -39,6 +39,7 @@
     @media (max-width: 768px) {
       min-height: 150px;
       text-align: start;
+      font-size: 14px;
     }
   }
 

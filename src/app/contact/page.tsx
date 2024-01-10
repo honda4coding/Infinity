@@ -16,8 +16,8 @@ const Contact: React.FC = () => {
           src="/resize-170386058519758890772.jpg" // Replace with your image URL
           alt="Description"
           objectFit="cover"
-          width={100}
-          height={100}
+          // width={100}
+          // height={100}
         />
 
         <div className={styles.conect}>
@@ -73,10 +73,10 @@ const Contact: React.FC = () => {
             acceptCharset="UTF-8"
             encType="text/plain"
           >
-            <input required type="text" name="Name" placeholder="Name" />
-            <input required type="text" name="Email" placeholder="Email" />
-            <input required type="text" name="Subject" placeholder="Subject" />
-            <textarea required name="Message" placeholder="Message" />
+            <input required type="text" placeholder="Name" />
+            <input required type="email" placeholder="Email" />
+            <input required type="text" placeholder="Subject" />
+            <textarea required name=" " placeholder="Message" />
             <button type="submit">{`SEND`}</button>
           </form>
         </div>

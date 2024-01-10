@@ -16,7 +16,7 @@ const Home1 = () => {
           Chief Engineers.`}
         </p>
         <Button
-          link="/services"
+          link="/about"
           text="Dive more"
           size="1.2rem"
           onClick={handleButtonClick}

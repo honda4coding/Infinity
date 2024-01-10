@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         <source src="/My Movie(1).webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
-      <div className={styles["ag-maecenas_title"]}>{`INFINITY`}</div>
+      <div className={styles["ag-maecenas_title"]}>{`INFINITY♾`}</div>
     </div>
   );
 };
