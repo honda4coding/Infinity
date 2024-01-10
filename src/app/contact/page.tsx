@@ -16,13 +16,13 @@ const Contact: React.FC = () => {
           src="/resize-170386058519758890772.jpg" // Replace with your image URL
           alt="Description"
           objectFit="cover"
-          // width={100}
-          // height={100}
+          width={100}
+          height={100}
         />
 
         <div className={styles.conect}>
-          <h2> {`contact`} </h2>
-          <h2> {`contact`} </h2>
+          <h2> {`contact us`} </h2>
+          <h2> {`contact us`} </h2>
         </div>
       </div>
 
