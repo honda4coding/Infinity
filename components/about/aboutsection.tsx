@@ -21,11 +21,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({
           <h2>{title}</h2>
           <p> {description}</p>
         </div>
-        <Image
-          src={imageSrc}
-          alt={`${title} Image`}
-          // width={550} height={250}
-        />
+        <Image src={imageSrc} alt={`${title} Image`} width={550} height={250} />
       </div>
     </>
   );
