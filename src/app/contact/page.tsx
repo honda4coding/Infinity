@@ -70,6 +70,7 @@ const Contact: React.FC = () => {
             className={styles.form_plus}
             action="mailto:tech@infinity-marine.org"
             method="post"
+            acceptCharset="UTF-8"
             encType="text/plain"
           >
             <input required type="text" name="Name" placeholder="Name" />
