@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendarDays } from "@fortawesome/free-solid-svg-icons";
 import { faBellConcierge } from "@fortawesome/free-solid-svg-icons";
+import { faDownload } from "@fortawesome/free-solid-svg-icons";
 const topics = [
   {
     title: "The Company",
@@ -119,7 +120,7 @@ const AboutContent = () => {
         </div>
         <div>
           <Button
-            link="/services"
+            link="/contact"
             text="Contact us"
             size="1.2rem"
             onClick={handleButton}
@@ -134,7 +135,7 @@ const AboutContent = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            here
+            <FontAwesomeIcon icon={faDownload} />
           </a>
         </div>
       </div>

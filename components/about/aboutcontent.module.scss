@@ -12,14 +12,15 @@
   h1 {
     color: #000000;
     margin-top: 80px;
-    font-size: 60px;
+    font-size: 3.5rem;
     font-weight: 700;
+    color: #000000;
     margin-bottom: 0;
   }
 
   h2 {
     color: rgb(0, 0, 0);
-    font-size: 40px;
+    font-size: 2rem;
     margin: 0;
   }
   h3 {
@@ -28,10 +29,16 @@
   }
   p {
     color: rgb(0, 0, 0);
-    font-size: 22px;
+    font-size: 14px;
     max-width: 1620px;
-    min-height: 150px;
+    min-height: 115px;
+
     // text-align: start;
+
+    @media (max-width: 768px) {
+      min-height: 150px;
+      text-align: start;
+    }
   }
 
   .button-container {

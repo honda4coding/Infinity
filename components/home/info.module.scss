@@ -8,6 +8,8 @@
 }
 .text h1 {
   font-size: 3.5rem;
+  font-weight: 700;
+  color: #000000;
   margin-bottom: 10px;
 }
 .features {
@@ -53,9 +55,12 @@
   border-radius: 20px;
   padding: 10px;
   p {
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     // width: 300px;
-    font-size: 30px;
+    font-size: 26px;
+    @media (max-width: 705px) {
+      font-size: 14px;
+    }
   }
 
   &:hover {

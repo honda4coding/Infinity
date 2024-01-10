@@ -30,6 +30,17 @@
   justify-items: center;
 
   @media (max-width: 991px) {
+    button {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    .focus-in-expand h1 {
+      font-size: 40px;
+    }
+    image {
+      width: 300px;
+      height: 200px;
+    }
     display: flex;
     flex-direction: column;
   }
@@ -110,10 +121,12 @@
         .textDivChildContant {
           width: auto;
           font-family: "Open Sans, sans-serif";
-          font-size: 19px;
+          font-size: 22px;
           color: rgba(0, 0, 0, 0.64);
         }
-
+        li {
+          font-size: 18px;
+        }
         svg {
           overflow: visible !important;
         }
@@ -141,6 +154,41 @@
 
   &:hover {
     background-color: #001f26;
+  }
+}
+.focus-in-expand {
+  display: block;
+  font-size: 65px;
+  font-weight: 700;
+  text-align: center;
+  color: #00303f;
+  margin-top: 200px;
+  animation: focus-in-expand 6.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
   }
 }
 

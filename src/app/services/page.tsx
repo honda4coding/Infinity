@@ -7,11 +7,24 @@ import MainComponent from "../../../components/services/main";
 
 const mainData = [
   {
-    logo: "https://img.icons8.com/ios/50/000000/maintenance--v1.png",
-    titile: "Annual Safety Inspections",
+    logo: "https://img.icons8.com/ios/50/000000/signing-a-document.png",
+    titile: "Ship registration services",
+    contantList: [
+      "Flag registration including processing of Navigation license, Ship station license, Minimum safe manning and Continuous synopsis record under Panama, Serra Leone, Bolivia, Georgia, Moldova and St. Vincent, Togo, Belize, Dominica, Malta, and Saint Kitts and Nevis",
+      "Registration of mortgages",
+      "Registration of title",
+      "Change of ownership and change of name",
+      "Deletion certificates",
+      "Free of encumbrance certificate",
+    ],
+    img: "https://i.ibb.co/D4ksJGw/ship-registration-e1623403355938.jpg",
+  },
+  {
+    logo: "https://img.icons8.com/ios/50/000000/cargo-ship.png",
+    titile: "New ships designs",
     contantPara:
-      "Our surveyors are duly authorized form Panama, Belize, Togo, Malta, Dominica Maritime Authority to carry out Annual Safety Inspection for aforementioned administrations.",
-    img: "https://i.ibb.co/F0C4drm/istockphoto-1658925458-612x612.webp",
+      "We offer a complete set of design with building supervision at owner request.",
+    img: "https://i.ibb.co/JB6gxNz/photo-1585713181935-d5f622cc2415.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/commercial-development-management.png",
@@ -55,6 +68,13 @@ const mainData = [
     img: "https://i.ibb.co/WHhT6sk/wood-table-business-wooden.webp",
   },
   {
+    logo: "https://img.icons8.com/ios/50/000000/contract.png",
+    titile: "Seafarers endorsements and certification",
+    contantPara:
+      "Issuance of Certificates of Endorsement (COE), Certificate of competencies (COC) Continuous Discharge Certificate (CDC).",
+    img: "https://i.ibb.co/WHhT6sk/wood-table-business-wooden.webp",
+  },
+  {
     logo: "https://img.icons8.com/ios/50/000000/related-companies.png",
     titile: "Corporations",
     contantPara:
@@ -75,18 +95,12 @@ const mainData = [
   },
 
   {
-    logo: "https://img.icons8.com/ios/50/000000/cargo-ship.png",
-    titile: "New ships designs",
-    contantPara:
-      "We offer a complete set of design with building supervision at owner request.",
-    img: "https://i.ibb.co/JB6gxNz/photo-1585713181935-d5f622cc2415.webp",
-  },
-  {
     logo: "https://img.icons8.com/ios/50/000000/advanced-search.png",
     titile: "Non-destructive tests",
     contantList: ["UT Thickness Measurements"],
     img: "https://i.ibb.co/TbdMSH2/non-destructive.webp",
   },
+
   {
     logo: "https://img.icons8.com/ios/50/000000/strike.png",
     titile: "On demand surveys",
@@ -135,13 +149,6 @@ const mainData = [
     img: "https://i.ibb.co/2dbFPQ0/istockphoto-1461594369-612x612.jpg",
   },
   {
-    logo: "https://img.icons8.com/ios/50/000000/contract.png",
-    titile: "Seafarers endorsements and certification",
-    contantPara:
-      "Issuance of Certificates of Endorsement (COE), Certificate of competencies (COC) Continuous Discharge Certificate (CDC).",
-    img: "https://i.ibb.co/WHhT6sk/wood-table-business-wooden.webp",
-  },
-  {
     logo: "https://img.icons8.com/ios/50/000000/commercial-development-management.png",
     titile: "EEXI / CII / EPL / OMM / SEEMP PART III – Consultation",
     contantPara:
@@ -156,17 +163,11 @@ const mainData = [
     img: "https://i.ibb.co/MCNjXHr/Screenshot-2024-01-09-165551.png",
   },
   {
-    logo: "https://img.icons8.com/ios/50/000000/signing-a-document.png",
-    titile: "Ship registration services",
-    contantList: [
-      "Flag registration including processing of Navigation license, Ship station license, Minimum safe manning and Continuous synopsis record under Panama, Serra Leone, Bolivia, Georgia, Moldova and St. Vincent, Togo, Belize, Dominica, Malta, and Saint Kitts and Nevis",
-      "Registration of mortgages",
-      "Registration of title",
-      "Change of ownership and change of name",
-      "Deletion certificates",
-      "Free of encumbrance certificate",
-    ],
-    img: "https://i.ibb.co/D4ksJGw/ship-registration-e1623403355938.jpg",
+    logo: "https://img.icons8.com/ios/50/000000/maintenance--v1.png",
+    titile: "Annual Safety Inspections",
+    contantPara:
+      "Our surveyors are duly authorized form Panama, Belize, Togo, Malta, Dominica Maritime Authority to carry out Annual Safety Inspection for aforementioned administrations.",
+    img: "https://i.ibb.co/F0C4drm/istockphoto-1658925458-612x612.webp",
   },
 ];
 
@@ -207,7 +208,10 @@ const Services: React.FC = () => {
   }, []); // Empty dependency array to run the effect only once on mount
 
   // Function to handle service selection
-  const openServ = (evt: React.MouseEvent<HTMLButtonElement>, Serv: string) => {
+  const openServ = (
+    _evt: React.MouseEvent<HTMLButtonElement>,
+    Serv: string
+  ) => {
     setActiveTab(Serv);
 
     // Update the hash dynamically based on the selected service
@@ -216,6 +220,7 @@ const Services: React.FC = () => {
 
   return (
     <>
+      <div className={styles["focus-in-expand"]}>Services</div>
       <div className={styles.page}>
         <div className={styles.tab}>
           <AsideComponent

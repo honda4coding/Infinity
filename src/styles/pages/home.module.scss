@@ -23,13 +23,20 @@
   padding-bottom: 80px;
   gap: 30px;
 }
-.centerContainer h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  color: #000000;
-  margin-bottom: 1px;
+.centerContainer {
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 1px;
+  }
+  h2 {
+    font-size: 20px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
 }
-
 .gridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

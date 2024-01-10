@@ -117,7 +117,7 @@ const MainComponent: React.FC<MainProps> = ({
               </div>
               <svg xmlns="http://www.w3.org/2000/svg">
                 <title>Maintenance Icon</title>
-                <image href={dataOpj.img} width="300" height="150" />
+                <image href={dataOpj.img} width="500" height="250" />
               </svg>
             </div>
           </div>

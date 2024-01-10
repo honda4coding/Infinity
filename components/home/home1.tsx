@@ -18,7 +18,7 @@ const Home1 = () => {
         <Button
           link="/services"
           text="Dive more"
-          size="1.5rem"
+          size="1.2rem"
           onClick={handleButtonClick}
           cursorPointer={true}
         />

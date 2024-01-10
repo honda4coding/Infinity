@@ -5,16 +5,15 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 20px;
   max-width: 1424px; /* Set a maximum width for the container */
   margin: 0 auto; /* Center the container horizontally */
-  padding-top: 5rem;
+  padding-top: 20rem;
   padding-bottom: 5rem;
-
   box-sizing: border-box;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr; /* Change to a single column layout on small screens */
+    padding-top: 10rem;
   }
 }
 
@@ -31,7 +30,11 @@
   }
 
   p {
-    font-size: 1.5em; /* Adjust the font size of the paragraph */
+    font-size: 20px;
+    padding: 5px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 
   .button {

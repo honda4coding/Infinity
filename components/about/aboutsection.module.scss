@@ -7,13 +7,13 @@
 }
 
 .about-section img {
-  max-width: 60%;
+  max-width: 100%;
   border-radius: 8px;
   /* Initial styling for larger screens */
 
   /* Additional styling for smaller screens */
   @media (max-width: 1024px) {
-    max-width: 70%;
+    max-width: 100%;
 
     /* Add more styles for smaller screens if needed */
   }

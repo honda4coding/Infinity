@@ -6,7 +6,10 @@ import styles from "./hero.module.scss";
 const Hero: React.FC = () => {
   return (
     <div className={styles["ag-maecenas_title"]}>
-      <div className={styles["ag-maecenas_content"]}>{`INFINITY`}</div>
+      <video autoPlay muted loop className={styles["ag-maecenas_video"]}>
+        <source src="/My Movie.webm" type="video/webm" />
+      </video>
+      <div className={styles["ag-maecenas_title"]}>{`INFINITY`}</div>
     </div>
   );
 };
