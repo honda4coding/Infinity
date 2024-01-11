@@ -1,7 +1,8 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import styles from "../../src/styles/pages/services.module.scss";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 interface AsideProps {
   mainData: { titile: string }[];
   activeTab: string;

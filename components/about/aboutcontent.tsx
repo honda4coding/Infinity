@@ -17,7 +17,7 @@ const topics = [
   },
   {
     title: "Our Vision",
-    imageSrc: "Our-Vision-1.jpg",
+    imageSrc: "/Our-Vision-1.jpg",
     description:
       "At Infinity Marine Consultants (IMC), we envision a future where we stand proudly at the forefront of the maritime industry in Egypt, serving as the heartbeat of innovation, excellence, and reliability. Our commitment to excellence is embodied in our highly specialized and dynamic team, comprised of expert Naval Architects, seasoned Masters, and accomplished Chief Engineers. In this vision, IMC is synonymous with unparalleled quality, cutting-edge solutions, and unwavering dedication to the maritime sector. We strive to be the go-to destination for clients seeking top-tier consulting services, where our team's expertise seamlessly merges with a deep understanding of the intricacies of the maritime domain.",
   },

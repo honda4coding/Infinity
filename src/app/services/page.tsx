@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import styles from "../../styles/pages/services.module.scss";
 import AsideComponent from "../../../components/services/aside";
 import MainComponent from "../../../components/services/main";
-
 const mainData = [
   {
     logo: "https://img.icons8.com/ios/50/000000/signing-a-document.png",
