@@ -77,7 +77,7 @@ const MainComponent: React.FC<MainProps> = ({
                 Array.isArray(dataOpj.contantListOne) &&
                 dataOpj.contantListOne.length > 0 ? (
                   <>
-                    <h4>Drawings</h4>
+                    <h3>Drawings</h3>
                     <ul>
                       {dataOpj.contantListOne.map((list, index) => (
                         <li key={index}>{list}</li>
@@ -91,7 +91,7 @@ const MainComponent: React.FC<MainProps> = ({
                 Array.isArray(dataOpj.contantListTwo) &&
                 dataOpj.contantListTwo.length > 0 ? (
                   <>
-                    <h4>Calculations</h4>
+                    <h3>Calculations</h3>
                     <ul>
                       {dataOpj.contantListTwo.map((list, index) => (
                         <li key={index}>{list}</li>
@@ -105,7 +105,7 @@ const MainComponent: React.FC<MainProps> = ({
                 Array.isArray(dataOpj.contantListThree) &&
                 dataOpj.contantListThree.length > 0 ? (
                   <>
-                    <h4>Manuals</h4>
+                    <h3>Manuals</h3>
                     <ul>
                       {dataOpj.contantListThree.map((list, index) => (
                         <li key={index}>{list}</li>

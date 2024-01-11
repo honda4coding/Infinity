@@ -10,7 +10,9 @@
 
     @media only screen and (max-width: 1059px) {
       width: 100%;
+      
     }
+    
   }
 
   &__container {
@@ -38,10 +40,36 @@
     .focus-in-expand h1 {
       font-size: 40px;
     }
-    image {
-      width: 300px;
-      height: 200px;
-      padding: 10px;
+
+    li{
+      font-size: 16px !important;
+    }
+   
+    .tabcontent {
+      .textDivChild {
+        .textDivChildContant {
+          margin: 0 auto; /* Center content horizontally */
+
+          padding: 0 15px; /* Add padding for better readability */
+          font-family: "Red Hat Display", sans-serif !important;
+          font-size: 17px !important;
+          color: rgba(0, 0, 0, 0.64);
+          width: 270px !important;
+        }
+        
+        .serviceImage {
+          display: flex;
+          margin: 0 auto;
+
+          width: 280px !important;
+          height: 190px !important;
+        }
+        
+      }
+
+      &.hidden {
+        display: none;
+      }
     }
     display: flex;
     flex-direction: column;
@@ -105,7 +133,6 @@
   .concnt {
     display: flex;
     min-width: 200px;
-    max-width: 700px;
     padding: 10px;
     // @media only screen and (max-width: 991px) {
     //   display: grid;
@@ -122,8 +149,9 @@
         position: relative;
         display: flex;
         text-align: start;
-        @media only screen and (max-width: 991px) {
-          display: grid;
+        @media only screen and (max-width: 1670px) {
+          display: flex;
+          flex-direction: column;
         }
         .textDivChildContant {
           margin: 0 auto; /* Center content horizontally */
@@ -132,6 +160,7 @@
           font-family: "Red Hat Display", sans-serif !important;
           font-size: 22px;
           color: rgba(0, 0, 0, 0.64);
+          width: 500px;
         }
 
         li {
@@ -140,12 +169,13 @@
 
         .serviceImage {
           display: flex;
-          height: auto; /* Maintain aspect ratio */
           margin: 0 auto;
 
-          width: 300px;
-          height: 150px;
+          width: 490px;
+          height: 390px;
+          border-radius: 20px;
         }
+        
       }
 
       &.hidden {
