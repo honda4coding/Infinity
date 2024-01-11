@@ -11,7 +11,7 @@ const About = () => {
         <h2 className={styles.sectionTitle}>Company</h2>
         <div className={styles.infoContainer}>
           <img
-            src="/test.jpeg"
+            src="the-company-1.jpg"
             width={360}
             height={180}
             alt="Company"

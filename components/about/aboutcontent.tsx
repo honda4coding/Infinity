@@ -11,7 +11,7 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 const topics = [
   {
     title: "The Company",
-    imageSrc: "/test.jpeg",
+    imageSrc: "the-company-1.jpg",
     description:
       "Infinity marine COnsultants (IMC) is in the heart position of the maritime industry in EGYPT, with a highly specialized teamwork, including Naval Architects, Masters and Chief Engineers. Infinity Marine Consultants (IMC) is a dynamic and forward-thinking maritime consultancy firm based in the heart of Egypt. Established with a vision to lead and innovate within the maritime industry, IMC has evolved into a beacon of excellence, known for its specialized expertise, client-centric approach, and commitment to advancing industry standards.",
   },
