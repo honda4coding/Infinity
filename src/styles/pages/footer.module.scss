@@ -1,0 +1,180 @@
+/* styles/footer.css */
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: "Red Hat Display", sans-serif !important;
+}
+
+.footer {
+  position: relative;
+  margin-top: 300px;
+  padding: 3rem 0;
+  color: white;
+  background: #006699;
+  font-family: "Red Hat Display", sans-serif !important;
+
+  &__columns {
+    display: flex;
+    justify-content: center;
+    gap: 10rem; // Adjust the gap as needed
+  }
+  &__col {
+    &-title {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      * ~ span {
+        margin-left: 1rem;
+      }
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-family: "Red Hat Display", sans-serif !important;
+
+    * ~ span {
+      margin-left: 1rem;
+    }
+  }
+  &__nav {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  @keyframes parralax {
+    0% {
+      background-position: 260px;
+    }
+    100% {
+      background-position: -10000vw;
+    }
+  }
+  @keyframes moto {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    5% {
+      transform: translateY(0) rotate(-5deg);
+    }
+    25% {
+      transform: translateY(60px) rotate(-20deg);
+    }
+    49% {
+      transform: translateY(0) rotate(-1deg);
+    }
+    51% {
+      transform: translateY(0) rotate(1deg);
+    }
+    75% {
+      transform: translateY(60px) rotate(20deg);
+    }
+    80% {
+      transform: translateY(60px) rotate(0deg);
+    }
+    98% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes voiture {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(0);
+    }
+    75% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  &__parralax {
+    position: absolute;
+    left: 0;
+    top: -300px;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    &-premierplan {
+      background-position: 260px;
+    }
+    &-trees,
+    &-premierplan,
+    &-secondplan {
+      position: absolute;
+      inset: 0;
+      background-repeat: repeat-x;
+      background-position-y: 100% !important;
+      animation: parralax 600s linear infinite;
+    }
+
+    &-voiture {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      margin-left: 250px;
+      height: 75px;
+      width: 100px;
+      // background: url("../../../public/cargo-ship-svgrepo-com\ \(1\).svg");
+      background-repeat: no-repeat;
+      animation: voiture 1s linear infinite;
+      z-index: -99;
+    }
+
+    &-premierplan {
+      // background-image: url("../../../public/output-onlinepngtools.png");
+      animation-duration: 2000s;
+    }
+  }
+}
+.socialMediaLinks {
+  display: flex;
+  gap: 10px;
+}
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+
+  .footer__parralax-voiture {
+    left: 0%;
+  }
+
+  .footer__parralax {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 599px) {
+  .footer__columns {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .container {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 1099px) {
+  .footer__columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(357px, 1fr));
+    justify-items: center;
+    gap: 15px;
+  }
+}
+.socialText {
+  text-align: center;
+}
