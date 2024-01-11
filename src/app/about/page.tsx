@@ -5,6 +5,7 @@ import React from "react";
 import styles from "../../styles/pages/about.module.scss";
 
 const About = () => {
+  
   return (
     <div className={styles.aboutContainer}>
         <h1 className={styles["focus-in-expand"]}>{`About Us`}</h1>

@@ -142,6 +142,7 @@ font-weight: 500;
 
 .focus-in-expand {
   font-size: 60px;
+  margin-top: 60px;
   animation: focus-in-expand 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
     both;
     color: #024364;
@@ -172,4 +173,38 @@ font-weight: 500;
     filter: blur(0px);
     opacity: 1;
   }
+}
+@media screen and (max-width: 990px) {
+  .aboutContainer {
+    margin-top: 50px;
+  }
+  .focus-in-expand {
+    font-size: 40px;
+  }
+  .sectionTitle {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 14px;
+    width: 40vh;
+  }
+  .image {
+    height: 200px;
+    width: 350px;
+  }
+  .servicesDescription,
+  .yearsDescription {
+    font-size: 12px;
+  }
+  .downloadLink,
+  .contactButton {
+    padding: 5px 10px;
+  }
+  .infoContainer , .infoContainerTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 19vh;
+  }
+  
 }
