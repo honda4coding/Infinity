@@ -1,5 +1,126 @@
 /* styles/pages/about.module.scss */
+/* styles/pages/about.module.scss */
 
-.aboutPage {
+.aboutContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.5s ease-in-out forwards;
+
+  /* Center the container */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.infoContainer {
+  display: flex;
+  align-items: center;
+}
+.infoContainerTwo {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.sectionTitle {
+  font-size: 24px;
+  margin-top: 20px;
+  transition: color 0.3s ease-in-out;
+  color: #333;
+}
+.sectionTitle:hover {
+  color: #555;
+}
+
+.image {
+  max-width: 100%;
   height: auto;
+  margin-top: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.servicesDescription,
+.yearsDescription {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #555;
+  transition: font-weight 0.3s ease-in-out;
+}
+
+.servicesDescription:hover,
+.yearsDescription:hover {
+  font-weight: bold;
+}
+
+.downloadLink,
+.contactButton {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #3498db;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.downloadLink:hover,
+.contactButton:hover {
+  background-color: #2575a8;
+}
+.animationOne {
+  display: grid;
+  justify-items: center;
+  animation: slideInFromLeft 1s ease-out; /* Adjust the duration and easing as needed */
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.animationTwo {
+  display: grid;
+  justify-items: center;
+  animation: slideInFromRight 1s ease-out; /* Adjust the duration and easing as needed */
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
