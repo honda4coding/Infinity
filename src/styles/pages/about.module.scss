@@ -78,6 +78,17 @@ background-color: rgb(240, 240, 240, 0.4);
   border-radius: 0px 10px 10px 0px;
   
 }
+.image_service {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+  
+}
+.image_service:hover {
+  transform: scale(1.05);
+}
 
 .image:hover {
   transform: scale(1.05);

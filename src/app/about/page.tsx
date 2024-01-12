@@ -1,10 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect,ReactNode } from "react";
 import Image from "next/image";
 import styles from "../../styles/pages/about.module.scss";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const About = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+     
+  
+    });
+  }, []);
 
   return (
     <div className={styles.aboutContainer}>
@@ -47,7 +55,7 @@ const About = () => {
             alt="Mission"
             className={styles.image}
             width={600}
-            height={600}
+            height={200}
           />
           <p className={styles.description}>
             <h2 className={styles.sectionTitle}> {`Our Mission`}</h2>
@@ -58,7 +66,7 @@ const About = () => {
       </div>
 
       <h2 className={styles.sectionTitle}>{`Service`}</h2>
-      <Image src="/Dark.png" alt="Services" className={styles.image}
+      <Image src="/Dark.png" alt="Services" className={styles.image_service}
          width={800}
          height={900} />
 
