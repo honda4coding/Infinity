@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
             width="100%"
             height="530"
             scrolling="no"
-            src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=25 Reda Street, ADAM Bldg. 4th Floor, Ismailia-Egypt&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=رضا، قسم ثان الاسماعيلية، محافظة الإسماعيلية&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           ></iframe>
         </div>
         <div data-aos="fade" className={styles.info_one}>
