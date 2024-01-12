@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
             width="100%"
             height="530"
             scrolling="no"
-            src= "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d510.5030807242952!2d32.273539860758376!3d30.59894557357218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDM1JzU1LjQiTiAzMsKwMTYnMjQuNSJF!5e0!3m2!1sar!2seg!4v1705062830395!5m2!1sar!2seg" width="355" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src= "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d510.5030807242952!2d32.273539860758376!3d30.59894557357218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDM1JzU1LjQiTiAzMsKwMTYnMjQuNSJF!5e0!3m2!1sar!2seg!4v1705062830395!5m2!1sar!2seg"  loading="lazy"
           ></iframe>
         </div>
         <div data-aos="fade" className={styles.info_one}>
