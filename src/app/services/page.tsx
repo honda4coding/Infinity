@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import styles from "../../styles/pages/services.module.scss";
 import AsideComponent from "../../../components/services/aside";
 import MainComponent from "../../../components/services/main";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const mainData = [
   {
@@ -172,6 +174,11 @@ const mainData = [
 ];
 
 const Services: React.FC = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
 
   // Function to extract the service name from the URL hash
@@ -221,9 +228,9 @@ const Services: React.FC = () => {
   return (
     <>
       <div className={styles["focus-in-expand"]}>Services</div>
-      <div className={styles.page}>
-        <div className={styles.tab}>
-          <AsideComponent
+      <div  className={styles.page}>
+        <div data-aos="fade-down" className={styles.tab}>
+          <AsideComponent 
             mainData={mainData}
             activeTab={activeTab}
             openServ={openServ}
