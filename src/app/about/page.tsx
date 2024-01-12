@@ -71,13 +71,15 @@ const About = () => {
          height={900} />
 
       <h2 className={styles.sectionTitle}>{`Years in Business`}</h2>
-      <p className={styles.yearsDescription}>{`15 years`}</p>
+      <Image src="/Info.png" alt="Services" className={styles.image_service}
+         width={800}
+         height={900} />
 
       <h2 className={styles.sectionTitle}>{`Company Profile`}</h2>
       <a href="https://drive.google.com/file/d/1tX6xTpx7n93WE2tffv6_qT2yZ40vDctt/view?usp=sharing" target="_blank" download className={styles.downloadLink}>
-      {`Download PDF`}
+      {`Download`}
       </a>
-
+      
       <a className={styles.a} href="/contact"><h2 className={styles.sectionTitle}>{`Contact Us`}</h2></a>
       {/* Add your contact form or contact details */}
     </div>
