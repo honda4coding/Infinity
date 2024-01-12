@@ -142,7 +142,9 @@
   align-items: center;
   white-space: nowrap;
 }
-
+.openTimeLogoText{
+  font-size: 20px;
+}
 .openingTimes {
   display: none;
   position: absolute;
@@ -151,9 +153,18 @@
   color: #000;
   padding: 10px;
   border-radius: 25px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
   z-index: 11; /* Ensure it's above other elements */
   margin-left: 10px;
+
+  /* Add a transition effect */
+  transition: opacity 2.3s ease-in-out;
+  
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .openingTimes ul {
@@ -187,5 +198,8 @@
   }
   .openingTimesButton {
     transform: translateX(15%); /* Adjust positioning as needed */
+  }
+  .openTimeLogoText{
+    font-size: 15px;
   }
 }
