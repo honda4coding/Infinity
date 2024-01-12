@@ -71,6 +71,8 @@ const About = () => {
          height={900} />
 
       <h2 className={styles.sectionTitle}>{`Years in Business`}</h2>
+      <p className={styles.description}>
+        {`years of experience in the maritime industry 18 years `}</p> 
       <Image src="/Info.png" alt="Services" className={styles.image_service}
          width={800}
          height={900} />
