@@ -4,11 +4,12 @@ import React, { useState, useEffect } from "react";
 import styles from "../../styles/pages/services.module.scss";
 import AsideComponent from "../../../components/services/aside";
 import MainComponent from "../../../components/services/main";
+
 const mainData = [
   {
     logo: "https://img.icons8.com/ios/50/000000/signing-a-document.png",
-    titile: "Ship registration services",
-    contantList: [
+    title: "Ship registration services",
+    contentList: [
       "Flag registration including processing of Navigation license, Ship station license, Minimum safe manning and Continuous synopsis record under Panama, Serra Leone, Bolivia, Georgia, Moldova and St. Vincent, Togo, Belize, Dominica, Malta, and Saint Kitts and Nevis",
       "Registration of mortgages",
       "Registration of title",
@@ -20,31 +21,31 @@ const mainData = [
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/cargo-ship.png",
-    titile: "New ships designs",
-    contantPara:
+    title: "New ships designs",
+    contentPara:
       "We offer a complete set of design with building supervision at owner request.",
     img: "https://i.ibb.co/JB6gxNz/photo-1585713181935-d5f622cc2415.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/commercial-development-management.png",
-    titile: "Ballast Water Management Solutions",
-    contantPara:
+    title: "Ballast Water Management Solutions",
+    contentPara:
       "Ballast water management system (BWMS) means any system which processes ballast water to kill, render harmless, or remove organisms. The BWMS includesall ballast water treatment equipment and all associated control and monitoringequipment,We present a cost-effective solution for complying with Ballast Water Management Convention and Non-Applicability of the convention Exemptions ",
     img: "https://i.ibb.co/LDy0zcq/maxresdefault.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/case-study.png",
-    titile: "CFD Finite Element Analysis",
-    contantPara:
+    title: "CFD Finite Element Analysis",
+    contentPara:
       "A dedicated team of highly qualified and experienced engineers and analysts ensure that all our CFD work is performed to the very highest standards. CFD results are presented in professional engineering reports that are accepted by Classification Societies",
     img: "https://i.ibb.co/yy1RyY8/Marine-ship-CFD-Msc-Cradle-Ansys-Fluent-Siemens-Star-ccm.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/certificate--v1.png",
-    titile: "Class and statutory certification",
-    contantPara:
+    title: "Class and statutory certification",
+    contentPara:
       "We are approved for the following class and statutory certification under flags of Panama, Panama, Belize, Serra Leone, Bolivia, Georgia, Moldova, Togo, Saint Kitts and Nevis:",
-    contantList: [
+    contentList: [
       "Class Hull and Machinery certification",
       "International Tonnage certificate",
       "International load line certificate",
@@ -68,42 +69,42 @@ const mainData = [
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/contract.png",
-    titile: "Seafarers endorsements and certification",
-    contantPara:
+    title: "Seafarers endorsements and certification",
+    contentPara:
       "Issuance of Certificates of Endorsement (COE), Certificate of competencies (COC) Continuous Discharge Certificate (CDC).",
     img: "https://i.ibb.co/WHhT6sk/wood-table-business-wooden.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/related-companies.png",
-    titile: "Corporations",
-    contantPara:
+    title: "Corporations",
+    contentPara:
       "Registration of incorporations /off-shore companies under Panama, Belize, Marshal Island, St.Kitts &Nevies.",
     img: "https://i.ibb.co/k2WgwT5/desktop-wallpaper-business-corporate.webp",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/manhole-cover.png",
-    titile: "Insurance Cover, conditions surveys",
-    contant: "",
+    title: "Insurance Cover, conditions surveys",
+    content: "",
     img: "",
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/training.png",
-    titile: "ISM and ISPS training and consultancy",
-    contant: "",
+    title: "ISM and ISPS training and consultancy",
+    content: "",
     img: "",
   },
 
   {
     logo: "https://img.icons8.com/ios/50/000000/advanced-search.png",
-    titile: "Non-destructive tests",
-    contantList: ["UT Thickness Measurements"],
+    title: "Non-destructive tests",
+    contentList: ["UT Thickness Measurements"],
     img: "https://i.ibb.co/TbdMSH2/non-destructive.webp",
   },
 
   {
     logo: "https://img.icons8.com/ios/50/000000/strike.png",
-    titile: "On demand surveys",
-    contantList: [
+    title: "On demand surveys",
+    contentList: [
       "Pre-purchase inspection",
       "On hire/ Off hire inspection",
       "Bunker Survey",
@@ -118,9 +119,9 @@ const mainData = [
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/drafting-compass.png",
-    titile:
+    title:
       "Recreation of existing ships drawings, calculations, manuals & plans",
-    contantListOne: [
+    contentListOne: [
       "Lines Plans",
       "Construction Drawings",
       "Machinery, Shafting Layouts",
@@ -129,10 +130,10 @@ const mainData = [
       "Capacity Plan",
       "Fire Control and Safety Plan",
     ],
-    contantListTwo: [
+    contentListTwo: [
       "Hydrostatics, Stability, freeboard calculations, tonnage measurements, Dwt Increment, Torsional Vibrations, etc.",
     ],
-    contantListThree: [
+    contentListThree: [
       "Intact, Damage Stability booklets",
       "Trim Sounding Tables",
       "Tonnage, Freeboard measurements",
@@ -149,10 +150,10 @@ const mainData = [
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/commercial-development-management.png",
-    titile: "EEXI / CII / EPL / OMM / SEEMP PART III – Consultation",
-    contantPara:
+    title: "EEXI / CII / EPL / OMM / SEEMP PART III – Consultation",
+    contentPara:
       "we provide complete consultation by our Expert Marine Engineers and Naval Architects for MARPOL ANNEX VI Compliance: ",
-    contantList: [
+    contentList: [
       "EEXI Compliance- (Energy Efficiency Existing Ship Index)",
       "CII Compliance- (Carbon Intensity Indicator)",
       "EPL- (Engine Power Limitation)",
@@ -163,8 +164,8 @@ const mainData = [
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/maintenance--v1.png",
-    titile: "Annual Safety Inspections",
-    contantPara:
+    title: "Annual Safety Inspections",
+    contentPara:
       "Our surveyors are duly authorized form Panama, Belize, Togo, Malta, Dominica Maritime Authority to carry out Annual Safety Inspection for aforementioned administrations.",
     img: "https://i.ibb.co/F0C4drm/istockphoto-1658925458-612x612.webp",
   },
@@ -185,7 +186,7 @@ const Services: React.FC = () => {
     const initialService = getServiceFromHash();
     if (
       initialService &&
-      mainData.some((data) => data.titile === initialService)
+      mainData.some((data) => data.title === initialService)
     ) {
       setActiveTab(initialService);
     }
@@ -193,7 +194,7 @@ const Services: React.FC = () => {
     // Add event listener for hash changes
     const handleHashChange = () => {
       const newService = getServiceFromHash();
-      if (newService && mainData.some((data) => data.titile === newService)) {
+      if (newService && mainData.some((data) => data.title === newService)) {
         setActiveTab(newService);
       }
     };
@@ -207,14 +208,14 @@ const Services: React.FC = () => {
   }, []); // Empty dependency array to run the effect only once on mount
 
   // Function to handle service selection
-  const openServ = (
+  const openService = (
     _evt: React.MouseEvent<HTMLButtonElement>,
-    Serv: string
+    Service: string
   ) => {
-    setActiveTab(Serv);
+    setActiveTab(Service);
 
     // Update the hash dynamically based on the selected service
-    window.location.hash = encodeURIComponent(Serv);
+    window.location.hash = encodeURIComponent(Service);
   };
 
   return (
@@ -225,12 +226,12 @@ const Services: React.FC = () => {
           <AsideComponent
             mainData={mainData}
             activeTab={activeTab}
-            openServ={openServ}
+            openService={openService}
           />
           <MainComponent
             mainData={mainData}
             activeTab={activeTab}
-            openServ={openServ}
+            openService={openService}
           />
         </div>
       </div>

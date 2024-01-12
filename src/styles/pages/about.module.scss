@@ -4,17 +4,19 @@
 .aboutContainer {
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 100px;
   padding: 20px;
-  font-family: "Arial", sans-serif;
+  font-family: "Red Hat Display", sans-serif !important;
   opacity: 0;
   transform: translateY(-20px);
-  animation: fadeInUp 0.5s ease-in-out forwards;
-
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  background-color: rgb(240, 240, 240, 0.4);
   /* Center the container */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 50px;
 }
 
 @keyframes fadeInUp {
@@ -27,30 +29,64 @@
     transform: translateY(0);
   }
 }
+.a {
+  text-decoration: none;
+}
 .infoContainer {
   display: flex;
   align-items: center;
+  width: 70vw;
+  background-color: antiquewhite;
 }
 .infoContainerTwo {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
+  width: 70vw;
+  background-color: rgb(2, 39, 83, 0.8);
+
+  .description {
+    color: #ffffff !important;
+    font-weight: 500;
+  }
+  .sectionTitle {
+    color: #ffffff !important;
+  }
+  .image {
+    border-radius: 10px 0 0 10px;
+  }
 }
 .sectionTitle {
-  font-size: 24px;
+  font-size: 29px;
   margin-top: 20px;
-  transition: color 0.3s ease-in-out;
+  transition: color 2.3s ease-in-out;
   color: #333;
-}
-.sectionTitle:hover {
-  color: #555;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-decoration-color: #3498db;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 9px;
+  text-decoration-style: solid;
 }
 
 .image {
-  max-width: 100%;
-  height: auto;
+  height: 320px;
   margin-top: 10px;
   transition: transform 0.3s ease-in-out;
+  border-radius: 0px 10px 10px 0px;
+  width: 50%;
+}
+.image_service {
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px;
+}
+.image_service:hover {
+  transform: scale(1.05);
 }
 
 .image:hover {
@@ -58,9 +94,13 @@
 }
 
 .description {
-  font-size: 16px;
-  margin-top: 10px;
-  color: #555;
+  font-size: 18px;
+  margin-top: 30px;
+  color: #3f3f3f;
+  margin-left: 30px;
+  margin-right: 30px;
+  text-align: justify;
+  font-weight: 600;
 }
 
 .servicesDescription,
@@ -68,7 +108,7 @@
   font-size: 16px;
   margin-top: 10px;
   color: #555;
-  transition: font-weight 0.3s ease-in-out;
+  transition: font-weight 2.3s ease-in-out;
 }
 
 .servicesDescription:hover,
@@ -95,7 +135,7 @@
 .animationOne {
   display: grid;
   justify-items: center;
-  animation: slideInFromLeft 1s ease-out; /* Adjust the duration and easing as needed */
+  animation: slideInFromLeft 2.5s ease-out; /* Adjust the duration and easing as needed */
 }
 
 @keyframes slideInFromLeft {
@@ -111,7 +151,7 @@
 .animationTwo {
   display: grid;
   justify-items: center;
-  animation: slideInFromRight 1s ease-out; /* Adjust the duration and easing as needed */
+  animation: slideInFromRight 2.5s ease-out; /* Adjust the duration and easing as needed */
 }
 
 @keyframes slideInFromRight {
@@ -122,5 +162,74 @@
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+.focus-in-expand {
+  font-size: 60px;
+  margin-top: 60px;
+  animation: focus-in-expand 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+    both;
+  color: #024364;
+  margin-bottom: 40px;
+}
+@-webkit-keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 990px) {
+  .aboutContainer {
+    margin-top: 50px;
+  }
+  .focus-in-expand {
+    font-size: 40px;
+  }
+  .sectionTitle {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 14px;
+    width: 40vh;
+  }
+  .image {
+    height: 200px;
+    width: 350px;
+  }
+  .servicesDescription,
+  .yearsDescription {
+    font-size: 12px;
+  }
+  .downloadLink,
+  .contactButton {
+    padding: 5px 10px;
+  }
+  .infoContainer,
+  .infoContainerTwo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 43vh;
   }
 }

@@ -1,35 +1,39 @@
 import React from "react";
+// import styles from "./main.module.scss";
 import styles from "../../src/styles/pages/services.module.scss";
 
 interface MainProps {
   mainData: {
-    titile: string;
+    title: string;
     logo: string;
-    contantPara?: string;
-    contantList?: string[];
-    contantListOne?: string[];
-    contantListTwo?: string[];
-    contantListThree?: string[];
+    contentPara?: string;
+    contentList?: string[];
+    contentListOne?: string[];
+    contentListTwo?: string[];
+    contentListThree?: string[];
     img: string;
   }[];
   activeTab: string;
-  openServ: (evt: React.MouseEvent<HTMLButtonElement>, Serv: string) => void;
+  openService: (
+    evt: React.MouseEvent<HTMLButtonElement>,
+    Service: string
+  ) => void;
 }
 
 const MainComponent: React.FC<MainProps> = ({
   mainData,
   activeTab,
-  openServ,
+  openService,
 }) => {
   return (
-    <main className={styles.concnt}>
+    <main className={styles.content}>
       {mainData.map((dataOpj) => (
         <>
           <div
             className={
-              activeTab === dataOpj.titile
-                ? `${styles.tabcontent} ${styles.logoDiv}`
-                : `${styles.tabcontent} ${styles.hidden}`
+              activeTab === dataOpj.title
+                ? `${styles.tabContent} ${styles.logoDiv}`
+                : `${styles.tabContent} ${styles.hidden}`
             }
             key={dataOpj.logo}
             style={{ paddingTop: "10px" }}
@@ -42,44 +46,44 @@ const MainComponent: React.FC<MainProps> = ({
 
           <div
             className={
-              activeTab === dataOpj.titile
-                ? `${styles.tabcontent} ${styles.textDiv}`
-                : `${styles.tabcontent} ${styles.hidden}`
+              activeTab === dataOpj.title
+                ? `${styles.tabContent} ${styles.textDiv}`
+                : `${styles.tabContent} ${styles.hidden}`
             }
-            key={dataOpj.titile}
+            key={dataOpj.title}
           >
             <h2
-              key={dataOpj.titile}
+              key={dataOpj.title}
               style={{
                 fontFamily: "Open Sans, sans-serif",
                 fontWeight: 600,
                 fontSize: 22,
               }}
             >
-              {dataOpj.titile}
+              {dataOpj.title}
             </h2>
             <div className={styles.textDivChild}>
-              <div className={styles.textDivChildContant}>
-                <p key={dataOpj.titile}>{dataOpj.contantPara}</p>
+              <div className={styles.textDivChildContent}>
+                <p key={dataOpj.title}>{dataOpj.contentPara}</p>
                 {/* ... Other text content rendering */}
-                {dataOpj.contantList &&
-                Array.isArray(dataOpj.contantList) &&
-                dataOpj.contantList.length > 0 ? (
+                {dataOpj.contentList &&
+                Array.isArray(dataOpj.contentList) &&
+                dataOpj.contentList.length > 0 ? (
                   <ul>
-                    {dataOpj.contantList.map((list, index) => (
+                    {dataOpj.contentList.map((list, index) => (
                       <li key={index}>{list}</li>
                     ))}
                   </ul>
                 ) : (
                   ""
                 )}
-                {dataOpj.contantListOne &&
-                Array.isArray(dataOpj.contantListOne) &&
-                dataOpj.contantListOne.length > 0 ? (
+                {dataOpj.contentListOne &&
+                Array.isArray(dataOpj.contentListOne) &&
+                dataOpj.contentListOne.length > 0 ? (
                   <>
-                    <h4>Drawings</h4>
+                    <h3>Drawings</h3>
                     <ul>
-                      {dataOpj.contantListOne.map((list, index) => (
+                      {dataOpj.contentListOne.map((list, index) => (
                         <li key={index}>{list}</li>
                       ))}
                     </ul>
@@ -87,13 +91,13 @@ const MainComponent: React.FC<MainProps> = ({
                 ) : (
                   ""
                 )}
-                {dataOpj.contantListTwo &&
-                Array.isArray(dataOpj.contantListTwo) &&
-                dataOpj.contantListTwo.length > 0 ? (
+                {dataOpj.contentListTwo &&
+                Array.isArray(dataOpj.contentListTwo) &&
+                dataOpj.contentListTwo.length > 0 ? (
                   <>
-                    <h4>Calculations</h4>
+                    <h3>Calculations</h3>
                     <ul>
-                      {dataOpj.contantListTwo.map((list, index) => (
+                      {dataOpj.contentListTwo.map((list, index) => (
                         <li key={index}>{list}</li>
                       ))}
                     </ul>
@@ -101,13 +105,13 @@ const MainComponent: React.FC<MainProps> = ({
                 ) : (
                   ""
                 )}
-                {dataOpj.contantListThree &&
-                Array.isArray(dataOpj.contantListThree) &&
-                dataOpj.contantListThree.length > 0 ? (
+                {dataOpj.contentListThree &&
+                Array.isArray(dataOpj.contentListThree) &&
+                dataOpj.contentListThree.length > 0 ? (
                   <>
-                    <h4>Manuals</h4>
+                    <h3>Manuals</h3>
                     <ul>
-                      {dataOpj.contantListThree.map((list, index) => (
+                      {dataOpj.contentListThree.map((list, index) => (
                         <li key={index}>{list}</li>
                       ))}
                     </ul>

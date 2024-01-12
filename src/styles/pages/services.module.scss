@@ -1,3 +1,113 @@
+// .page {
+//   display: flex;
+//   justify-content: center;
+//   padding-top: 50px;
+
+//   &__tab {
+//     width: 25%;
+//     padding: 20px;
+//     box-sizing: border-box;
+
+//     @media only screen and (max-width: 1059px) {
+//       width: 100%;
+//     }
+//   }
+
+//   &__container {
+//     width: 75%;
+//     padding: 20px;
+//     box-sizing: border-box;
+//   }
+// }
+
+// .tab {
+//   font-family: "Red Hat Display", sans-serif !important;
+//   display: flex;
+//   justify-items: center;
+
+//   @media (max-width: 991px) {
+//     button {
+//       font-size: 16px;
+//       font-weight: 600;
+//     }
+
+//     .focus-in-expand h1 {
+//       font-size: 40px;
+//     }
+
+//     li {
+//       font-size: 16px !important;
+//     }
+
+//     .tabContent {
+//       .textDivChild {
+//         .textDivChildContent {
+//           margin: 0 auto;
+//           padding: 0 15px;
+//           font-family: "Red Hat Display", sans-serif !important;
+//           font-size: 17px !important;
+//           color: rgba(0, 0, 0, 0.64);
+//           width: 270px !important;
+//         }
+
+//         .serviceImage {
+//           display: flex;
+//           margin: 0 auto;
+//           width: 280px !important;
+//           height: 190px !important;
+//         }
+//       }
+
+//       &.hidden {
+//         display: none;
+//       }
+//     }
+
+//     display: flex;
+//     flex-direction: column;
+//   }
+// }
+
+// .focus-in-expand {
+//   display: block;
+//   font-size: 65px;
+//   font-weight: 700;
+//   text-align: center;
+//   color: #00303f;
+//   margin-top: 100px;
+//   animation: focus-in-expand 6.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+// }
+
+// @-webkit-keyframes focus-in-expand {
+//   0% {
+//     letter-spacing: -0.5em;
+//     -webkit-filter: blur(12px);
+//     filter: blur(12px);
+//     opacity: 0;
+//   }
+//   100% {
+//     -webkit-filter: blur(0px);
+//     filter: blur(0px);
+//     opacity: 1;
+//   }
+// }
+
+// @keyframes focus-in-expand {
+//   0% {
+//     letter-spacing: -0.5em;
+//     -webkit-filter: blur(12px);
+//     filter: blur(12px);
+//     opacity: 0;
+//   }
+//   100% {
+//     -webkit-filter: blur(0px);
+//     filter: blur(0px);
+//     opacity: 1;
+//   }
+// }
+
+/////////////////////////////////////////////////////////////////
+
 .page {
   display: flex;
   justify-content: center;
@@ -38,16 +148,41 @@
     .focus-in-expand h1 {
       font-size: 40px;
     }
-    image {
-      width: 300px;
-      height: 200px;
-      padding: 10px;
+
+    li {
+      font-size: 16px !important;
+    }
+
+    .tabContent {
+      .textDivChild {
+        .textDivChildContent {
+          margin: 0 auto; /* Center content horizontally */
+
+          padding: 0 15px; /* Add padding for better readability */
+          font-family: "Red Hat Display", sans-serif !important;
+          font-size: 17px !important;
+          color: rgba(0, 0, 0, 0.64);
+          width: 270px !important;
+        }
+
+        .serviceImage {
+          display: flex;
+          margin: 0 auto;
+
+          width: 280px !important;
+          height: 190px !important;
+        }
+      }
+
+      &.hidden {
+        display: none;
+      }
     }
     display: flex;
     flex-direction: column;
   }
   //todo
-  .btncnttt {
+  .btnClick {
     display: grid;
     justify-items: center;
     top: 10px;
@@ -87,7 +222,7 @@
       border: 0.01px solid white;
       border-radius: 10px;
       font-size: 15px;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Red Hat Display", sans-serif !important;
       font-weight: 600;
 
       &:hover {
@@ -102,10 +237,9 @@
     }
   }
 
-  .concnt {
+  .content {
     display: flex;
     min-width: 200px;
-    max-width: 700px;
     padding: 10px;
     // @media only screen and (max-width: 991px) {
     //   display: grid;
@@ -117,21 +251,23 @@
       color: #0000008a;
     }
 
-    .tabcontent {
+    .tabContent {
       .textDivChild {
         position: relative;
         display: flex;
         text-align: start;
-        @media only screen and (max-width: 991px) {
-          display: grid;
+        @media only screen and (max-width: 1670px) {
+          display: flex;
+          flex-direction: column;
         }
-        .textDivChildContant {
+        .textDivChildContent {
           margin: 0 auto; /* Center content horizontally */
 
           padding: 0 15px; /* Add padding for better readability */
           font-family: "Red Hat Display", sans-serif !important;
           font-size: 22px;
           color: rgba(0, 0, 0, 0.64);
+          width: 500px;
         }
 
         li {
@@ -140,11 +276,11 @@
 
         .serviceImage {
           display: flex;
-          height: auto; /* Maintain aspect ratio */
           margin: 0 auto;
 
-          width: 300px;
-          height: 150px;
+          width: 490px;
+          height: 390px;
+          border-radius: 20px;
         }
       }
 

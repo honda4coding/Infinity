@@ -1,18 +1,22 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import styles from "../../src/styles/pages/services.module.scss";
+// import styles from "../../src/styles/pages/services.module.scss";
+import styles from "./aside.module.scss";
 import AOS from "aos";
 import "aos/dist/aos.css";
 interface AsideProps {
-  mainData: { titile: string }[];
+  mainData: { title: string }[];
   activeTab: string;
-  openServ: (evt: React.MouseEvent<HTMLButtonElement>, Serv: string) => void;
+  openService: (
+    evt: React.MouseEvent<HTMLButtonElement>,
+    Service: string
+  ) => void;
 }
 
 const AsideComponent: React.FC<AsideProps> = ({
   mainData,
   activeTab,
-  openServ,
+  openService,
 }) => {
   const [collapsed, setCollapsed] = useState(
     typeof window !== "undefined" && window.innerWidth <= 1059 ? true : false
@@ -24,9 +28,9 @@ const AsideComponent: React.FC<AsideProps> = ({
 
   const handleServiceClick = (
     e: React.MouseEvent<HTMLButtonElement>,
-    titile: string
+    title: string
   ) => {
-    openServ(e, titile);
+    openService(e, title);
     // Set collapsed to true after a service is selected in mobile view
     if (typeof window !== "undefined" && window.innerWidth <= 990) {
       setCollapsed(true);
@@ -74,19 +78,19 @@ const AsideComponent: React.FC<AsideProps> = ({
   return (
     <>
       {windowWidth > 991 ? (
-        <aside className={styles.btncnttt}>
+        <aside className={styles.btnClick}>
           {mainData.map((dataObj) => (
             <button
               type="button"
               className={
-                activeTab === dataObj.titile
-                  ? `${styles.tablinks} ${styles.active}`
-                  : styles.tablinks
+                activeTab === dataObj.title
+                  ? `${styles.tabLinks} ${styles.active}`
+                  : styles.tabLinks
               }
-              onClick={(e) => openServ(e, dataObj.titile)}
-              key={dataObj.titile}
+              onClick={(e) => openService(e, dataObj.title)}
+              key={dataObj.title}
             >
-              {dataObj.titile}
+              {dataObj.title}
             </button>
           ))}
         </aside>
@@ -107,14 +111,14 @@ const AsideComponent: React.FC<AsideProps> = ({
               <button
                 type="button"
                 className={
-                  activeTab === dataObj.titile
+                  activeTab === dataObj.title
                     ? `${styles.tablinks} ${styles.active}`
                     : styles.tablinks
                 }
-                onClick={(e) => handleServiceClick(e, dataObj.titile)}
-                key={dataObj.titile}
+                onClick={(e) => handleServiceClick(e, dataObj.title)}
+                key={dataObj.title}
               >
-                {dataObj.titile}
+                {dataObj.title}
               </button>
             ))}
           </aside>

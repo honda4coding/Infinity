@@ -1,8 +1,12 @@
 // components/ServicesComponent.js
 "use client";
 
-import React, { ReactNode } from "react";
 import styles from "./services.module.scss";
+import React, { useState, useEffect,ReactNode } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
+
 
 interface CardProps {
   icon: ReactNode;
@@ -19,6 +23,13 @@ const Services: React.FC<ServicesProps> = ({
   href,
   onClick,
 }) => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+     
+  
+    });
+  }, []);
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -27,7 +38,7 @@ const Services: React.FC<ServicesProps> = ({
     window.location.href = href;
   };
   return (
-    <button className={styles.card} onClick={handleClick}>
+    <button data-aos="fade-up" className={styles.card} onClick={handleClick}>
       <div className={styles.cardContent}>
         <div className={styles.icon}>{icon}</div>
         <h2>{title}</h2>

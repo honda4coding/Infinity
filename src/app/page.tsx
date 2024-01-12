@@ -1,16 +1,23 @@
 // pages/HomePage.js
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Home1 from "../../components/home/home1";
 import Services from "../../components/home/services";
 import styles from "../styles/pages/home.module.scss";
 import Info from "../../components/home/info";
 import Button from "../../components/common/readmore";
 import Hero from "../../components/home/hero";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import Image from "next/image";
 
 const HomePage = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   function handleButtonClick(): void {}
   const handleServiceClick = () => {};
   return (
@@ -18,7 +25,7 @@ const HomePage = () => {
       <Hero></Hero>
       <div className={styles.pageContainer}>
         <Home1></Home1>
-        <div className={styles.centerContainer}>
+        <div data-aos="fade-down" className={styles.centerContainer}>
           <h1>Services</h1>
           <h2>
             {` We strive to provide an expert solution everyday in maritime
@@ -109,8 +116,9 @@ const HomePage = () => {
             cursorPointer={true}
           />
         </div>
-
-        <Info></Info>
+        <div data-aos="fade-down" className={styles.topics}>
+          <Info></Info>
+        </div>
       </div>
     </>
   );

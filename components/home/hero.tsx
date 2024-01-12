@@ -1,7 +1,17 @@
-import React, { useRef } from "react";
+"use client";
+4;
+import React, { useState, useEffect } from "react";
+import { useRef } from "react";
 import styles from "./hero.module.scss";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
@@ -16,7 +26,10 @@ const Hero: React.FC = () => {
         <source src="/My Movie(1).webm" type="video/webm" />
         Your browser does not support the video tag.
       </video>
-      <div className={styles["ag-maecenas_title"]}>{`INFINITY♾`}</div>
+      <div
+        data-aos="fade-down"
+        className={styles["ag-maecenas_title"]}
+      >{`INFINITY`}</div>
     </div>
   );
 };
