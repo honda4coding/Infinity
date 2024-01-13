@@ -13,8 +13,6 @@ const About = () => {
     });
   }, []);
 
-  function handleButtonClick(): void {}
-
   return (
     <div className={styles.aboutContainer}>
       <h1 className={styles["focus-in-expand"]}>{`About Us`}</h1>
@@ -92,7 +90,6 @@ const About = () => {
       <a
         href="https://drive.google.com/file/d/1tX6xTpx7n93WE2tffv6_qT2yZ40vDctt/view?usp=sharing"
         target="_blank"
-        download
         className={styles.downloadLink}
       >
         {`Download`}
@@ -114,16 +111,3 @@ const About = () => {
 };
 
 export default About;
-// import AboutContent from "../../../components/about/aboutcontent";
-// import styles from "../../styles/pages/about.module.scss";
-// const About = () => {
-//   return (
-//     <>
-//       <div className={styles.aboutPage}>
-//         <AboutContent></AboutContent>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default About;

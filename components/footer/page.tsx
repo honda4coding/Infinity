@@ -90,16 +90,28 @@ const Footer: React.FC = () => {
       <div className={styles.footer__copyrights}>
         <p>
           Made with love by{" "}
-          <a href="https://link1.com" target="_blank" rel="noopener noreferrer">
-            Link 1
+          <a
+            href="https://www.facebook.com/mohaned.a55"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Mohaned
           </a>
           ,{" "}
-          <a href="https://link2.com" target="_blank" rel="noopener noreferrer">
-            Link 2
+          <a
+            href="https://www.facebook.com/ahmed.sameh.334839"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ahmed
           </a>
           , and{" "}
-          <a href="https://link3.com" target="_blank" rel="noopener noreferrer">
-            Link 3
+          <a
+            href="https://www.facebook.com/ahmed.zekoo.3572"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ahmed
           </a>
         </p>
       </div>
