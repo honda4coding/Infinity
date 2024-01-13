@@ -1,5 +1,5 @@
 "use client";
-4;
+
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/pages/contact.module.scss";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -26,8 +26,8 @@ const Contact: React.FC = () => {
           src="/resize-170386058519758890772.jpg" // Replace with your image URL
           alt="Description"
           objectFit="cover"
-          width={100}
-          height={100}
+          // width={100}
+          // height={100}
         />
 
         <div data-aos="fade-down" className={styles.conect}>
@@ -48,7 +48,8 @@ const Contact: React.FC = () => {
             width="100%"
             height="530"
             scrolling="no"
-            src="https://maps.google.com/maps?width=100%&amp;height=100%&amp;hl=en&amp;q=25 Reda Street, ADAM Bldg. 4th Floor, Ismailia-Egypt&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d510.5030807242952!2d32.273539860758376!3d30.59894557357218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzDCsDM1JzU1LjQiTiAzMsKwMTYnMjQuNSJF!5e0!3m2!1sar!2seg!4v1705062830395!5m2!1sar!2seg"
+            loading="lazy"
           ></iframe>
         </div>
         <div data-aos="fade" className={styles.info_one}>

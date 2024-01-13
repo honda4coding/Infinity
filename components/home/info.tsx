@@ -2,7 +2,11 @@
 import React, { useState, useEffect } from "react";
 import Button from "../common/readmore";
 import styles from "./info.module.scss"; // Import the SCSS module
-
+interface Topic {
+  title: string;
+  text: string;
+  image: string;
+}
 const topics = [
   {
     title: "The Company",
@@ -50,16 +54,6 @@ const Info = () => {
           <div className={styles.infoText}>
             <h2>{topics[currentTopic].title}</h2>
             <p>{topics[currentTopic].text}</p>
-
-            <div className={styles.toggleButtons}>
-              {topics.map((topic, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleTopicChange(index)}
-                  className={index === currentTopic ? styles.active : ""}
-                />
-              ))}
-            </div>
           </div>
           <div
             className={`${styles.imageContainer} ${styles.imageBackground}`}
@@ -67,6 +61,16 @@ const Info = () => {
               backgroundImage: `url(${topics[currentTopic].image})`,
             }}
           />
+          <div className={styles.toggleButtons}>
+            {topics.map((topic, index) => (
+              <button
+                type="button"
+                key={index}
+                onClick={() => handleTopicChange(index)}
+                className={index === currentTopic ? styles.active : ""}
+              ></button>
+            ))}
+          </div>
         </div>
       </div>
       <Button

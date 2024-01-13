@@ -27,7 +27,6 @@
   // float: right;
   padding: 0;
   margin: 0;
-  // width: 10%;
   height: 100%;
   display: flex;
   font-family: "Red Hat Display", sans-serif !important;
@@ -74,7 +73,7 @@
   }
 }
 
-@media screen and (max-width: 829px) {
+@media screen and (max-width: 882px) {
   .logo {
     float: none;
     width: auto;
@@ -138,7 +137,7 @@
   width: auto;
   height: 62px;
   transform: translateX(120%); /* Adjust positioning as needed */
-
+  font-size: 18px;
   align-items: center;
   white-space: nowrap;
 }
@@ -175,7 +174,7 @@
 .openingTimes.active {
   display: block;
 }
-@media screen and (max-width: 829px) {
+@media screen and (max-width: 882px) {
   .nav {
     flex-direction: row-reverse;
     justify-content: space-between;

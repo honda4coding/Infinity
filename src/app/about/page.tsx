@@ -102,13 +102,13 @@ const About = () => {
         <h2 className={styles.sectionTitle}>{`Contact Us`}</h2>
       </a>
       {/* Add your contact form or contact details */}
-      <Button
+      {/* <Button
         link="/contact"
         text="Dive more"
         size="1.2rem"
         onClick={handleButtonClick}
         cursorPointer={true}
-      />
+      /> */}
     </div>
   );
 };

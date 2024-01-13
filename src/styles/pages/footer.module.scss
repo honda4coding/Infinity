@@ -51,57 +51,6 @@
     }
   }
 
-  @keyframes parralax {
-    0% {
-      background-position: 260px;
-    }
-    100% {
-      background-position: -10000vw;
-    }
-  }
-  @keyframes moto {
-    0% {
-      transform: translateY(0) rotate(0);
-    }
-    5% {
-      transform: translateY(0) rotate(-5deg);
-    }
-    25% {
-      transform: translateY(60px) rotate(-20deg);
-    }
-    49% {
-      transform: translateY(0) rotate(-1deg);
-    }
-    51% {
-      transform: translateY(0) rotate(1deg);
-    }
-    75% {
-      transform: translateY(60px) rotate(20deg);
-    }
-    80% {
-      transform: translateY(60px) rotate(0deg);
-    }
-    98% {
-      transform: translateY(0) rotate(0);
-    }
-  }
-  @keyframes voiture {
-    0% {
-      transform: rotate(0);
-    }
-    25% {
-      transform: rotate(-5deg);
-    }
-    50% {
-      transform: rotate(0);
-    }
-    75% {
-      transform: rotate(5deg);
-    }
-    100% {
-      transform: rotate(0);
-    }
-  }
   &__parralax {
     position: absolute;
     left: 0;
@@ -177,4 +126,22 @@
 }
 .socialText {
   text-align: center;
+}
+/* Add this CSS to your stylesheet */
+.footer__copyrights {
+  display: flex;
+  justify-content: center;
+  font-size: xx-small; /* Adjust the font size as needed */
+  background: #006699;
+  color: #ffffff; /* Set the color of the links */
+}
+
+.footer__copyrights a {
+  text-decoration: none; /* Remove text decoration from links */
+  // font-size: 12px; /* Adjust the font size for links as needed */
+  color: #ffffff; /* Set the color of the links */
+}
+
+.footer__copyrights a:hover {
+  text-decoration: underline; /* Add underline on hover (optional) */
 }
