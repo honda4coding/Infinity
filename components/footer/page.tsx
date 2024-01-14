@@ -89,29 +89,13 @@ const Footer: React.FC = () => {
       </footer>
       <div className={styles.footer__copyrights}>
         <p>
-          Made with love by{" "}
+          Created with passion by{" "}
           <a
-            href="https://www.facebook.com/mohaned.a55"
+            href="https://linktr.ee/TSX_DEV"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Mohaned
-          </a>
-          ,{" "}
-          <a
-            href="https://www.facebook.com/ahmed.sameh.334839"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ahmed
-          </a>
-          , and{" "}
-          <a
-            href="https://www.facebook.com/ahmed.zekoo.3572"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ahmed
+            TSX_DEV
           </a>
         </p>
       </div>
