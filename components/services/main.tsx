@@ -12,6 +12,8 @@ interface MainProps {
     contentListTwo?: string[];
     contentListThree?: string[];
     img: string;
+    imgPop?: string[];
+    textPop?: string[];
   }[];
   activeTab: string;
   openService: (
@@ -36,7 +38,7 @@ const MainComponent: React.FC<MainProps> = ({
                 : `${styles.tabContent} ${styles.hidden}`
             }
             key={dataOpj.logo}
-            style={{ paddingTop: "10px" }}
+            // style={{ paddingTop: "10px;" }}
           >
             <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
               <title>Maintenance Icon</title>
@@ -54,11 +56,13 @@ const MainComponent: React.FC<MainProps> = ({
           >
             <h2
               key={dataOpj.title}
-              style={{
-                fontFamily: "Open Sans, sans-serif",
-                fontWeight: 600,
-                fontSize: 22,
-              }}
+              style={
+                {
+                  // fontFamily: "Open Sans &quot;, sans-serif",
+                  // fontWeight: 600,
+                  // fontSize: 22,
+                }
+              }
             >
               {dataOpj.title}
             </h2>

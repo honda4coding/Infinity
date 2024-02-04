@@ -78,7 +78,7 @@ const AsideComponent: React.FC<AsideProps> = ({
   return (
     <>
       {windowWidth > 991 ? (
-        <aside className={styles.btnClick}>
+        <div className={styles.btnClick}>
           {mainData.map((dataObj) => (
             <button
               type="button"
@@ -93,7 +93,7 @@ const AsideComponent: React.FC<AsideProps> = ({
               {dataObj.title}
             </button>
           ))}
-        </aside>
+        </div>
       ) : (
         <div className={styles.container}>
           <button
@@ -104,9 +104,7 @@ const AsideComponent: React.FC<AsideProps> = ({
             {collapsed ? "Hide Services" : "Show Services"}
           </button>
 
-          <aside
-            className={`${styles.btn} ${collapsed ? styles.collapsed : ""}`}
-          >
+          <div className={`${styles.btn} ${collapsed ? styles.collapsed : ""}`}>
             {mainData.map((dataObj) => (
               <button
                 type="button"
@@ -121,7 +119,7 @@ const AsideComponent: React.FC<AsideProps> = ({
                 {dataObj.title}
               </button>
             ))}
-          </aside>
+          </div>
         </div>
       )}
     </>

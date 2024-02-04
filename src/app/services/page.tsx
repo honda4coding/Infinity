@@ -19,6 +19,7 @@ const mainData = [
       "Free of encumbrance certificate",
     ],
     img: "https://i.ibb.co/D4ksJGw/ship-registration-e1623403355938.jpg",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/cargo-ship.png",
@@ -26,6 +27,7 @@ const mainData = [
     contentPara:
       "We offer a complete set of design with building supervision at owner request.",
     img: "https://i.ibb.co/JB6gxNz/photo-1585713181935-d5f622cc2415.webp",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/commercial-development-management.png",
@@ -33,6 +35,15 @@ const mainData = [
     contentPara:
       "Ballast water management system (BWMS) means any system which processes ballast water to kill, render harmless, or remove organisms. The BWMS includesall ballast water treatment equipment and all associated control and monitoringequipment,We present a cost-effective solution for complying with Ballast Water Management Convention and Non-Applicability of the convention Exemptions ",
     img: "https://i.ibb.co/LDy0zcq/maxresdefault.webp",
+    showPopup: true,
+    imgPop: [
+      "https://i.ibb.co/yy1RyY8/Marine-ship-CFD-Msc-Cradle-Ansys-Fluent-Siemens-Star-ccm.webp",
+      "https://i.ibb.co/JB6gxNz/photo-1585713181935-d5f622cc2415.webp",
+    ],
+    textPop: [
+      "Class Hull and Machinery certification",
+      "International Tonnage certificate",
+    ],
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/case-study.png",
@@ -40,6 +51,7 @@ const mainData = [
     contentPara:
       "A dedicated team of highly qualified and experienced engineers and analysts ensure that all our CFD work is performed to the very highest standards. CFD results are presented in professional engineering reports that are accepted by Classification Societies",
     img: "https://i.ibb.co/yy1RyY8/Marine-ship-CFD-Msc-Cradle-Ansys-Fluent-Siemens-Star-ccm.webp",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/certificate--v1.png",
@@ -67,6 +79,7 @@ const mainData = [
       "Passenger ship safety certificate",
     ],
     img: "https://i.ibb.co/WHhT6sk/wood-table-business-wooden.webp",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/contract.png",
@@ -74,6 +87,7 @@ const mainData = [
     contentPara:
       "Issuance of Certificates of Endorsement (COE), Certificate of competencies (COC) Continuous Discharge Certificate (CDC).",
     img: "https://i.ibb.co/WHhT6sk/wood-table-business-wooden.webp",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/related-companies.png",
@@ -81,18 +95,21 @@ const mainData = [
     contentPara:
       "Registration of incorporations /off-shore companies under Panama, Belize, Marshal Island, St.Kitts &Nevies.",
     img: "https://i.ibb.co/k2WgwT5/desktop-wallpaper-business-corporate.webp",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/manhole-cover.png",
     title: "Insurance Cover, conditions surveys",
     content: "",
     img: "",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/training.png",
     title: "ISM and ISPS training and consultancy",
     content: "",
     img: "",
+    showPopup: false,
   },
 
   {
@@ -100,6 +117,7 @@ const mainData = [
     title: "Non-destructive tests",
     contentList: ["UT Thickness Measurements"],
     img: "https://i.ibb.co/TbdMSH2/non-destructive.webp",
+    showPopup: false,
   },
 
   {
@@ -117,6 +135,7 @@ const mainData = [
       "MARPOL Surveys",
     ],
     img: "https://i.ibb.co/8M91bp0/pexels-photo-669622.webp",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/drafting-compass.png",
@@ -148,6 +167,7 @@ const mainData = [
       "Fire and safety training manual",
     ],
     img: "https://i.ibb.co/2dbFPQ0/istockphoto-1461594369-612x612.jpg",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/commercial-development-management.png",
@@ -162,6 +182,7 @@ const mainData = [
       "SEEMP Part III",
     ],
     img: "https://i.ibb.co/MCNjXHr/Screenshot-2024-01-09-165551.png",
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/maintenance--v1.png",
@@ -169,6 +190,7 @@ const mainData = [
     contentPara:
       "Our surveyors are duly authorized form Panama, Belize, Togo, Malta, Dominica Maritime Authority to carry out Annual Safety Inspection for aforementioned administrations.",
     img: "https://i.ibb.co/F0C4drm/istockphoto-1658925458-612x612.webp",
+    showPopup: false,
   },
 ];
 const imagePaths = [
@@ -177,6 +199,7 @@ const imagePaths = [
   "https://placekitten.com/202/202",
   "/MV ABDULLAH F.jpg",
 ];
+
 const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
 
@@ -216,13 +239,17 @@ const Services: React.FC = () => {
   // Function to handle service selection
   const openService = (
     _evt: React.MouseEvent<HTMLButtonElement>,
-    Service: string
+    service: string
   ) => {
-    setActiveTab(Service);
+    setActiveTab(service);
 
     // Update the hash dynamically based on the selected service
-    window.location.hash = encodeURIComponent(Service);
+    window.location.hash = encodeURIComponent(service);
   };
+
+  const currentService = mainData.find(
+    (service) => service.title === activeTab
+  );
 
   return (
     <>
@@ -234,18 +261,23 @@ const Services: React.FC = () => {
             activeTab={activeTab}
             openService={openService}
           />
-          <MainComponent
-            mainData={mainData}
-            activeTab={activeTab}
-            openService={openService}
-          />
+          <div className={styles.pop}>
+            <MainComponent
+              mainData={mainData}
+              activeTab={activeTab}
+              openService={openService}
+            />
+            {currentService && currentService.showPopup && (
+              <Popup
+                key={currentService.title} // Make sure to provide a unique key for each Popup
+                imagePaths={currentService.imgPop}
+                content={currentService.textPop}
+                onClose={() => console.log("Popup closed")}
+              />
+            )}
+          </div>
         </div>
       </div>
-      <Popup
-        imagePaths={imagePaths}
-        content="This is some custom text for the popup!"
-        onClose={() => console.log("Popup closed")} // Optional onClose callback
-      />
     </>
   );
 };

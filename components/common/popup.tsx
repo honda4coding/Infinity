@@ -11,6 +11,7 @@ interface PopupProps {
 const Popup: React.FC<PopupProps> = ({ imagePaths, content, onClose }) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentContent, setCurrentContent] = useState(0);
   const popupRef = useRef<HTMLDivElement | null>(null);
   const togglePopup = () => {
     setIsPopupOpen(!isPopupOpen);
@@ -29,11 +30,17 @@ const Popup: React.FC<PopupProps> = ({ imagePaths, content, onClose }) => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex > 0 ? prevIndex - 1 : imagePaths.length - 1
     );
+    setCurrentContent((prevContent) =>
+      prevContent > 0 ? prevContent - 1 : content.length - 1
+    );
   };
 
   const handleNextImage = () => {
     setCurrentImageIndex((prevIndex) =>
       prevIndex < imagePaths.length - 1 ? prevIndex + 1 : 0
+    );
+    setCurrentContent((prevContent) =>
+      prevContent < content.length - 1 ? prevContent + 1 : 0
     );
   };
 
@@ -63,8 +70,9 @@ const Popup: React.FC<PopupProps> = ({ imagePaths, content, onClose }) => {
             </span>
             <div className={styles.popupContentWrapper}>
               <div className={styles.textContainer}>
-                <p>{content}</p>
+                <p>{content[currentContent]}</p>
               </div>
+
               <div className={styles.imageContainer}>
                 <button
                   className={`${styles.arrowButton} ${styles.left}`}
