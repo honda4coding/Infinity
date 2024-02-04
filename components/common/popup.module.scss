@@ -1,0 +1,109 @@
+/* styles/popup.module.scss */
+
+.popupContainer {
+  position: relative;
+}
+
+.popupButton {
+  background-color: #3498db; /* Blue background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  outline: none;
+}
+
+.popupButton:hover {
+  background-color: #2e86c1; /* Darker blue on hover */
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  width: 1000px; /* Set a minimum width to prevent it from becoming too small */
+
+  @media (max-width: 1040px) {
+    width: 80vw; /* Use viewport width units for responsiveness */
+    left: 50%;
+  }
+
+  @media (max-width: 1040px) {
+    width: 90vw; /* Adjust the width further for smaller screens */
+  }
+}
+
+.popupContent {
+  background: #3498db;
+  padding: 20px;
+  border-radius: 8px;
+  color: #ac4747;
+}
+
+.popupClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.popupContentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Add space between the text and image */
+  align-items: center;
+  height: 100%; /* Ensure the container takes full height */
+}
+@media (min-width: 1040px) {
+  .popupContentWrapper {
+    flex-direction: row; /* Align elements side by side for larger screens */
+  }
+  .popup {
+    min-width: 500px;
+  }
+}
+.textContainer {
+  padding: 20px;
+  text-align: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 60%;
+  //   display: flex;
+  margin-top: 10px;
+  @media (max-width: 1040px) {
+    width: 90%; /* Adjust the width further for smaller screens */
+  }
+}
+
+.imageContainer img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.arrowButton {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrowButton.left {
+  left: 10px;
+}
+
+.arrowButton.right {
+  right: 10px;
+}
