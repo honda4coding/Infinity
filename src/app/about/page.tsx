@@ -26,11 +26,11 @@ const About = () => {
             width={600}
             height={600}
           />
-          <p className={styles.description}>
+          <div className={styles.description}>
             <h2 className={styles.sectionTitle}>{`The Company`}</h2>
 
             {`Infinity Marine Consultants (IMC) is in the heart position of the maritime industry in EGYPT, with a highly specialized teamwork, including Naval Architects, Masters and Chief Engineers. Infinity Marine Consultants (IMC) is a dynamic and forward-thinking maritime consultancy firm based in the heart of Egypt. Established with a vision to lead and innovate within the maritime industry, IMC has evolved into a beacon of excellence, known for its specialized expertise, client-centric approach, and commitment to advancing industry standards.`}
-          </p>
+          </div>
         </div>
       </div>
 
@@ -43,11 +43,11 @@ const About = () => {
             width={600}
             height={600}
           />
-          <p className={styles.description}>
+          <div className={styles.description}>
             <h2 className={styles.sectionTitle}>{`Our Vision`}</h2>
 
             {`we envision a future where we stand proudly at the forefront of the maritime industry in Egypt, serving as the heartbeat of innovation, excellence, and reliability. Our commitment to excellence is embodied in our highly specialized and dynamic team, comprised of expert Naval Architects, seasoned Masters, and accomplished Chief Engineers. In this vision, IMC is synonymous with unparalleled quality, cutting-edge solutions, and unwavering dedication to the maritime sector. We strive to be the go-to destination for clients seeking top-tier consulting services, where our team's expertise seamlessly merges with a deep understanding of the intricacies of the maritime domain.`}
-          </p>
+          </div>
         </div>
       </div>
 
@@ -60,11 +60,11 @@ const About = () => {
             width={600}
             height={200}
           />
-          <p className={styles.description}>
+          <div className={styles.description}>
             <h2 className={styles.sectionTitle}> {`Our Mission`}</h2>
 
             {`At Infinity Marine Consultants (IMC), our mission is to be the driving force behind the evolution and advancement of the maritime industry in Egypt. We are dedicated to providing unparalleled consulting services that combine technical expertise, innovation, and a profound understanding of maritime intricacies. To achieve complete customer satisfaction by providing on-time reliable, professional services. IMC consists of a group of highly specialized teamwork of Naval Architects, Masters, and Chief Engineers. IMC team provides technical expertise and engineering solutions locally and globally through our representatives in different countries.`}
-          </p>
+          </div>
         </div>
       </div>
 
