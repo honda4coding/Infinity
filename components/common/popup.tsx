@@ -1,0 +1,99 @@
+// components/Popup.js
+import React, { useState, useRef, useEffect } from "react";
+import PropTypes from "prop-types";
+import styles from "./popup.module.scss";
+
+interface PopupProps {
+  imagePaths: string[];
+  content: string;
+  onClose?: () => void;
+}
+const Popup: React.FC<PopupProps> = ({ imagePaths, content, onClose }) => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const popupRef = useRef<HTMLDivElement | null>(null);
+  const togglePopup = () => {
+    setIsPopupOpen(!isPopupOpen);
+  };
+
+  const closePopup = (e) => {
+    if (popupRef.current && !popupRef.current.contains(e.target)) {
+      if (e.target.closest(".popupContent") === null) {
+        setIsPopupOpen(false);
+        onClose && onClose(); // Call the onClose callback if provided
+      }
+    }
+  };
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex > 0 ? prevIndex - 1 : imagePaths.length - 1
+    );
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex < imagePaths.length - 1 ? prevIndex + 1 : 0
+    );
+  };
+
+  useEffect(() => {
+    const handleMouseDown = (e) => {
+      closePopup(e);
+    };
+
+    document.addEventListener("mousedown", handleMouseDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleMouseDown);
+    };
+  }, []);
+
+  return (
+    <div className={styles.popupContainer}>
+      <button className={styles.popupButton} onClick={togglePopup}>
+        Open Popup
+      </button>
+
+      {isPopupOpen && (
+        <div className={styles.popup} ref={popupRef}>
+          <div className={styles.popupContent}>
+            <span className={styles.popupClose} onClick={togglePopup}>
+              &times;
+            </span>
+            <div className={styles.popupContentWrapper}>
+              <div className={styles.textContainer}>
+                <p>{content}</p>
+              </div>
+              <div className={styles.imageContainer}>
+                <button
+                  className={`${styles.arrowButton} ${styles.left}`}
+                  onClick={handlePrevImage}
+                >
+                  {"<"}
+                </button>
+                <img
+                  src={imagePaths[currentImageIndex]}
+                  alt={`Popup Image ${currentImageIndex + 1}`}
+                />
+                <button
+                  className={`${styles.arrowButton} ${styles.right}`}
+                  onClick={handleNextImage}
+                >
+                  {">"}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+Popup.propTypes = {
+  imagePaths: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  content: PropTypes.string.isRequired,
+  onClose: PropTypes.func,
+};
+export default Popup;

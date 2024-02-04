@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import styles from "../../styles/pages/services.module.scss";
 import AsideComponent from "../../../components/services/aside";
 import MainComponent from "../../../components/services/main";
+import Popup from "../../../components/common/popup";
 
 const mainData = [
   {
@@ -170,7 +171,12 @@ const mainData = [
     img: "https://i.ibb.co/F0C4drm/istockphoto-1658925458-612x612.webp",
   },
 ];
-
+const imagePaths = [
+  "https://placekitten.com/200/200",
+  "https://placekitten.com/201/201",
+  "https://placekitten.com/202/202",
+  "/MV ABDULLAH F.jpg",
+];
 const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
 
@@ -235,6 +241,11 @@ const Services: React.FC = () => {
           />
         </div>
       </div>
+      <Popup
+        imagePaths={imagePaths}
+        content="This is some custom text for the popup!"
+        onClose={() => console.log("Popup closed")} // Optional onClose callback
+      />
     </>
   );
 };

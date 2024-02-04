@@ -20,6 +20,7 @@ const HomePage = () => {
   }, []);
   function handleButtonClick(): void {}
   const handleServiceClick = () => {};
+
   return (
     <>
       <Hero></Hero>
