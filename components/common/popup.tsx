@@ -16,7 +16,7 @@ const Popup: React.FC<PopupProps> = ({ imagePaths, content, onClose }) => {
     setIsPopupOpen(!isPopupOpen);
   };
 
-  const closePopup = (e) => {
+  const closePopup = (e: any) => {
     if (popupRef.current && !popupRef.current.contains(e.target)) {
       if (e.target.closest(".popupContent") === null) {
         setIsPopupOpen(false);
@@ -38,7 +38,7 @@ const Popup: React.FC<PopupProps> = ({ imagePaths, content, onClose }) => {
   };
 
   useEffect(() => {
-    const handleMouseDown = (e) => {
+    const handleMouseDown = (e: any) => {
       closePopup(e);
     };
 
