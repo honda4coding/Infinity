@@ -8,7 +8,12 @@ interface PopupProps {
   content?: string[]; // Make it optional
   onClose?: () => void;
 }
-const Popup: React.FC<PopupProps> = ({ imagePaths, content, onClose }) => {
+
+const Popup: React.FC<PopupProps> = ({
+  imagePaths = [],
+  content = [],
+  onClose,
+}) => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentContent, setCurrentContent] = useState(0);
@@ -100,8 +105,9 @@ const Popup: React.FC<PopupProps> = ({ imagePaths, content, onClose }) => {
 };
 
 Popup.propTypes = {
-  imagePaths: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
-  content: PropTypes.string.isRequired,
+  imagePaths: PropTypes.arrayOf(PropTypes.string.isRequired),
+  content: PropTypes.arrayOf(PropTypes.string.isRequired),
   onClose: PropTypes.func,
 };
+
 export default Popup;
