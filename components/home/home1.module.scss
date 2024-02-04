@@ -1,0 +1,56 @@
+/* styles/pages/home.module.scss */
+
+@use "../../src/styles/abstracts/variables" as *;
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1424px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif !important;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Change to a single column layout on small screens */
+    padding-top: 10rem;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.6;
+
+  h2 {
+    font-size: 2em; /* Adjust the font size of the heading */
+  }
+
+  p {
+    font-size: 20px;
+    padding: 5px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  .button {
+    margin-top: 20px; /* Add margin to space the button from the text */
+  }
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

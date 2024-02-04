@@ -1,0 +1,93 @@
+/* styles/info.module.scss */
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 20px;
+  /* Add your other existing styles for .infoContainer here */
+}
+
+.infoContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.infoText {
+  display: grid;
+  justify-items: center;
+  padding: 20px; /* Adjust the padding as needed for smaller screens */
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  z-index: 2;
+  position: relative;
+  max-width: 750px;
+  height: auto; /* Adjust height to auto for responsiveness */
+  text-align: center;
+  font-family: "Red Hat Display", sans-serif !important;
+  max-width: 40rem;
+  min-height: 20rem;
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* Adjust styles for screens wider than 768px */
+    padding: 40px; /* Increase padding for larger screens */
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  max-height: 400px; /* Set a maximum height for responsiveness */
+  position: relative;
+}
+
+.imageBackground {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(50%) contrast(90%) saturate(120%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.toggleButtons {
+  display: flex;
+  position: relative;
+  bottom: 20px;
+  z-index: 99;
+  // flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  // margin-top: 340px;
+
+  button {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #2c3e50;
+    outline: none;
+
+    &.active {
+      background-color: #3498db;
+    }
+  }
+}
