@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import styles from "./popup.module.scss";
 
 interface PopupProps {
-  imagePaths: string[];
-  content: string;
+  imagePaths?: string[]; // Make it optional
+  content?: string[]; // Make it optional
   onClose?: () => void;
 }
 const Popup: React.FC<PopupProps> = ({ imagePaths, content, onClose }) => {
