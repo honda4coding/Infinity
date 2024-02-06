@@ -26,8 +26,8 @@ const Navbar: React.FC = () => {
   // Sample opening times data
   const openingTimes = [
     { day: "Sunday - Tuesday", hours: "8:30 AM - 5:00 PM" },
-    { day: "Saturday", hours: "9:30 AM - 1:00 PM" },
-    { day: "Friday", hours: "Closed" },
+
+    { day: "Friday , Saturday", hours: "Closed" },
   ];
 
   return (
