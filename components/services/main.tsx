@@ -14,7 +14,8 @@ interface MainProps {
     img: string;
     imgPop?: string[];
     textPop?: string[];
-    
+    textPop1?: string[];
+    numberPop?: string[];
     
   }[];
   activeTab: string;

@@ -39,12 +39,28 @@ const mainData = [
     imgPop: [
       "https://i.ibb.co/10fnq2h/Whats-App-Image-2024-01-29-at-14-30-51-57ac9f15.jpg",
       "https://i.ibb.co/Rj4MyTw/Whats-App-Image-2024-01-29-at-14-31-35-63280565.jpg",
+      "https://i.ibb.co/sg7qYfG/Whats-App-Image-2024-01-29-at-14-33-41-40c46481.jpg",
+      "https://i.ibb.co/Fkrsh6t/Whats-App-Image-2024-01-29-at-14-35-11-2424bb8b.jpg",
+      "https://i.ibb.co/4s9gHxh/Whats-App-Image-2024-01-29-at-14-48-31-6295bd96.jpg",
+      "https://i.ibb.co/n6xdhVq/Whats-App-Image-2024-01-29-at-14-52-39-3b4af2da.jpg",
     ],
     textPop: [
       "NAME OF VESSEL : M/V ABDULLAH ",
-      "TYPE OF BWTS: OPTIMARIN 190/167",
-      
+      "NAME OF VESSEL : M/V ABDULLAH ",
+      "NAME OF VESSEL : M/V DANIA",
+      "NAME OF VESSEL : M/V DANIA",
+      "NAME OF VESSEL : M/V SEA MAJESTY ",
+      "NAME OF VESSEL : M/V SEA MAJESTY ",
     ],
+    textPop1: [
+      "TYPE OF BWTS: OPTIMARIN 190/167 ",
+      "TYPE OF BWTS: OPTIMARIN 190/167 ",
+      "TYPE OF BWTS : DESMI 170 ",
+      "TYPE OF BWTS : DESMI 170 ",
+      "TYPE OF BWTS : DESMI 190 ",
+      "TYPE OF BWTS : DESMI 190 ",
+    ],
+    numberPop: [" pro-num #1", " pro-num #1", " pro-num #2", " pro-num #2", " pro-num #3", " pro-num #3"],
    
   },
   {
@@ -274,6 +290,8 @@ const Services: React.FC = () => {
                 key={currentService.title} // Make sure to provide a unique key for each Popup
                 imagePaths={currentService.imgPop}
                 content={currentService.textPop}
+                content1={currentService.textPop1}
+                content2={currentService.numberPop}
                 onClose={() => console.log("Popup closed")}
               />
             )}
