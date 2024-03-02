@@ -1,11 +1,12 @@
 "use client";
-4;
+// 4;
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/pages/services.module.scss";
 import AsideComponent from "../../../components/services/aside";
 import MainComponent from "../../../components/services/main";
 import Popup from "../../../components/common/popup";
 
+const flags = "https://i.ibb.co/CW2g8Xm/Copy-of-Untitled.png";
 const mainData = [
   {
     logo: "https://img.icons8.com/ios/50/000000/signing-a-document.png",
@@ -19,7 +20,8 @@ const mainData = [
       "Free of encumbrance certificate",
     ],
     img: "https://i.ibb.co/D4ksJGw/ship-registration-e1623403355938.jpg",
-    showPopup: false,
+    showPopup: true,
+    imgPop: [flags],
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/cargo-ship.png",
@@ -37,12 +39,36 @@ const mainData = [
     img: "https://i.ibb.co/LDy0zcq/maxresdefault.webp",
     showPopup: true,
     imgPop: [
-      "https://i.ibb.co/yy1RyY8/Marine-ship-CFD-Msc-Cradle-Ansys-Fluent-Siemens-Star-ccm.webp",
-      "https://i.ibb.co/JB6gxNz/photo-1585713181935-d5f622cc2415.webp",
+      "https://i.ibb.co/10fnq2h/Whats-App-Image-2024-01-29-at-14-30-51-57ac9f15.jpg",
+      "https://i.ibb.co/Rj4MyTw/Whats-App-Image-2024-01-29-at-14-31-35-63280565.jpg",
+      "https://i.ibb.co/sg7qYfG/Whats-App-Image-2024-01-29-at-14-33-41-40c46481.jpg",
+      "https://i.ibb.co/Fkrsh6t/Whats-App-Image-2024-01-29-at-14-35-11-2424bb8b.jpg",
+      "https://i.ibb.co/4s9gHxh/Whats-App-Image-2024-01-29-at-14-48-31-6295bd96.jpg",
+      "https://i.ibb.co/n6xdhVq/Whats-App-Image-2024-01-29-at-14-52-39-3b4af2da.jpg",
     ],
     textPop: [
-      "Class Hull and Machinery certification",
-      "International Tonnage certificate",
+      "NAME OF VESSEL : M/V ABDULLAH ",
+      "NAME OF VESSEL : M/V ABDULLAH ",
+      "NAME OF VESSEL : M/V DANIA",
+      "NAME OF VESSEL : M/V DANIA",
+      "NAME OF VESSEL : M/V SEA MAJESTY ",
+      "NAME OF VESSEL : M/V SEA MAJESTY ",
+    ],
+    textPop1: [
+      "TYPE OF BWTS: OPTIMARIN 190/167 ",
+      "TYPE OF BWTS: OPTIMARIN 190/167 ",
+      "TYPE OF BWTS : DESMI 170 ",
+      "TYPE OF BWTS : DESMI 170 ",
+      "TYPE OF BWTS : DESMI 190 ",
+      "TYPE OF BWTS : DESMI 190 ",
+    ],
+    numberPop: [
+      " pro-num #1",
+      " pro-num #1",
+      " pro-num #2",
+      " pro-num #2",
+      " pro-num #3",
+      " pro-num #3",
     ],
   },
   {
@@ -201,7 +227,7 @@ const imagePaths = [
 ];
 
 const Services: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
+  const [activeTab, setActiveTab] = useState("Ship registration services");
 
   // Function to extract the service name from the URL hash
   const getServiceFromHash = () => {
@@ -272,6 +298,8 @@ const Services: React.FC = () => {
                 key={currentService.title} // Make sure to provide a unique key for each Popup
                 imagePaths={currentService.imgPop}
                 content={currentService.textPop}
+                content1={currentService.textPop1}
+                content2={currentService.numberPop}
                 onClose={() => console.log("Popup closed")}
               />
             )}

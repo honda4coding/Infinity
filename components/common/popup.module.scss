@@ -3,20 +3,41 @@
 .popupContainer {
   position: relative;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Adjust the alpha value to control darkness */
+  z-index: 999; /* Place it above other elements */
+}
 
 .popupButton {
   background-color: #3498db; /* Blue background color */
   color: #fff; /* Text color */
-  padding: 10px 20px;
+  padding: 10px 50px;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 23px;
   outline: none;
+  transition: background-color 0.3s; /* Add a smooth transition on hover */
+  margin-top: 30px;
+  margin-right: 470px;
+
+  @media (max-width: 1670px) {
+    margin-right: -45px;
+  }
 }
 
 .popupButton:hover {
-  background-color: #2e86c1; /* Darker blue on hover */
+  background-color: #0f5a8b; /* Darker blue on hover */
 }
 .popup {
   position: fixed;
@@ -24,27 +45,28 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 99999;
-  width: 1000px; /* Set a minimum width to prevent it from becoming too small */
+  width: 70vw; /* Set a minimum width to prevent it from becoming too small */
 
-  @media (max-width: 1040px) {
+  @media (max-width: 1440px) {
     width: 80vw; /* Use viewport width units for responsiveness */
     left: 50%;
   }
 
-  @media (max-width: 1040px) {
+  @media (max-width: 1440px) {
     width: 90vw; /* Adjust the width further for smaller screens */
   }
 }
 
 .popupContent {
-  background: #3498db;
-  padding: 20px;
-  border-radius: 8px;
-  color: #ac4747;
+  background: #3680b0;
+  padding: 30px;
+  border-radius: 15px;
+  color: #ffffff;
 }
 
 .popupClose {
   position: absolute;
+  font-size: 35px;
   top: 10px;
   right: 10px;
   cursor: pointer;
@@ -54,9 +76,27 @@
 .popupContentWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Add space between the text and image */
+  justify-content: center; /* Add space between the text and image */
+  align-items: center;
+  min-height: 370px; /* Ensure the container takes full height */
+  gap: 20px;
+}
+.popupContentWrapper img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+.project {
+  display: flex;
+  justify-content: space-around; /* Add space between the text and image */
   align-items: center;
   height: 100%; /* Ensure the container takes full height */
+  top: -185px;
+  position: absolute;
+  left: 35px;
+  @media (max-width: 1040px) {
+    position: static;
+  }
 }
 @media (min-width: 1040px) {
   .popupContentWrapper {
@@ -67,8 +107,9 @@
   }
 }
 .textContainer {
-  padding: 20px;
+  padding: 5px;
   text-align: center;
+  font-size: 22px;
 }
 
 .imageContainer {
@@ -86,13 +127,14 @@
   height: auto;
   max-width: 100%;
   max-height: 100vh;
+  border-radius: 25px;
 }
 
 .arrowButton {
   background: transparent;
   border: none;
   font-size: 24px;
-  color: #fff;
+  color: #b3cdff;
   cursor: pointer;
   outline: none;
   position: absolute;
@@ -102,8 +144,12 @@
 
 .arrowButton.left {
   left: 10px;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .arrowButton.right {
   right: 10px;
+  font-size: 32px;
+  font-weight: bold;
 }

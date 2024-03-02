@@ -14,6 +14,8 @@ interface MainProps {
     img: string;
     imgPop?: string[];
     textPop?: string[];
+    textPop1?: string[];
+    numberPop?: string[];
   }[];
   activeTab: string;
   openService: (
@@ -21,7 +23,6 @@ interface MainProps {
     Service: string
   ) => void;
 }
-
 const MainComponent: React.FC<MainProps> = ({
   mainData,
   activeTab,
