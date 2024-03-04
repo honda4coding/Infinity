@@ -1,0 +1,52 @@
+/* styles/Card.module.scss */
+.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+  border: none;
+
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(
+    45deg,
+    #003366,
+    #006699
+  ); /* Maritime-inspired gradient background */
+  color: #ffffff;
+  /* White text color */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  max-width: 30rem;
+  min-height: 250px;
+  margin: 10px;
+  // font-size: 15px
+  h2 {
+    font-size: 25px !important;
+    font-weight: 800;
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
+}
+
+/* styles/Home.module.scss */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.icon {
+  margin-bottom: 10px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,54 @@
+// Mixins
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: "";
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+// Theme
+$yellow: #f5d300;
+$black: #292929;
+$bg: #191919;
+$lines: #757474;
+
+// Rest of your styles
+body {
+  background-color: $bg;
+  font-family: "Open Sans", sans-serif;
+}
+
+// Other styles...
+
+// Continue with the rest of your SCSS code, including the Hero component styles
