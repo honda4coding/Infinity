@@ -97,7 +97,7 @@ const Popup: React.FC<PopupProps> = ({
               </span>
               <div className={styles.popupContentWrapper}>
                 <div className={styles.project}>
-                  {/* <img src="https://i.ibb.co/YQf4ncW/project-5956597.png"></img> */}
+                  <img src="https://i.ibb.co/YQf4ncW/project-5956597.png"></img>
                   <p>{content2[currentContent2]}</p>
                 </div>
                 <div className={styles.textContainer}>

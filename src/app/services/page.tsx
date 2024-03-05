@@ -1,12 +1,11 @@
 "use client";
-// 4;
+4;
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/pages/services.module.scss";
 import AsideComponent from "../../../components/services/aside";
 import MainComponent from "../../../components/services/main";
 import Popup from "../../../components/common/popup";
 
-const flags = "https://i.ibb.co/CW2g8Xm/Copy-of-Untitled.png";
 const mainData = [
   {
     logo: "https://img.icons8.com/ios/50/000000/signing-a-document.png",
@@ -20,8 +19,7 @@ const mainData = [
       "Free of encumbrance certificate",
     ],
     img: "https://i.ibb.co/D4ksJGw/ship-registration-e1623403355938.jpg",
-    showPopup: true,
-    imgPop: [flags],
+    showPopup: false,
   },
   {
     logo: "https://img.icons8.com/ios/50/000000/cargo-ship.png",
@@ -227,7 +225,8 @@ const imagePaths = [
 ];
 
 const Services: React.FC = () => {
-  const [activeTab, setActiveTab] = useState("Ship registration services");
+  const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
+  const [showImage, setShowImage] = useState(false);
 
   // Function to extract the service name from the URL hash
   const getServiceFromHash = () => {
@@ -302,6 +301,26 @@ const Services: React.FC = () => {
                 content2={currentService.numberPop}
                 onClose={() => console.log("Popup closed")}
               />
+            )}
+            {currentService &&
+              currentService.title === "Ship registration services" && (
+                <button
+                  className={styles.button}
+                  onClick={() => setShowImage(!showImage)}
+                >
+                  {showImage ? "Our Registration" : "Our Registration "}
+                </button>
+              )}
+            {showImage && (
+              <div
+                className={styles.overlay}
+                onClick={() => setShowImage(false)}
+              >
+                <img
+                  src="https://i.ibb.co/CW2g8Xm/Copy-of-Untitled.png"
+                  alt="Your Image"
+                />
+              </div>
             )}
           </div>
         </div>
