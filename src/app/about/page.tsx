@@ -37,11 +37,11 @@ const About = () => {
       <div className={styles.animationTwo}>
         <div className={styles.infoContainerTwo}>
           <Image
-            src="/vision.jpg"
+            src="/Our-Vision-1.jpg"
             alt="Vision"
             className={styles.image}
-            // width={600}
-            // height={600}
+            width={600}
+            height={600}
           />
           <div className={styles.description}>
             <h2 className={styles.sectionTitle}>{`Our Vision`}</h2>
