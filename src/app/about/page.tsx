@@ -20,7 +20,7 @@ const About = () => {
       <div className={styles.animationOne}>
         <div className={styles.infoContainer}>
           <Image
-            src="/company.jpg"
+            src="/infinity.png"
             alt="Company"
             className={styles.image}
             width={600}
