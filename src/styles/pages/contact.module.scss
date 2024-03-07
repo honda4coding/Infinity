@@ -7,7 +7,14 @@
   justify-content: center; /* Center items horizontally */
   letter-spacing: 60px; /* Adjust the value according to your preference */
   text-transform: uppercase;
+  overflow: hidden;
 
+  @media only screen and (max-width: 880px) {
+    letter-spacing: 40px; /* Adjust the value according to your preference */
+  }
+  @media only screen and (max-width: 480px) {
+    letter-spacing: 20px; /* Adjust the value according to your preference */
+  }
 }
 
 .img {
@@ -24,7 +31,6 @@
   text-align: center;
   width: 100%;
   margin: 0;
-  // font-family: "Red Hat Display", sans-serif !important;
 }
 
 .conect h2:nth-child(1) {

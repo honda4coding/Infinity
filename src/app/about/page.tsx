@@ -22,7 +22,7 @@ const About = () => {
           <Image
             src="/infinity.png"
             alt="Company"
-            className={styles.image}
+            className={`${styles.image} ${styles.imageWithBorder}`}
             width={600}
             height={600}
           />
@@ -37,11 +37,11 @@ const About = () => {
       <div className={styles.animationTwo}>
         <div className={styles.infoContainerTwo}>
           <Image
-            src="/Our-Vision-1.jpg"
+            src="/VisionPro.png"
             alt="Vision"
-            className={styles.image}
-            width={600}
-            height={600}
+            className={`${styles.image} ${styles.imageWithBackground}`}
+            width={1000}
+            height={1000}
           />
           <div className={styles.description}>
             <h2 className={styles.sectionTitle}>{`Our Vision`}</h2>
@@ -56,7 +56,7 @@ const About = () => {
           <Image
             src="/mission.jpg"
             alt="Mission"
-            className={styles.image}
+            className={`${styles.image} ${styles.imageWithBorder}`}
             width={600}
             height={200}
           />
