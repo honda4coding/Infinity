@@ -13,23 +13,21 @@ const Footer: React.FC = () => {
   return (
     <>
       <footer className={styles.footer}>
-      
         <div className={styles.footer__parralax}>
           <div className={styles["footer__parralax-premierplan"]}></div>
           <div className={styles["footer__parralax-voiture"]}></div>
         </div>
         <div className={styles.container}>
-          
           <div className={styles.footer__columns}>
             <div className={styles.image}>
-          <Image
-              src="/logo.png"
-              alt="Clock Icon"
-              // width={10}
-              // height={10}
-              layout="responsive"
-            />
-          </div>
+              <Image
+                src="/logo.png"
+                alt="Clock Icon"
+                // width={10}
+                // height={10}
+                layout="responsive"
+              />
+            </div>
             {/* Contact us column */}
             <div className={styles.footer__col}>
               <h3 className={styles.footer__colTitle}>

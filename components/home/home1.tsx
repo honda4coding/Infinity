@@ -10,13 +10,11 @@ const Home1 = () => {
   useEffect(() => {
     Aos.init({
       duration: 3000,
-     
-
     });
   }, []);
   function handleButtonClick(): void {}
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ overflowX: "hidden" }}>
       <div data-aos="fade-right" className={styles.textContainer}>
         <h2>{`Infinity Marine Consultants (IMC)`}</h2>
         <p>
