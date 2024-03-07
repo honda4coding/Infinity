@@ -40,8 +40,8 @@ const About = () => {
             src="/vision.jpg"
             alt="Vision"
             className={styles.image}
-            width={600}
-            height={600}
+            // width={600}
+            // height={600}
           />
           <div className={styles.description}>
             <h2 className={styles.sectionTitle}>{`Our Vision`}</h2>

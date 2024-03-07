@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import Button from "../common/readmore";
 import styles from "./aboutcontent.module.scss"; // Import the SCSS module
 import AboutSection from "./aboutsection";
