@@ -25,8 +25,8 @@ const Footer: React.FC = () => {
           <Image
               src="/logo.png"
               alt="Clock Icon"
-              width={10}
-              height={10}
+              // width={10}
+              // height={10}
               layout="responsive"
             />
           </div>
