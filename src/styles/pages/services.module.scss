@@ -120,6 +120,7 @@
 }
 
 .overlay img {
+  
   max-width: 90%;
   max-height: 90%;
   border: 10px solid #ccc;
@@ -317,7 +318,7 @@
           display: flex;
           margin: 0 auto;
 
-          width: 490px;
+          width: 650px;
           height: 390px;
           border-radius: 20px;
         }
@@ -353,7 +354,7 @@
   font-weight: 700;
   text-align: center;
   color: #00303f;
-  margin-top: 130px;
+  margin-top: 150px;
   margin-bottom: 40px;
   animation: focus-in-expand 6.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }

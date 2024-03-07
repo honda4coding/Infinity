@@ -20,7 +20,7 @@ const About = () => {
       <div className={styles.animationOne}>
         <div className={styles.infoContainer}>
           <Image
-            src="/the-company-1.jpg"
+            src="/company.jpg"
             alt="Company"
             className={styles.image}
             width={600}
@@ -37,7 +37,7 @@ const About = () => {
       <div className={styles.animationTwo}>
         <div className={styles.infoContainerTwo}>
           <Image
-            src="/Our-Vision-1.jpg"
+            src="/vision.jpg"
             alt="Vision"
             className={styles.image}
             width={600}
@@ -54,7 +54,7 @@ const About = () => {
       <div className={styles.animationOne}>
         <div className={styles.infoContainer}>
           <Image
-            src="/Our-Mission-1.jpg"
+            src="/mission.jpg"
             alt="Mission"
             className={styles.image}
             width={600}
