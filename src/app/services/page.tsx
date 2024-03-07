@@ -5,7 +5,8 @@ import styles from "../../styles/pages/services.module.scss";
 import AsideComponent from "../../../components/services/aside";
 import MainComponent from "../../../components/services/main";
 import Popup from "../../../components/common/popup";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const mainData = [
   {
     logo: "https://img.icons8.com/ios/50/000000/signing-a-document.png",
@@ -221,7 +222,11 @@ const imagePaths = [
 const Services: React.FC = () => {
   const [activeTab, setActiveTab] = useState("Annual Safety Inspections");
   const [showImage, setShowImage] = useState(false);
-
+  useEffect(() => {
+    Aos.init({
+      duration: 3000,
+    });
+  }, []);
   // Function to extract the service name from the URL hash
   const getServiceFromHash = () => {
     const hash = window.location.hash.substring(1);
@@ -272,15 +277,17 @@ const Services: React.FC = () => {
 
   return (
     <>
-      <div className={styles["focus-in-expand"]}>Services</div>
-      <div className={styles.page}>
+      <div data-aos="fade-down" className={styles["focus-in-expand"]}>Services</div>
+      <div  className={styles.page}>
         <div className={styles.tab}>
+          <div data-aos="fade-right">
           <AsideComponent
             mainData={mainData}
             activeTab={activeTab}
             openService={openService}
           />
-          <div className={styles.pop}>
+          </div>
+          <div data-aos="fade-left" className={styles.pop}>
             <MainComponent
               mainData={mainData}
               activeTab={activeTab}

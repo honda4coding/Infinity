@@ -321,6 +321,11 @@
           width: 650px;
           height: 390px;
           border-radius: 20px;
+          transition: transform 0.7s ease-in-out;
+
+        }
+        .serviceImage:hover {
+          transform: scale(1.05);
         }
       }
 
