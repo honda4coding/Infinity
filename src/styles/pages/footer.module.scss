@@ -14,7 +14,6 @@
 }
 .footer {
   position: relative;
-  margin-top: 300px;
   padding: 3rem 0;
   color: white;
   background: #006699;
@@ -139,7 +138,6 @@
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-
   justify-content: center;
   font-size: small; /* Adjust the font size as needed */
   background: #006699;
@@ -154,4 +152,8 @@
 
 .footer__copyrights a:hover {
   text-decoration: underline; /* Add underline on hover (optional) */
+}
+.index {
+  position: relative;
+  z-index: 1;
 }
