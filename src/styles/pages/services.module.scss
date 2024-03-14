@@ -1,599 +1,277 @@
-// .page {
-//   display: flex;
-//   justify-content: center;
-//   padding-top: 50px;
-
-//   &__tab {
-//     width: 25%;
-//     padding: 20px;
-//     box-sizing: border-box;
-
-//     @media only screen and (max-width: 1059px) {
-//       width: 100%;
-//     }
-//   }
-
-//   &__container {
-//     width: 75%;
-//     padding: 20px;
-//     box-sizing: border-box;
-//   }
-// }
-
-// .tab {
-//   font-family: "Red Hat Display", sans-serif !important;
-//   display: flex;
-//   justify-items: center;
-
-//   @media (max-width: 991px) {
-//     button {
-//       font-size: 16px;
-//       font-weight: 600;
-//     }
-
-//     .focus-in-expand h1 {
-//       font-size: 40px;
-//     }
-
-//     li {
-//       font-size: 16px !important;
-//     }
-
-//     .tabContent {
-//       .textDivChild {
-//         .textDivChildContent {
-//           margin: 0 auto;
-//           padding: 0 15px;
-//           font-family: "Red Hat Display", sans-serif !important;
-//           font-size: 17px !important;
-//           color: rgba(0, 0, 0, 0.64);
-//           width: 270px !important;
-//         }
-
-//         .serviceImage {
-//           display: flex;
-//           margin: 0 auto;
-//           width: 280px !important;
-//           height: 190px !important;
-//         }
-//       }
-
-//       &.hidden {
-//         display: none;
-//       }
-//     }
-
-//     display: flex;
-//     flex-direction: column;
-//   }
-// }
-
-// .focus-in-expand {
-//   display: block;
-//   font-size: 65px;
-//   font-weight: 700;
-//   text-align: center;
-//   color: #00303f;
-//   margin-top: 100px;
-//   animation: focus-in-expand 6.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-// }
-
-// @-webkit-keyframes focus-in-expand {
-//   0% {
-//     letter-spacing: -0.5em;
-//     -webkit-filter: blur(12px);
-//     filter: blur(12px);
-//     opacity: 0;
-//   }
-//   100% {
-//     -webkit-filter: blur(0px);
-//     filter: blur(0px);
-//     opacity: 1;
-//   }
-// }
-
-// @keyframes focus-in-expand {
-//   0% {
-//     letter-spacing: -0.5em;
-//     -webkit-filter: blur(12px);
-//     filter: blur(12px);
-//     opacity: 0;
-//   }
-//   100% {
-//     -webkit-filter: blur(0px);
-//     filter: blur(0px);
-//     opacity: 1;
-//   }
-// }
-
-/////////////////////////////////////////////////////////////////
-// .overlay {
-//   position: fixed;
+// .sidebar {
+//   position: absolute;
 //   top: 0;
-//   left: 0;
-//   width: 100%;
+//   left: 0; /* Initially hide the sidebar */
 //   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .overlay img {
-//   max-width: 90%;
-//   max-height: 90%;
-//   border: 10px solid #ccc;
-//   border-radius: 30px;
-// }
-// .button {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-bottom: 20px;
-//   padding: 10px 30px;
-//   background-color: #047b95;
-//   color: white;
-//   border: none;
-//   border-radius: 15px;
-//   box-shadow: 0px 0px 10px 0px #cae4db;
-//   cursor: pointer;
-//   font-size: 18px;
-//   height: 50px;
-//   transition: background-color 0.3s, color 0.3s;
-//   margin-bottom: 5px;
-
-//   margin-right: 475px;
-//   @media (max-width: 1670px) {
-//     margin-right: 0px;
-//   }
-
-//   @media (max-width: 991px) {
-//     margin-right: -30px;
-//   }
-
-//   &:hover {
-//     background-color: #00303f;
-//   }
-// }
-// .page {
-//   display: flex;
-//   justify-content: center;
-//   padding-top: 50px;
-
-//   &__tab {
-//     width: 25%; // Adjust as needed
-//     padding: 20px;
-//     box-sizing: border-box;
-
-//     @media only screen and (max-width: 1059px) {
-//       width: 100%;
-//     }
-//   }
-
-//   &__container {
-//     width: 75%; // Adjust as needed
-//     padding: 20px;
-//     box-sizing: border-box;
-//   }
-// }
-
-// .container {
-//   display: grid;
-//   justify-content: center;
-// }
-
-// .tab {
-//   font-family: "Red Hat Display", sans-serif !important;
-//   display: flex;
-//   justify-items: center;
-
-//   @media (max-width: 991px) {
-//     button {
-//       font-size: 16px;
-//       font-weight: 600;
-//     }
-//     .focus-in-expand h1 {
-//       font-size: 40px;
-//     }
-
-//     li {
-//       font-size: 16px !important;
-//     }
-
-//     .tabContent {
-//       .textDivChild {
-//         .textDivChildContent {
-//           margin: 0 auto; /* Center content horizontally */
-
-//           padding: 0 15px; /* Add padding for better readability */
-//           font-family: "Red Hat Display", sans-serif !important;
-//           font-size: 17px !important;
-//           color: rgba(0, 0, 0, 0.64);
-//           width: 270px !important;
-//         }
-
-//         .serviceImage {
-//           display: flex;
-//           margin: 0 auto;
-
-//           width: 280px !important;
-//           height: 190px !important;
-//         }
-//       }
-
-//       &.hidden {
-//         display: none;
-//       }
-//     }
-//     display: flex;
-//     flex-direction: column;
-//   }
-//   //todo
-//   .btnClick {
-//     display: grid;
-//     justify-items: center;
-//     top: 10px;
-//     right: 10px;
-//     min-width: 300px;
-//     overflow-y: auto;
-//     height: 420px;
-//     margin-right: 30px;
-//     margin-left: 30px;
-
-//     border-radius: 10px;
-//     background-color: white;
-//     box-shadow: 0px 0px 10px 0px #cae4db;
-
-//     &::-webkit-scrollbar {
-//       width: 2px;
-//     }
-//     &::-webkit-scrollbar-track {
-//       background: #f1f1f1;
-//     }
-//     &::-webkit-scrollbar-thumb {
-//       background: #888;
-//     }
-//     & button {
-//       display: flex;
-//       background-color: whitesmoke;
-//       color: black;
-//       width: 90%;
-//       height: 60px;
-//       outline: none;
-//       margin: 5px;
-//       text-align: center;
-//       justify-content: center;
-//       align-items: center;
-//       cursor: pointer;
-//       transition: 0.3s;
-//       border: 0.01px solid white;
-//       border-radius: 10px;
-//       font-size: 15px;
-//       font-family: "Red Hat Display", sans-serif !important;
-//       font-weight: 600;
-
-//       &:hover {
-//         background-color: #00303f;
-//         color: white;
-//       }
-
-//       &.active {
-//         background-color: #00303f;
-//         color: #f5f4f4;
-//       }
-//     }
-//   }
-
-//   .content {
-//     display: flex;
-//     min-width: 200px;
-//     padding: 10px;
-//     // @media only screen and (max-width: 991px) {
-//     //   display: grid;
-//     // }
-//     li,
-//     h4 {
-//       font-family: "Red Hat Display", sans-serif !important;
-//       font-size: small;
-//       color: #0000008a;
-//     }
-
-//     .tabContent {
-//       .textDivChild {
-//         position: relative;
-//         display: flex;
-//         text-align: start;
-//         @media only screen and (max-width: 1670px) {
-//           display: flex;
-//           flex-direction: column;
-//         }
-//         .textDivChildContent {
-//           margin: 0 auto; /* Center content horizontally */
-
-//           padding: 0 15px; /* Add padding for better readability */
-//           font-family: "Red Hat Display", sans-serif !important;
-//           font-size: 22px;
-//           color: rgba(0, 0, 0, 0.64);
-//           width: 500px;
-//         }
-
-//         li {
-//           font-size: 18px;
-//         }
-
-//         .serviceImage {
-//           display: flex;
-//           margin: 0 auto;
-
-//           width: 650px;
-//           height: 390px;
-//           border-radius: 20px;
-//           transition: transform 0.7s ease-in-out;
-//         }
-//         .serviceImage:hover {
-//           transform: scale(1.05);
-//         }
-//       }
-
-//       &.hidden {
-//         display: none;
-//       }
-//     }
-//   }
-// }
-
-// .toggleButton {
-//   padding: 10px 20px;
-//   background-color: #00303f;
-//   color: white;
-//   border: none;
-//   border-radius: 5px;
-//   box-shadow: 0px 0px 10px 0px #cae4db;
-//   cursor: pointer;
-//   font-size: 16px;
-//   height: 50px;
-//   transition: background-color 0.3s, color 0.3s;
-//   margin-bottom: 5px;
-
-//   &:hover {
-//     background-color: #001f26;
-//   }
-// }
-// .focus-in-expand {
-//   display: block;
-//   font-size: 65px;
-//   font-weight: 700;
-//   text-align: center;
-//   color: #00303f;
-//   margin-top: 150px;
-//   margin-bottom: 40px;
-//   animation: focus-in-expand 6.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-// }
-// @-webkit-keyframes focus-in-expand {
-//   0% {
-//     letter-spacing: -0.5em;
-//     -webkit-filter: blur(12px);
-//     filter: blur(12px);
-//     opacity: 0;
-//   }
-//   100% {
-//     -webkit-filter: blur(0px);
-//     filter: blur(0px);
-//     opacity: 1;
-//   }
-// }
-// @keyframes focus-in-expand {
-//   0% {
-//     letter-spacing: -0.5em;
-//     -webkit-filter: blur(12px);
-//     filter: blur(12px);
-//     opacity: 0;
-//   }
-//   100% {
-//     -webkit-filter: blur(0px);
-//     filter: blur(0px);
-//     opacity: 1;
-//   }
-// }
-
-// .btn {
-//   display: grid;
-//   justify-items: center;
-
-//   background-color: white;
-//   width: 300px;
-//   transition: max-height 0.3s ease-in-out;
+//   width: 260px;
+//   background: #11101d;
+//   padding: 15px;
 //   overflow-y: auto;
-//   max-height: 300px;
-//   box-shadow: 0px 0px 10px 0px #cae4db;
-//   &::-webkit-scrollbar {
-//     width: 1px;
+//   transition: left 0.3s ease; /* Add transition for smooth animation */
+//   margin-top: 110px;
+// }
+// @media (max-width: 768px) {
+//   .sidebar {
+//     width: 100%;
+//     height: auto;
+//     transform: translateX(-100%); /* Initially hide the sidebar off-screen */
 //   }
 
-//   /* Rest of the scrollbar styles */
-
-//   &.collapsed {
-//     max-height: 0;
-//     overflow: hidden;
+//   .open {
+//     transform: translateX(0); /* Move the sidebar into view */
 //   }
 
-//   & button {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: whitesmoke;
-//     color: black;
-//     height: 72px;
-//     width: 90%;
-//     border-style: none;
-//     outline: none;
-//     cursor: pointer;
-//     transition: 0.3s;
-//     border-radius: 5px;
-//     margin-bottom: 10px;
-//     margin-top: 10px;
-//     border: 0.01px solid white;
-//     &:hover {
-//       background-color: #00303f9d;
-//       color: white;
-//     }
+//   .main {
+//     margin-left: 0; /* Adjust the margin to remove space for the sidebar */
+//   }
 
-//     &.active {
-//       background-color: #00303f9d;
-//       color: #f5f4f4;
-//     }
+//   .resNav {
+//     display: block; /* Show the button on smaller screens */
+//     text-align: center;
+//     margin-bottom: 20px;
 //   }
 // }
-// .pop {
-//   display: flex;
-//   position: relative;
-//   flex-direction: column;
-//   align-items: center;
+// .open {
+//   left: 0; /* Show the sidebar when it's open */
 // }
-// .text {
+
+// .logo {
+//   font-size: 25px;
+//   padding: 0 15px;
+// }
+
+// .menuContent {
+//   margin-top: 40px;
+// }
+
+// .menuItems {
 //   display: grid;
-//   justify-content: center;
-//   justify-items: center;
-//   // width: 100%;
+//   list-style: none;
+//   padding-left: 0;
 // }
-// .text1 {
-//   width: 50%;
+
+// .item a {
+//   padding: 16px;
+//   display: block;
+//   color: #fff;
+//   text-decoration: none;
+//   transition: background 0.3s ease; /* Add transition for hover effect */
+// }
+
+// .item a:hover {
+//   background: rgba(255, 255, 255, 0.1);
+// }
+
+// // .overlay {
+// //   position: fixed;
+// //   top: 0;
+// //   left: 0;
+// //   width: 100%;
+// //   height: 100%;
+// //   background-color: rgba(233, 8, 8, 0.5); /* Semi-transparent black overlay */
+// //   z-index: 98; /* Ensure the overlay is below the sidebar */
+// // }
+
+// .resNav {
+//   position: fixed;
+//   padding-top: 110px;
+//   // display: none; /* Hide the button on larger screens */
+// }
+// .main {
+//   position: relative;
+//   display: grid;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100vh;
+//   width: calc(100% - 260px); /* Adjust main content width */
+//   transition: all 0.3s ease; /* Add transition for smooth animation */
+//   z-index: -100;
+//   margin-left: 260px; /* Shift main content when sidebar opens */
+//   align-content: center;
+//   margin-left: 250px; /* Adjust the margin to accommodate the sidebar */
+//   transition: margin-left 0.3s ease-in-out; /* Add transition for smooth animation */
+// }
+
+// .main h1 {
+//   color: #11101d;
+//   font-size: 40px;
 //   text-align: center;
 // }
-/* services.module.scss */
-.page {
-  padding-top: 100px;
-  display: flex;
-  width: 100%;
 
+// .serviceSection {
+//   display: grid;
+//   // height: 100%;
+// }
+// styles.module.css
+.resNav {
+  // padding-left: 20px;
+  padding-top: 110px;
+}
+
+.sidebar {
+  position: relative;
+  color: #fff;
+  width: 350px;
+  padding-left: 20px;
+  height: 100vh;
+  background-color: #006699;
+  border-top-right-radius: 80px;
+  overflow-y: auto;
+  margin-top: 110px;
+}
+.toggleButton {
+  display: none;
+}
+@media (max-width: 768px) {
   .sidebar {
     position: fixed;
-    top: 110px; /* Adjust top position to allow space for padding-top */
-    left: 0;
-    height: calc(100% - 110px); /* Subtract the top padding from the height */
-    width: 250px;
-    background-color: #2c3e50;
-    padding: 20px;
-    color: #ecf0f1;
-    font-family: "Arial", sans-serif;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 0;
-    // overflow-y: auto;
-
-    &.hide {
-      display: none;
-    }
-  }
-
-  .sidebar h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    padding-left: 20px;
-  }
-
-  .sidebar ul {
-    margin: 0;
-  }
-
-  .sidebar ul li {
-    margin-bottom: 15px;
-  }
-
-  .sidebar ul li:last-child {
-    margin-bottom: 0;
-  }
-
-  .sidebar a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #ecf0f1;
-    font-size: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    border-radius: 5px;
-  }
-
-  .sidebar a:hover {
-    background-color: #3498db;
-    color: #fff;
-  }
-
-  .services-page {
-    display: flex;
     width: 100%;
-    justify-content: center;
+    height: 100vh;
+    transform: translateX(-100%);
+    z-index: 1000;
+    overflow-y: auto; /* Initially hide the sidebar off-screen */
+  }
 
-    .main-content {
-      display: grid;
-      padding: 20px;
-      width: 100%;
-      justify-items: center;
-      overflow: hidden;
+  .open {
+    transform: translateX(0); /* Move the sidebar into view */
+  }
 
-      .service-section {
-        display: grid;
-        padding-top: 100px; /* Adjust top padding to match .page */
-        max-width: 1000px;
-        justify-items: center;
-      }
+  .resNav {
+    display: block; /* Show the button on smaller screens */
+    text-align: center;
+    // margin-bottom: 20px;
+  }
+  .toggleButton {
+    display: block;
+  }
+}
+.open {
+  left: 0; /* Show the sidebar when it's open */
+}
+.open {
+  transform: translateX(0);
+}
 
-      .service-container {
-        display: flex;
-        margin-bottom: 40px;
-        height: 100vh;
-        align-items: center;
-        width: 90%;
-        flex-direction: column;
-        @media (min-width: 1500px) {
-          /* On screens wider than 768px, change flex-direction to row */
-          flex-direction: row;
-        }
-        .service-text {
-          flex: 1;
-        }
+.sidebar a {
+  font-size: 12px;
+  color: #fff;
+  display: block;
+  padding: 12px;
+  padding-left: 30px;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
-        .service-image {
-          flex: 1;
-          text-align: center;
+.sidebar a:hover {
+  color: #3f5efb;
+  background: #fff;
+  outline: none;
+  position: relative;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
 
-          img {
-            max-width: 100%;
-            height: auto;
-          }
+.sidebar a i {
+  margin-right: 5px;
+}
 
-          // button {
-          //   margin-top: 10px;
-          //   padding: 10px 20px;
-          //   background-color: #007bff;
-          //   color: #fff;
-          //   border: none;
-          //   border-radius: 5px;
-          //   cursor: pointer;
+.sidebar a:hover::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 100%;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-bottom-right-radius: 18px;
+  box-shadow: 0 20px 0 0 #fff;
+}
 
-          //   &:hover {
-          //     background-color: #0056b3;
-          //   }
-          // }
-        }
-      }
-    }
+.sidebar a:hover::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: 38px;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -20px 0 0 #fff;
+}
+
+.logo {
+  color: #fff;
+  display: block;
+  padding: 12px;
+  padding-left: 30px;
+  text-decoration: none;
+}
+
+.menuItems {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+.main {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: calc(100% - 260px); /* Adjust main content width */
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+  z-index: -100;
+  gap: 250px;
+  // margin-left: 260px; /* Shift main content when sidebar opens */
+  align-content: center;
+  top: 110px;
+
+  // margin-left: 250px; /* Adjust the margin to accommodate the sidebar */
+  transition: margin-left 0.3s ease-in-out;
+  /* Add transition for smooth animation */
+  @media (max-width: 768px) {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    top: -130px;
+    gap: 100px;
   }
 }
 
-// .hide-sidebar {
-//   .sidebar {
-//     display: none;
-//   }
-// }
+.main h1 {
+  color: #11101d;
+  font-size: 40px;
+  text-align: center;
+}
 
-/* Add styles for sidebar when it's not fixed */
-// .page .sidebar:not(.sidebarFixed) {
-//   position: relative;
-//   margin-top: 0;
-// }
+.serviceSection {
+  display: grid;
+  // height: 100%;
+}
+.serviceContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.test {
+  display: flex;
+  @media (max-width: 768px) {
+    display: grid;
+  }
+}
+.serviceText {
+  flex: 1;
+}
 
-// /* Adjust other styles as needed */
-// .sidebarFixed {
-//   position: relative;
-//   //   // top: 110px; /* Adjust top position to allow space for padding-top */
-// }
+.serviceImage {
+  flex: 0.5;
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
