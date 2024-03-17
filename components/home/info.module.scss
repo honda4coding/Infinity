@@ -1,5 +1,9 @@
 /* styles/info.module.scss */
-
+.container {
+  display: grid;
+  justify-items: center;
+  padding-bottom: 100px;
+}
 .infoContainer {
   display: flex;
   flex-direction: column;

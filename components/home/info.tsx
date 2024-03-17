@@ -49,37 +49,39 @@ const Info = () => {
 
   return (
     <>
-      <div className={styles.infoContainer}>
-        <div className={styles.infoContent}>
-          <div className={styles.infoText}>
-            <h2>{topics[currentTopic].title}</h2>
-            <p>{topics[currentTopic].text}</p>
-          </div>
-          <div
-            className={`${styles.imageContainer} ${styles.imageBackground}`}
-            style={{
-              backgroundImage: `url(${topics[currentTopic].image})`,
-            }}
-          />
-          <div className={styles.toggleButtons}>
-            {topics.map((topic, index) => (
-              <button
-                type="button"
-                key={index}
-                onClick={() => handleTopicChange(index)}
-                className={index === currentTopic ? styles.active : ""}
-              ></button>
-            ))}
+      <div className={styles.container}>
+        <div className={styles.infoContainer}>
+          <div className={styles.infoContent}>
+            <div className={styles.infoText}>
+              <h2>{topics[currentTopic].title}</h2>
+              <p>{topics[currentTopic].text}</p>
+            </div>
+            <div
+              className={`${styles.imageContainer} ${styles.imageBackground}`}
+              style={{
+                backgroundImage: `url(${topics[currentTopic].image})`,
+              }}
+            />
+            <div className={styles.toggleButtons}>
+              {topics.map((topic, index) => (
+                <button
+                  type="button"
+                  key={index}
+                  onClick={() => handleTopicChange(index)}
+                  className={index === currentTopic ? styles.active : ""}
+                ></button>
+              ))}
+            </div>
           </div>
         </div>
+        <Button
+          link="/about"
+          text="Dive more"
+          size="1.2rem"
+          onClick={handleButtonClick}
+          cursorPointer={true}
+        />
       </div>
-      <Button
-        link="/about"
-        text="Dive more"
-        size="1.2rem"
-        onClick={handleButtonClick}
-        cursorPointer={true}
-      />
     </>
   );
 };

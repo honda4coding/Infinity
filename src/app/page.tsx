@@ -41,7 +41,7 @@ const HomePage = () => {
                 <Image src="/sailboat.svg" alt="Icon" width={50} height={50} />
               } // Replace with your icon component
               description={`  Flag registration including processing of Navigation license, Ship station license.`}
-              href="/services#Ship%20registration%20services"
+              href="/services#service-2"
               onClick={handleServiceClick}
             />
 
@@ -51,7 +51,7 @@ const HomePage = () => {
                 <Image src="/sailboat.svg" alt="Icon" width={50} height={50} />
               } // Replace with your icon component
               description={`Our surveyors are duly authorized form Panama, Belize, Togo,Malta, Dominica Maritime.`}
-              href="/services#annual%20safety%20inspections"
+              href="/services#service-1"
               onClick={handleServiceClick}
             />
             <Services
@@ -65,7 +65,7 @@ const HomePage = () => {
                 />
               }
               description={`Registration of incorporations /off-shore companies under Panama, Belize, Marshal.`}
-              href="/services#Corporations"
+              href="/services#service-8"
               onClick={handleServiceClick}
             />
             <Services
@@ -78,7 +78,7 @@ const HomePage = () => {
                 />
               }
               description={` Issuance of Certificates of Endorsement (COE), Certificate of competencies (COC) Continuous.`}
-              href="/services#Seafarers%20endorsements%20and%20certification"
+              href="/services#service-7"
               onClick={handleServiceClick}
             />
             <Services
@@ -91,7 +91,7 @@ const HomePage = () => {
                 />
               }
               description={`We are approved for the following class and statutory certification under flags of Panama.`}
-              href="/services#Class%20and%20statutory%20certification"
+              href="/services#service-6"
               onClick={handleServiceClick}
             />
             <Services
@@ -104,7 +104,7 @@ const HomePage = () => {
                 />
               }
               description={`We offer a complete set of design with building supervision at owner request.`}
-              href="/services#New%20ships%20designs"
+              href="/services#service-3"
               onClick={handleServiceClick}
             />
             {/* Repeat other Services components similarly */}

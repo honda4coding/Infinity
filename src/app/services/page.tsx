@@ -2,10 +2,13 @@
 import Link from "next/link"; // Import Link from next/link
 import React, { useEffect, useState } from "react";
 import styles from "../../styles/pages/services.module.scss"; // Import
+import { faAngleDoubleRight, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 interface Service {
   id: number;
   title: string;
-  text: string;
+  text: string[];
   imageUrl: string;
   buttonText?: string;
 }
@@ -13,35 +16,50 @@ const servicesData: Service[] = [
   {
     id: 1,
     title: "Annual Safety Inspections",
-    text: "Ensure the safety and compliance of your vessel with our comprehensive annual safety inspections. Our experienced inspectors will thoroughly assess your vessel's condition and equipment to identify and mitigate potential risks.",
+    text: [
+      "Ensure the safety and compliance of your vessel with our comprehensive annual safety inspections. Our experienced inspectors will thoroughly assess your vessel's condition and equipment to identify and mitigate potential risks.",
+    ],
     imageUrl: "https://i.ibb.co/F0C4drm/istockphoto-1658925458-612x612.webp",
     buttonText: "Learn More",
   },
   {
     id: 2,
     title: "Ship Registration Services",
-    text: "Navigate the complex process of ship registration with ease. Our team provides expert assistance and guidance to ensure smooth registration under various flags, meeting all international regulatory requirements.",
+    text: [
+      "Flag registration including processing of Navigation license, Ship station license, Minimum safe manning and Continuous synopsis record under Panama, Serra Leone, Bolivia, Georgia, Moldova and St. Vincent, Togo, Belize, Dominica, Malta, and Saint Kitts and Nevis",
+      "Registration of mortgages",
+      "Registration of title",
+      "Change of ownership and change of name",
+      "Deletion certificates",
+      "Free of encumbrance certificate",
+    ],
     imageUrl: "https://i.ibb.co/D4ksJGw/ship-registration-e1623403355938.jpg",
     buttonText: "Register Now",
   },
   {
     id: 3,
     title: "New Ships Designs",
-    text: "Embark on your maritime ventures with confidence with our bespoke ship design solutions. Our team of naval architects and engineers will work closely with you to bring your vision to life, delivering innovative designs tailored to your specific needs.",
+    text: [
+      "Embark on your maritime ventures with confidence with our bespoke ship design solutions. Our team of naval architects and engineers will work closely with you to bring your vision to life, delivering innovative designs tailored to your specific needs.",
+    ],
     imageUrl: "https://i.ibb.co/JB6gxNz/photo-1585713181935-d5f622cc2415.webp",
     buttonText: "Explore Designs",
   },
   {
     id: 4,
     title: "Ballast Water Management Solutions",
-    text: "Mitigate the environmental impact of ballast water discharge with our advanced management solutions. Our comprehensive approach ensures compliance with regulations while protecting marine ecosystems.",
+    text: [
+      "Ballast water management system (BWMS) means any system which processes ballast water to kill, render harmless, or remove organisms. The BWMS includesall ballast water treatment equipment and all associated control and monitoringequipment,We present a cost-effective solution for complying with Ballast Water Management Convention and Non-Applicability of the convention Exemptions ",
+    ],
     imageUrl: "https://i.ibb.co/LDy0zcq/maxresdefault.webp",
     buttonText: "Discover Solutions",
   },
   {
     id: 5,
     title: "CFD Finite Element Analysis",
-    text: "Optimize the performance and efficiency of your vessel with our advanced CFD finite element analysis services. Our team employs cutting-edge simulation techniques to evaluate and improve design aspects, ensuring optimal results.",
+    text: [
+      "A dedicated team of highly qualified and experienced engineers and analysts ensure that all our CFD work is performed to the very highest standards. CFD results are presented in professional engineering reports that are accepted by Classification Societies",
+    ],
     imageUrl:
       "https://i.ibb.co/yy1RyY8/Marine-ship-CFD-Msc-Cradle-Ansys-Fluent-Siemens-Star-ccm.webp",
     buttonText: "Learn More",
@@ -49,21 +67,45 @@ const servicesData: Service[] = [
   {
     id: 6,
     title: "Class and Statutory Certification",
-    text: "Stay compliant with industry regulations and standards with our class and statutory certification services. Our experienced team ensures that your vessel meets all necessary requirements, providing peace of mind for your operations.",
+    text: [
+      "We are approved for the following class and statutory certification under flags of Panama, Panama, Belize, Serra Leone, Bolivia, Georgia, Moldova, Togo, Saint Kitts and Nevis:",
+      "Class Hull and Machinery certification",
+      "International Tonnage certificate",
+      "International load line certificate",
+      "Cargo ship safety equipment certificate",
+      "Cargo ship safety construction certificate",
+      "Cargo ship safety radio certificate",
+      "International oil pollutions prevention certificate",
+      "Document of compliance (ISM certification for companies)",
+      "Safety management certificate (ISM certification for vessels)",
+      "International Ship Security Plan (ISPS Certification)",
+      "Certificate of inspection of crew accommodation",
+      "International air pollution prevention certificate",
+      "International sewage pollution prevention certificate",
+      "Cargo gear certification and load test",
+      "Garbage certificate",
+      "Solid bulk cargo certificate.",
+      "Cargo ship safety certificate for vessels below 500 GRT",
+      "Passenger ship safety certificate",
+    ],
     imageUrl: "https://i.ibb.co/WHhT6sk/wood-table-business-wooden.webp",
     buttonText: "View Certifications",
   },
   {
     id: 7,
     title: "Seafarers Endorsements and Certification",
-    text: "Facilitate the certification process for your seafaring personnel with our comprehensive services. From endorsements to specialized certifications, we streamline the process to ensure compliance and efficiency.",
+    text: [
+      "Issuance of Certificates of Endorsement (COE), Certificate of competencies (COC) Continuous Discharge Certificate (CDC).",
+    ],
     imageUrl: "https://i.ibb.co/WHhT6sk/wood-table-business-wooden.webp",
     buttonText: "Get Certified",
   },
   {
     id: 8,
     title: "Corporations",
-    text: "Navigate corporate requirements and regulations with our expert guidance. Our team assists with corporate structuring, compliance, and governance, ensuring smooth operations for your maritime business.",
+    text: [
+      "Registration of incorporations /off-shore companies under Panama, Belize, Marshal Island, St.Kitts &Nevies.",
+    ],
     imageUrl:
       "https://i.ibb.co/k2WgwT5/desktop-wallpaper-business-corporate.webp",
     buttonText: "Explore Services",
@@ -71,28 +113,44 @@ const servicesData: Service[] = [
   {
     id: 9,
     title: "Insurance Cover, Conditions Surveys",
-    text: "Protect your maritime assets with comprehensive insurance cover and condition surveys. Our team provides tailored solutions to assess risks and ensure adequate coverage, safeguarding your investments.",
+    text: [
+      "Protect your maritime assets with comprehensive insurance cover and condition surveys. Our team provides tailored solutions to assess risks and ensure adequate coverage, safeguarding your investments.",
+    ],
     imageUrl: "/images/insurance-cover-conditions-surveys.jpg",
     buttonText: "Get Insured",
   },
   {
     id: 10,
     title: "ISM and ISPS Training and Consultancy",
-    text: "Enhance safety and security measures with our ISM and ISPS training and consultancy services. Our experienced team provides customized solutions to ensure compliance and mitigate risks for your maritime operations.",
+    text: [
+      "Enhance safety and security measures with our ISM and ISPS training and consultancy services. Our experienced team provides customized solutions to ensure compliance and mitigate risks for your maritime operations.",
+    ],
     imageUrl: "/images/ism-and-isps-training-and-consultancy.jpg",
     buttonText: "Enroll Now",
   },
   {
     id: 11,
     title: "Non-Destructive Tests",
-    text: "Ensure the integrity and safety of your vessel with our non-destructive testing services. Our certified inspectors utilize advanced techniques to detect flaws and defects without causing damage, ensuring optimal performance and longevity.",
+    text: [
+      "Ensure the integrity and safety of your vessel with our non-destructive testing services. Our certified inspectors utilize advanced techniques to detect flaws and defects without causing damage, ensuring optimal performance and longevity.",
+    ],
     imageUrl: "https://i.ibb.co/TbdMSH2/non-destructive.webp",
     buttonText: "Learn More",
   },
   {
     id: 12,
     title: "On Demand Surveys",
-    text: "Get timely and reliable surveys for your vessel with our on-demand survey services. Our experienced team provides comprehensive assessments to meet your specific needs, ensuring compliance and peace of mind.",
+    text: [
+      "Pre-purchase inspection",
+      "On hire/ Off hire inspection",
+      "Bunker Survey",
+      "Cargo, Hold’s Inspections",
+      "Insurance Cover Surveys",
+      "Conditions Surveys",
+      "UT Thickness Measurement",
+      "Wall/Wash Test",
+      "MARPOL Surveys",
+    ],
     imageUrl: "https://i.ibb.co/8M91bp0/pexels-photo-669622.webp",
     buttonText: "Request Survey",
   },
@@ -100,14 +158,41 @@ const servicesData: Service[] = [
     id: 13,
     title:
       "Recreation of Existing Ships Drawings, Calculations, Manuals & Plans",
-    text: "Revitalize your vessel's documentation with our recreation services. Our team recreates existing ship drawings, calculations, manuals, and plans with accuracy and attention to detail, ensuring compliance and efficiency.",
+    text: [
+      "Lines Plans",
+      "Construction Drawings",
+      "Machinery, Shafting Layouts",
+      "Shell Expansion",
+      "General Plan",
+      "Capacity Plan",
+      "Fire Control and Safety Plan",
+      "Hydrostatics, Stability, freeboard calculations, tonnage measurements, Dwt Increment, Torsional Vibrations, etc.",
+      "Intact, Damage Stability booklets",
+      "Trim Sounding Tables",
+      "Tonnage, Freeboard measurements",
+      "Cargo Securing Manuals",
+      "SOPEP",
+      "Garbage management plan",
+      "Ship security plan, Cyber Security Manual",
+      "Bulk carrier booklet",
+      "Cow operational manual",
+      "Ballast water management plan",
+      "Fire and safety training manual",
+    ],
     imageUrl: "https://i.ibb.co/2dbFPQ0/istockphoto-1461594369-612x612.jpg",
     buttonText: "Get Started",
   },
   {
     id: 14,
     title: "EEXI / CII / EPL / OMM / SEEMP PART III – Consultation",
-    text: "Stay ahead of regulatory requirements with our expert consultation services. Our team provides guidance on EEXI, CII, EPL, OMM, and SEEMP Part III compliance, ensuring smooth operations and environmental sustainability for your vessels.",
+    text: [
+      "we provide complete consultation by our Expert Marine Engineers and Naval Architects for MARPOL ANNEX VI Compliance: ",
+      "EEXI Compliance- (Energy Efficiency Existing Ship Index)",
+      "CII Compliance- (Carbon Intensity Indicator)",
+      "EPL- (Engine Power Limitation)",
+      "OMM- (On Board Management Manual)",
+      "SEEMP Part III",
+    ],
     imageUrl: "https://i.ibb.co/MCNjXHr/Screenshot-2024-01-09-165551.png",
     buttonText: "Consult Now",
   },
@@ -144,7 +229,7 @@ const Services: React.FC = () => {
     window.location.hash = `#service-${id}`; // Update hash in URL
   };
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -160,21 +245,27 @@ const Services: React.FC = () => {
     event.preventDefault(); // Prevent default anchor behavior
     setActiveService(serviceId); // Set active service
     window.location.hash = `service-${serviceId}`; // Update hash in URL
-  };
 
+    // Close the sidebar in mobile view
+    if (window.innerWidth <= 768) {
+      setIsSidebarOpen(false);
+    }
+  };
   return (
     <>
       <div className={styles.test}>
         <div className={styles.resNav}>
           <button onClick={toggleSidebar} className={styles.toggleButton}>
-            Open Sidebar
+            <FontAwesomeIcon
+              icon={isSidebarOpen ? faTimes : faAngleDoubleRight}
+            />
           </button>
         </div>
         <nav
           className={`${styles.sidebar} ${isSidebarOpen ? styles.open : ""}`}
         >
           <button onClick={closeSidebar} className={styles.toggleButton}>
-            Close Sidebar
+            <FontAwesomeIcon icon={faTimes} />
           </button>
           <h1 className={styles.logo}>our services</h1>
 
