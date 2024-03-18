@@ -1,38 +1,48 @@
 "use client";
-
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../../src/styles/pages/nav.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 
 const Navbar: React.FC = () => {
-  // State to control visibility of the opening times
   const [showOpeningTimes, setShowOpeningTimes] = useState(false);
-
-  // State to control the menu toggle
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const openingTimesRef = useRef<HTMLDivElement>(null);
 
-  // Toggles the visibility of the opening times section
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        openingTimesRef.current &&
+        !openingTimesRef.current.contains(event.target as Node)
+      ) {
+        setShowOpeningTimes(false);
+      }
+    };
+
+    document.body.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.body.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   const toggleOpeningTimes = () => {
     setShowOpeningTimes(!showOpeningTimes);
+    setMenuOpen(false); // Close menu when opening times are toggled
   };
 
-  // Handles the toggle of the menu
   const handleToggleMenu = () => {
-    setMenuOpen(!isMenuOpen); // Toggles the menu
-    setShowOpeningTimes(false); // Closes the opening times when menu is toggled
+    setMenuOpen(!isMenuOpen);
+    setShowOpeningTimes(false); // Close opening times when menu is toggled
   };
 
-  // Sample opening times data
   const openingTimes = [
     { day: "Sunday - Tuesday", hours: "8:30 AM - 5:00 PM" },
-
     { day: "Friday , Saturday", hours: "Closed" },
   ];
 
   return (
     <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}>
-      {/* Navbar Logo */}
       <div className={styles.logo}>
         <Link href="/">
           <div style={{ width: "100%", maxWidth: "110px", height: "auto" }}>
@@ -45,18 +55,15 @@ const Navbar: React.FC = () => {
             />
           </div>
         </Link>
-
-        {/* <strong>Infinity</strong> */}
       </div>
+
       <div className={styles.openingTimesButton} onClick={toggleOpeningTimes}>
         <div className={styles.openTimeLogoText}>
           <h6>OPENING HOURS</h6>
         </div>
-
         <Image src={"/clock.svg"} alt="Clock Icon" width={20} height={20} />
       </div>
 
-      {/* Navbar Links */}
       <ul className={`${styles.links} ${isMenuOpen ? styles.open : ""}`}>
         <li>
           <a href="/">Home</a>
@@ -70,7 +77,6 @@ const Navbar: React.FC = () => {
         <li>
           <a href="/contact">Contact</a>
         </li>
-        {/* Add other menu items here */}
       </ul>
 
       <label
@@ -88,6 +94,7 @@ const Navbar: React.FC = () => {
           className={`${styles.openingTimes} ${
             showOpeningTimes ? styles.active : ""
           }`}
+          ref={openingTimesRef}
         >
           <strong>{`Opening Hours:`}</strong>
           <ul>

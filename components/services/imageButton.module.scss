@@ -1,0 +1,46 @@
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  // width: calc(100% + 260px); /* Adjust main content width */
+}
+
+.popupContent {
+  display: grid;
+  justify-items: end;
+  // background-color: white;
+  padding: 20px;
+  // border-radius: 5px;
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  // text-align: center;
+}
+
+.popupContent img {
+  max-width: 100%;
+  max-height: 80vh; /* Limit the height of the image */
+}
+
+.popupContent button {
+  margin-top: 10px;
+}
+.clickButton {
+  background-color: #077fc4; /*  background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Add pointer cursor */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  transition: background-color 0.3s; /* Add smooth transition for background color */
+}
+
+.clickButton:hover {
+  background-color: #0c579e; /* Darken background color on hover */
+}
