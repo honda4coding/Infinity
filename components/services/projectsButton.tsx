@@ -56,9 +56,6 @@ const ProjectButton: React.FC<ProjectButtonProps> = ({ projectData }) => {
       {isPopupOpen && (
         <div className={styles.popupOverlay}>
           <div ref={popupRef} className={styles.popupContent}>
-            {/* <button className={styles.closeButton} onClick={togglePopup}>
-              Close
-            </button> */}
             <div className={styles.project}>
               <h3 className={styles.projectTitle}>
                 {projectData[currentIndex].projectTitle}
