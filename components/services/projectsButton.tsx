@@ -64,7 +64,22 @@ const ProjectButton: React.FC<ProjectButtonProps> = ({ projectData }) => {
                 {Array.isArray(projectData[currentIndex].projectDescription) ? (
                   // Check if projectDescription is an array before mapping
                   projectData[currentIndex].projectDescription.map(
-                    (line, index) => <p key={index}>{line}</p>
+                    (
+                      line:
+                        | string
+                        | number
+                        | boolean
+                        | React.ReactElement<
+                            any,
+                            string | React.JSXElementConstructor<any>
+                          >
+                        | Iterable<React.ReactNode>
+                        | React.ReactPortal
+                        | React.PromiseLikeOfReactNode
+                        | null
+                        | undefined,
+                      index: React.Key | null | undefined
+                    ) => <p key={index}>{line}</p>
                   )
                 ) : (
                   // If not an array, render it as a single paragraph
