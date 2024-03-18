@@ -3,7 +3,7 @@ import styles from "./projectsButton.module.scss"; // Import your module SCSS fi
 
 interface ProjectButtonProps {
   projectData: {
-    title: string;
+    title?: string;
     projectTitle: string;
     projectDescription: string[] | string; // Updated type to accept either string or array of strings
     imageUrl: string;
