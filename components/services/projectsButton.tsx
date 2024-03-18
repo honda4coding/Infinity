@@ -40,11 +40,11 @@ const ProjectButton: React.FC<ProjectButtonProps> = ({ projectData }) => {
     };
 
     if (isPopupOpen) {
-      document.body.addEventListener("mousedown", handleOutsideClick);
+      document.addEventListener("mousedown", handleOutsideClick);
     }
 
     return () => {
-      document.body.removeEventListener("mousedown", handleOutsideClick);
+      document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [isPopupOpen]);
 
