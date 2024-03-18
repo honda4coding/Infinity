@@ -5,7 +5,7 @@ interface ProjectButtonProps {
   projectData: {
     title: string;
     projectTitle: string;
-    projectDescription: string | string[]; // Updated type to accept either string or array of strings
+    projectDescription: string[] | string; // Updated type to accept either string or array of strings
     imageUrl: string;
   }[]; // Array of project data containing additional properties
 }
