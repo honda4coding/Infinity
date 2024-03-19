@@ -4,6 +4,7 @@ import Navbar from "../../components/nav/page";
 import Footer from "../../components/footer/page";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { HydrationOverlay } from "@builder.io/react-hydration-overlay";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: "INFINITY MARINE CONSULTANTS",
@@ -33,7 +34,10 @@ export default function RootLayout({
           {" "}
           <Navbar />{" "}
         </header>
-        <HydrationOverlay> {children} </HydrationOverlay>
+        <HydrationOverlay>
+          {children}
+          <Analytics />
+        </HydrationOverlay>
         <SpeedInsights />
         <footer>
           <Footer />
