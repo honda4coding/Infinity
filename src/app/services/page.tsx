@@ -19,7 +19,7 @@ interface Service {
 const servicesData: Service[] = [
   {
     id: 1,
-    title: "🧾 Annual Safety Inspections",
+    title: "Annual Safety Inspections",
     sections: [
       {
         text: "Ensure the safety and compliance of your vessel with our comprehensive annual safety inspections. Our experienced inspectors will thoroughly assess your vessel's condition and equipment to identify and mitigate potential risks.",
@@ -31,7 +31,7 @@ const servicesData: Service[] = [
   },
   {
     id: 2,
-    title: "🛳 Ship Registration Services",
+    title: "Ship Registration Services",
     sections: [
       {
         text: "",
@@ -49,7 +49,7 @@ const servicesData: Service[] = [
   },
   {
     id: 3,
-    title: "⚓️ New Ships Designs",
+    title: "New Ships Designs",
     sections: [
       {
         text: "Embark on your maritime ventures with confidence with our bespoke ship design solutions. Our team of naval architects and engineers will work closely with you to bring your vision to life, delivering innovative designs tailored to your specific needs.",
@@ -60,7 +60,7 @@ const servicesData: Service[] = [
   },
   {
     id: 4,
-    title: "🛟 Ballast Water Management Solutions",
+    title: "Ballast Water Management Solutions",
     sections: [
       {
         text: "Ballast water management system (BWMS) means any system which processes ballast water to kill, render harmless, or remove organisms. The BWMS includesall ballast water treatment equipment and all associated control and monitoringequipment,We present a cost-effective solution for complying with Ballast Water Management Convention and Non-Applicability of the convention Exemptions ",
@@ -71,7 +71,7 @@ const servicesData: Service[] = [
   },
   {
     id: 5,
-    title: "🪝 CFD Finite Element Analysis",
+    title: "CFD Finite Element Analysis",
     sections: [
       {
         text: "A dedicated team of highly qualified and experienced engineers and analysts ensure that all our CFD work is performed to the very highest standards. CFD results are presented in professional engineering reports that are accepted by Classification Societies",
@@ -83,7 +83,7 @@ const servicesData: Service[] = [
   },
   {
     id: 6,
-    title: "⛵️ Class and Statutory Certification",
+    title: "Class and Statutory Certification",
     sections: [
       {
         text: "We are approved for the following class and statutory certification under flags of Panama, Panama, Belize, Serra Leone, Bolivia, Georgia, Moldova, Togo, Saint Kitts and Nevis:",
@@ -114,7 +114,7 @@ const servicesData: Service[] = [
   },
   {
     id: 7,
-    title: "🌊 Seafarers Endorsements and Certification",
+    title: "Seafarers Endorsements and Certification",
     sections: [
       {
         text: "Issuance of Certificates of Endorsement (COE), Certificate of competencies (COC) Continuous Discharge Certificate (CDC).",
@@ -125,7 +125,7 @@ const servicesData: Service[] = [
   },
   {
     id: 8,
-    title: "📰 Corporations",
+    title: "Corporations",
     sections: [
       {
         text: "Registration of incorporations /off-shore companies under Panama, Belize, Marshal Island, St.Kitts &Nevies.",
@@ -137,7 +137,7 @@ const servicesData: Service[] = [
   },
   {
     id: 9,
-    title: "📑 Insurance Cover, Conditions Surveys",
+    title: "Insurance Cover, Conditions Surveys",
     sections: [
       {
         text: "Protect your maritime assets with comprehensive insurance cover and condition surveys. Our team provides tailored solutions to assess risks and ensure adequate coverage, safeguarding your investments.",
@@ -148,7 +148,7 @@ const servicesData: Service[] = [
   },
   {
     id: 10,
-    title: "📜 ISM and ISPS Training and Consultancy",
+    title: "ISM and ISPS Training and Consultancy",
     sections: [
       {
         text: "Enhance safety and security measures with our ISM and ISPS training and consultancy services. Our experienced team provides customized solutions to ensure compliance and mitigate risks for your maritime operations.",
@@ -159,7 +159,7 @@ const servicesData: Service[] = [
   },
   {
     id: 11,
-    title: "📋 Non-Destructive Tests",
+    title: "Non-Destructive Tests",
     sections: [
       {
         text: "",
@@ -173,7 +173,7 @@ const servicesData: Service[] = [
   },
   {
     id: 12,
-    title: "📃 On Demand Surveys",
+    title: "On Demand Surveys",
     sections: [
       {
         text: "",
@@ -195,7 +195,7 @@ const servicesData: Service[] = [
   {
     id: 13,
     title:
-      "📝 Recreation of Existing Ships Drawings, Calculations, Manuals & Plans",
+      "Recreation of Existing Ships Drawings, Calculations, Manuals & Plans",
     sections: [
       {
         text: "Drawings",
@@ -236,7 +236,7 @@ const servicesData: Service[] = [
   },
   {
     id: 14,
-    title: "📦 EEXI / CII / EPL / OMM / SEEMP PART III – Consultation",
+    title: "EEXI / CII / EPL / OMM / SEEMP PART III – Consultation",
     sections: [
       {
         text: "we provide complete consultation by our Expert Marine Engineers and Naval Architects for MARPOL ANNEX VI Compliance: ",
@@ -426,13 +426,11 @@ const Services: React.FC = () => {
                     alt={servicesData[activeService - 1].title}
                   />
                 </div>
-                <div data-aos="zoom-in" className={styles.serviceText}>
-                  {/* <p>{servicesData[activeService - 1].text}</p> */}
-                </div>
+                <div>{/* <p>{servicesData[activeService - 1].text}</p> */}</div>
                 {/* Render the list if it exists */}
                 {servicesData[activeService - 1].sections.map(
                   (section, index) => (
-                    <div key={index} className={styles.lol}>
+                    <div key={index} data-aos="zoom-in" className={styles.lol}>
                       <h3 className={styles.serviceText}>{section.text}</h3>
                       <ul className={styles.serviceList}>
                         {section.list.map((item, itemIndex) => (
@@ -443,11 +441,11 @@ const Services: React.FC = () => {
                   )
                 )}
                 {servicesData[activeService - 1].title ===
-                  "🛳 Ship Registration Services" && (
+                  "Ship Registration Services" && (
                   <ImageButton imageUrl={""}></ImageButton>
                 )}
                 {servicesData[activeService - 1].title ===
-                  "🛟 Ballast Water Management Solutions" && (
+                  "Ballast Water Management Solutions" && (
                   <ProjectButton projectData={projectData} />
                 )}
               </div>
