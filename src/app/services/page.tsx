@@ -590,7 +590,9 @@ const servicesData: Service[] = [
       },
     ],
     imageUrl:
-      "https://i.ibb.co/k2WgwT5/desktop-wallpaper-business-corporate.webp",
+      " https://i.ibb.co/FsdWvWp/The-Problems-with-Corporations-and-Phantom-Wealth-feat.jpg",
+    // imageUrl:
+    //   "https://i.ibb.co/k2WgwT5/desktop-wallpaper-business-corporate.webp",
   },
   {
     id: 9,
@@ -601,7 +603,8 @@ const servicesData: Service[] = [
         list: [],
       },
     ],
-    imageUrl: "https://i.ibb.co/GPD0y4g/OIP-1.jpg",
+    imageUrl: "https://i.ibb.co/fdJqdZC/635719714858770000.jpg",
+    // imageUrl: "https://i.ibb.co/GPD0y4g/OIP-1.jpg",
   },
   {
     id: 10,
@@ -612,7 +615,8 @@ const servicesData: Service[] = [
         list: [],
       },
     ],
-    imageUrl: "/images/ism-and-isps-training-and-consultancy.jpg",
+    imageUrl:
+      "https://i.ibb.co/Y8Gfzcx/b1752cbf-3b3f-4503-9c3f-2a56007343c8-2.jpg",
   },
   {
     id: 11,
@@ -647,7 +651,9 @@ const servicesData: Service[] = [
         ],
       },
     ],
-    imageUrl: "https://i.ibb.co/8M91bp0/pexels-photo-669622.webp",
+    imageUrl:
+      "https://i.ibb.co/BTqP7dc/download-it-budget-stress-hardware-maintenance-hero.jpg",
+    // imageUrl: "https://i.ibb.co/8M91bp0/pexels-photo-669622.webp",
   },
   {
     id: 13,
@@ -689,7 +695,8 @@ const servicesData: Service[] = [
         ],
       },
     ],
-    imageUrl: "https://i.ibb.co/2dbFPQ0/istockphoto-1461594369-612x612.jpg",
+    imageUrl: "https://i.ibb.co/PYyfsCG/engineering.jpg",
+    // imageUrl: "https://i.ibb.co/2dbFPQ0/istockphoto-1461594369-612x612.jpg",
   },
   {
     id: 14,
@@ -707,7 +714,8 @@ const servicesData: Service[] = [
         ],
       },
     ],
-    imageUrl: "https://i.ibb.co/MCNjXHr/Screenshot-2024-01-09-165551.png",
+    imageUrl: "https://i.ibb.co/9vxvhSX/maxresdefault.jpg",
+    // imageUrl: "https://i.ibb.co/MCNjXHr/Screenshot-2024-01-09-165551.png",
   },
 ];
 
@@ -795,13 +803,17 @@ const Services: React.FC = () => {
     };
   }, []);
 
-  const handleServiceClick = (id: number) => {
+  const handleServiceClick = (
+    id: number,
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {
     // Check if the clicked service is already active
     if (activeService === id) {
       return; // Do nothing
     }
     setActiveService(id);
     window.location.hash = `service-${id}`;
+    event.preventDefault(); // Prevent default behavior of scrolling to top
   };
 
   return (
@@ -817,9 +829,11 @@ const Services: React.FC = () => {
             className={`${styles.service} ${
               activeService === service.id ? styles.active : ""
             }`}
-            onClick={() => handleServiceClick(service.id)}
           >
-            <div className={styles.serviceLabel}>
+            <div
+              className={styles.serviceLabel}
+              onClick={(e) => handleServiceClick(service.id, e)} // Pass event to the handler
+            >
               <div className={styles.serviceTitle}>{service.title}</div>
               <FontAwesomeIcon
                 icon={

@@ -422,7 +422,13 @@
   width: 100%; /* Make the image fill its container */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
 }
+
+.serviceImage:hover {
+  transform: scale(1.05); /* Increase scale on hover */
+}
+
 .serviceLabel:hover {
   color: #007bff; /* Change icon color on hover */
 }
