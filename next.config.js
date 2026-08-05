@@ -5,6 +5,10 @@ const {
 /** @type {import('next').NextConfig} */
 const nextConfig = {};
 
-module.exports = withHydrationOverlay({
-  appRootSelector: "main",
-})(nextConfig);
+module.exports =
+  process.env.NODE_ENV === "development"
+    ? withHydrationOverlay({
+        appRootSelector: "main",
+      })(nextConfig)
+    : nextConfig;
+
